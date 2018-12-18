@@ -1,11 +1,14 @@
 <template>
-  <div id="home-page">
+  <div id="background">
     <section class="container">
       <div>
         <logo/>
         <h1 class="title">
           Yuma Mitsuyoshi's portfolio
         </h1>
+        <h2 class="title is-2">
+          Web Engineer
+        </h2>
         <div class="links">
           <a
             href="/"
@@ -37,7 +40,7 @@ export default {
 </script>
 
 <style>
-#home-page {
+#background {
   background-image: url('~assets/png/home/background.png');
   background-size: cover;
 }
