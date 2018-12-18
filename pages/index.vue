@@ -1,25 +1,32 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        yuma-portfolio
-      </h1>
-      <h2 class="subtitle">
-        My slick Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <div id="home-page">
+    <section class="container">
+      <div>
+        <logo/>
+        <h1 class="title">
+          Yuma Mitsuyoshi's portfolio
+        </h1>
+        <div class="links">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Home</a>
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Profile</a>
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Skill</a>
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            class="button--green">Hobby</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -33,6 +40,11 @@ export default {
 </script>
 
 <style>
+#home-page {
+  background-image: url('~assets/png/home/background.png');
+  background-size: cover;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
