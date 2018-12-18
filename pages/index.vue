@@ -8,20 +8,17 @@
         </h1>
         <div class="links">
           <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            class="button--green">Home</a>
+            href="/"
+            class="button--green">
+            Home</a>
           <a
-            href="https://nuxtjs.org/"
-            target="_blank"
+            href="/profile"
             class="button--green">Profile</a>
           <a
-            href="https://nuxtjs.org/"
-            target="_blank"
+            href="/skill"
             class="button--green">Skill</a>
           <a
-            href="https://nuxtjs.org/"
-            target="_blank"
+            href="/hobby"
             class="button--green">Hobby</a>
         </div>
       </div>
