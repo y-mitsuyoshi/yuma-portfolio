@@ -22,7 +22,9 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/html-self-closing': ['error', {
       'html': {
-        'void': 'any'
+        'void': 'any',
+        'normal': 'any',
+        'component': 'any'
       },
       'svg': 'any'
     }]
