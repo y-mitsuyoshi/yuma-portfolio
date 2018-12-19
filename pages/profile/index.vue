@@ -52,7 +52,7 @@
           <div class="box">
             <p class="title is-3">エンジニアとしての考え方</p>
             <p class="title is-5">
-
+              hoge
             </p>
           </div>
         </div>
