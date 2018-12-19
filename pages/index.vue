@@ -1,31 +1,47 @@
 <template>
-  <div id="background">
-    <section class="container">
-      <div>
-        <logo/>
-        <h1 class="title">
-          Yuma Mitsuyoshi's portfolio
-        </h1>
-        <h2 class="title is-2">
-          Web Engineer
-        </h2>
-        <div class="links">
-          <a
-            href="/"
-            class="button--green">
-            Home</a>
-          <a
-            href="/profile"
-            class="button--green">Profile</a>
-          <a
-            href="/skill"
-            class="button--green">Skill</a>
-          <a
-            href="/hobby"
-            class="button--green">Hobby</a>
+  <div>
+    <div id="background">
+      <section class="container">
+        <div>
+          <logo/>
+          <h1 class="title">
+            Yuma Mitsuyoshi's portfolio
+          </h1>
+          <h2 class="title is-2">
+            Web Engineer
+          </h2>
+          <div class="links">
+            <a
+              href="/"
+              class="button--green">
+              Home</a>
+            <a
+              href="/profile"
+              class="button--green">Profile</a>
+            <a
+              href="/skill"
+              class="button--green">Skill</a>
+            <a
+              href="/hobby"
+              class="button--green">Hobby</a>
+          </div>
         </div>
+      </section>
+    </div>
+    <div id="contact">
+      <div class="content has-text-centered">
+        <p>
+          <strong class="title is-2">Contact</strong>
+        </p>
       </div>
-    </section>
+    </div>
+    <footer class="footer footer-color">
+      <div class="content has-text-right">
+        <p>
+          <strong class="has-text-white">Product by Yuma Mitsuyoshi</strong>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -65,5 +81,15 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.contact {
+  background-color: rgb(253, 255, 231);
+  background-size: cover;
+}
+
+.footer-color {
+  background-color: black;
+  background-size: cover;
 }
 </style>
