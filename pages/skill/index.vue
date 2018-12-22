@@ -80,6 +80,7 @@ export default {
   margin-top: 50px;
   background-color: #fff5ee;
   background-size: cover;
+  margin-bottom: 100px;
 }
 
 .container {
