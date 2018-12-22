@@ -52,7 +52,7 @@
           </div>
           <div class="box">
             <p class="title is-3">その他</p>
-            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI</p>
+            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI, マイクロサービスアーキテクチャー, bugsnag, Google Apps Script, VBA</p>
           </div>
         </div>
       </div>
