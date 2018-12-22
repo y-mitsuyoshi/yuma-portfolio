@@ -2,8 +2,7 @@
   <div id="background">
     <section class="container">
       <div>
-        <logo/>
-        <h1 class="title is-1">
+        <h1 class="title is-1 title-margin">
           Yuma Mitsuyoshi's portfolio
         </h1>
         <h2 class="title is-2">
@@ -65,5 +64,9 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.title-margin {
+  margin-top: 50px;
 }
 </style>
