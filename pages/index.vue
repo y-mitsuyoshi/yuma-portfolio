@@ -1,33 +1,31 @@
 <template>
-  <div>
-    <div id="background">
-      <section class="container">
-        <div>
-          <logo/>
-          <h1 class="title">
-            Yuma Mitsuyoshi's portfolio
-          </h1>
-          <h2 class="title is-2">
-            Web Engineer
-          </h2>
-          <div class="links">
-            <a
-              href="/"
-              class="button--green">
-              Home</a>
-            <a
-              href="/profile"
-              class="button--green">Profile</a>
-            <a
-              href="/skill"
-              class="button--green">Skill</a>
-            <a
-              href="/hobby"
-              class="button--green">Hobby</a>
-          </div>
+  <div id="background">
+    <section class="container">
+      <div>
+        <logo/>
+        <h1 class="title">
+          Yuma Mitsuyoshi's portfolio
+        </h1>
+        <h2 class="title is-2">
+          Web Engineer
+        </h2>
+        <div class="links">
+          <a
+            href="/"
+            class="button--green">
+            Home</a>
+          <a
+            href="/profile"
+            class="button--green">Profile</a>
+          <a
+            href="/skill"
+            class="button--green">Skill</a>
+          <a
+            href="/hobby"
+            class="button--green">Hobby</a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 
