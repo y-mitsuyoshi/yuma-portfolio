@@ -28,20 +28,6 @@
         </div>
       </section>
     </div>
-    <div id="contact">
-      <div class="content has-text-centered">
-        <p>
-          <strong class="title is-2">Contact</strong>
-        </p>
-      </div>
-    </div>
-    <footer class="footer footer-color">
-      <div class="content has-text-right">
-        <p>
-          <strong class="has-text-white">Product by Yuma Mitsuyoshi</strong>
-        </p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -51,7 +37,8 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
-  }
+  },
+  layout: 'default'
 }
 </script>
 
@@ -81,15 +68,5 @@ export default {
 
 .links {
   padding-top: 15px;
-}
-
-.contact {
-  background-color: rgb(253, 255, 231);
-  background-size: cover;
-}
-
-.footer-color {
-  background-color: black;
-  background-size: cover;
 }
 </style>

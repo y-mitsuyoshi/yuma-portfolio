@@ -1,6 +1,8 @@
 <template>
   <div>
     <nuxt/>
+    <Contact/>
+    <Footer/>
   </div>
 </template>
 
@@ -53,3 +55,14 @@ html {
   background-color: #35495e;
 }
 </style>
+
+<script>
+import Footer from '~/components/Footer.vue'
+import Contact from '~/components/Contact.vue'
+export default {
+  components: {
+    Footer,
+    Contact
+  }
+}
+</script>
