@@ -29,8 +29,8 @@ html {
 .button--green {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 3px solid #438173;
+  color: #438173;
   text-decoration: none;
   padding: 10px 30px;
 }
@@ -43,7 +43,7 @@ html {
 .button--grey {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #35495e;
+  border: 3px solid #35495e;
   color: #35495e;
   text-decoration: none;
   padding: 10px 30px;
