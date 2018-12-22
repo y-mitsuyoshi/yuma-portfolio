@@ -3,7 +3,7 @@
     <section class="container">
       <div>
         <logo/>
-        <h1 class="title">
+        <h1 class="title is-1">
           Yuma Mitsuyoshi's portfolio
         </h1>
         <h2 class="title is-2">
