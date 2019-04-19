@@ -30,7 +30,7 @@
             <p class="title is-4">自由に使いこなせる</p>
             <p class="title is-5">Ruby, Python3, ES6</p>
             <br/>
-            <p class="title is-4">学習中</p>
+            <p class="title is-4">そこそこできる</p>
             <p class="title is-5">Go</p>
           </div>
           <div class="box">
@@ -51,7 +51,7 @@
           </div>
           <div class="box">
             <p class="title is-3">その他</p>
-            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI, マイクロサービスアーキテクチャー, bugsnag, Google Apps Script, VBA</p>
+            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI, マイクロサービスアーキテクチャー, bugsnag, Google Apps Script, VBA, gRPC</p>
           </div>
         </div>
       </div>
