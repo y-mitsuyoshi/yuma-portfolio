@@ -21,3 +21,7 @@ $ yarn run generate
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 # yuma-portfolio
+
+
+## 備考
+nodeのバージョンは11.2
