@@ -31,7 +31,7 @@
             <p class="title is-5">Ruby, Python3, ES6</p>
             <br/>
             <p class="title is-4">そこそこできる</p>
-            <p class="title is-5">Go, TypeScript</p>
+            <p class="title is-5">Go, TypeScript, Elixir</p>
           </div>
           <div class="box">
             <p class="title is-3">フレームワーク</p>
