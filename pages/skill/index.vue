@@ -51,7 +51,7 @@
           </div>
           <div class="box">
             <p class="title is-3">その他</p>
-            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI, CircleCI, マイクロサービスアーキテクチャー, bugsnag, Google Apps Script, VBA, gRPC, GraphQL</p>
+            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI, CircleCI, マイクロサービスアーキテクチャ, bugsnag, Sentry, Google Apps Script, VBA, gRPC, GraphQL</p>
           </div>
         </div>
       </div>
