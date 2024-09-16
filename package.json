@@ -13,23 +13,24 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "@nuxtjs/axios": "^5.0.0",
-    "@nuxtjs/bulma": "^1.2.0",
-    "@nuxtjs/dotenv": "^1.3.0",
-    "cross-env": "^5.2.0",
-    "firebase": "^5.7.1",
-    "firebase-tools": "^6.2.2",
-    "nuxt": "^2.0.0"
+    "@fortawesome/fontawesome-free": "^6.5.3",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/bulma": "^1.2.7",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "cross-env": "^7.0.3",
+    "firebase": "^10.5.0",
+    "firebase-tools": "^12.5.0",
+    "nuxt": "^2.15.8",
+    "punycode": "^2.3.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^5.10.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-prettier": "2.6.2",
-    "eslint-plugin-vue": "^4.7.1",
-    "nodemon": "^1.11.0",
-    "prettier": "1.14.3"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.18.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.3.0"
   }
 }

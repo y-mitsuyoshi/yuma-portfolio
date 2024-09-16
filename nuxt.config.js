@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   mode: 'universal',
@@ -27,10 +28,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@fortawesome/fontawesome-free-webfonts',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
-    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
+    '@fortawesome/fontawesome-free/css/all.css',
   ],
 
   /*
@@ -70,15 +68,14 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.plugins.push(
+          new ESLintPlugin({
+            extensions: ['js', 'vue'],
+            emitWarning: true,
+          })
+        );
       }
     }
   }
