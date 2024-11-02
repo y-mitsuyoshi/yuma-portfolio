@@ -81,4 +81,4 @@ dist
 .idea
 
 # firebase
-.firebase/
+.firebase
