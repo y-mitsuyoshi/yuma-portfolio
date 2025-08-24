@@ -47,13 +47,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@fortawesome/fontawesome-free/css/all.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/fontawesome.js'
   ],
 
   /*
@@ -62,10 +63,16 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
     '@nuxtjs/dotenv',
   ],
+
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+  ],
+
   /*
   ** Axios module configuration
   */
@@ -77,13 +84,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        }
-      }
-    },
     /*
     ** You can extend webpack config here
     */

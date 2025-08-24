@@ -1,72 +1,21 @@
 <template>
-  <div id="background">
-    <section class="container">
-      <div>
-        <h1 class="title is-1 title-margin">
-          Yuma Mitsuyoshi's portfolio
-        </h1>
-        <h2 class="title is-2">
-          Web Engineer
-        </h2>
-        <div class="links">
-          <a
-            href="/"
-            class="button--green">
-            Home</a>
-          <a
-            href="/profile"
-            class="button--green">Profile</a>
-          <a
-            href="/skill"
-            class="button--green">Skill</a>
-          <a
-            href="/hobby"
-            class="button--green">Hobby</a>
-        </div>
-      </div>
-    </section>
+  <div class="flex flex-col items-center justify-center text-center" style="min-height: 70vh;">
+    <h1 class="text-6xl font-bold text-gray-800">
+      Yuma Mitsuyoshi's Portfolio
+    </h1>
+    <h2 class="mt-4 text-2xl text-gray-600">
+      Web Engineer
+    </h2>
+    <p class="mt-8 text-lg text-gray-700 max-w-2xl">
+      Welcome to my portfolio. I am a passionate web engineer with a focus on creating modern and user-friendly web applications. Explore my work and get in touch!
+    </p>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
 <style>
-#background {
-  background-image: url('~assets/png/home/background.png');
-  background-size: cover;
-}
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #07090a;
-  letter-spacing: 1px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.title-margin {
-  margin-top: 50px;
-}
+/* All styling is now done with Tailwind CSS utility classes */
 </style>

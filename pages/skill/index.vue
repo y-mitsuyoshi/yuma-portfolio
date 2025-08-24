@@ -1,110 +1,55 @@
 <template>
-  <div id="background">
-    <section class="container">
-      <div>
-        <h1 class="title is-1 title-margin">
-          Yuma Mitsuyoshi's portfolio
-        </h1>
-        <h2 class="title is-2">
-          Web Engineer
-        </h2>
-        <div class="links">
-          <a
-            href="/"
-            class="button--green">
-            Home</a>
-          <a
-            href="/profile"
-            class="button--green">Profile</a>
-          <a
-            href="/skill"
-            class="button--green">Skill</a>
-          <a
-            href="/hobby"
-            class="button--green">Hobby</a>
+  <div>
+    <h1 class="text-4xl font-bold text-center mb-8">Skill</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">プログラミング言語</h2>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">自由に使いこなせる</h3>
+          <p class="text-gray-700">Ruby, Python3, ES6</p>
         </div>
-        <div class="description">
-          <h3 class="subtitle is-2">Skill</h3>
-          <div class="box">
-            <p class="title is-3">プログラミング言語</p>
-            <p class="title is-4">自由に使いこなせる</p>
-            <p class="title is-5">Ruby, Python3, ES6</p>
-            <br/>
-            <p class="title is-4">そこそこできる</p>
-            <p class="title is-5">Go, TypeScript, Elixir, PHP</p>
-          </div>
-          <div class="box">
-            <p class="title is-3">フレームワーク</p>
-            <p class="title is-5">Ruby on Rails, Django, Bottle, Vue.js, Nuxt.js</p>
-          </div>
-          <div class="box">
-            <p class="title is-3">DB</p>
-            <p class="title is-5">Mysql, Redis, DynamoDB</p>
-          </div>
-          <div class="box">
-            <p class="title is-3">Iaas</p>
-            <p class="title is-5">AWS, GCP</p>
-          </div>
-          <div class="box">
-            <p class="title is-3">インフラ</p>
-            <p class="title is-5">Docker, Linux</p>
-          </div>
-          <div class="box">
-            <p class="title is-3">その他</p>
-            <p class="title is-5">機械学習, Slack, Git, Github, TravisCI, CircleCI, マイクロサービスアーキテクチャ, bugsnag, Sentry, Google Apps Script, VBA, gRPC, GraphQL</p>
-          </div>
+        <div class="mt-4">
+          <h3 class="text-xl font-semibold mb-2">そこそこできる</h3>
+          <p class="text-gray-700">Go, TypeScript, Elixir, PHP</p>
         </div>
       </div>
-    </section>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">フレームワーク</h2>
+        <p class="text-gray-700">Ruby on Rails, Django, Bottle, Vue.js, Nuxt.js</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">DB</h2>
+        <p class="text-gray-700">Mysql, Redis, DynamoDB</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">IaaS</h2>
+        <p class="text-gray-700">AWS, GCP</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">インフラ</h2>
+        <p class="text-gray-700">Docker, Linux</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md col-span-1 md:col-span-2 lg:col-span-3">
+        <h2 class="text-2xl font-semibold mb-4">その他</h2>
+        <p class="text-gray-700">
+          機械学習, Slack, Git, Github, TravisCI, CircleCI, マイクロサービスアーキテクチャ, bugsnag, Sentry, Google Apps Script, VBA, gRPC, GraphQL
+        </p>
+      </div>
+
+    </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
 <style>
-#background {
-  background-image: url('~assets/png/home/background.png');
-  background-size: cover;
-}
-
-.description {
-  margin-top: 50px;
-  background-color: #fff5ee;
-  background-size: cover;
-  margin-bottom: 100px;
-}
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #07090a;
-  letter-spacing: 1px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.title-margin {
-  margin-top: 50px;
-}
+/* All styling is now done with Tailwind CSS utility classes */
 </style>

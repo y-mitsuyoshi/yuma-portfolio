@@ -1,60 +1,27 @@
 <template>
-  <div>
-    <nuxt/>
-    <Contact/>
-    <Footer/>
+  <div class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div>
+          <nuxt-link to="/" class="text-2xl font-bold text-gray-800">Yuma Mitsuyoshi</nuxt-link>
+        </div>
+        <div class="flex space-x-4">
+          <nuxt-link to="/" class="px-4 py-2 rounded hover:bg-gray-200">Home</nuxt-link>
+          <nuxt-link to="/profile" class="px-4 py-2 rounded hover:bg-gray-200">Profile</nuxt-link>
+          <nuxt-link to="/skill" class="px-4 py-2 rounded hover:bg-gray-200">Skill</nuxt-link>
+          <nuxt-link to="/hobby" class="px-4 py-2 rounded hover:bg-gray-200">Hobby</nuxt-link>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+      <nuxt />
+    </main>
+
+    <Contact />
+    <Footer />
   </div>
 </template>
-
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 3px solid #438173;
-  color: #438173;
-  text-decoration: none;
-  padding: 10px 19px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 3px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
 
 <script>
 import Footer from '~/components/Footer.vue'
@@ -66,3 +33,10 @@ export default {
   }
 }
 </script>
+
+<style>
+/* We will rely on Tailwind CSS for all styling */
+body {
+  @apply bg-gray-100;
+}
+</style>
