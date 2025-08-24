@@ -85,6 +85,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+  // Transpile modern ESM packages in node_modules that use optional chaining
+  // so Nuxt's Babel can process them (fixes errors from @firebase / firebase)
+  transpile: ["@firebase", "firebase"],
     /*
     ** You can extend webpack config here
     */
