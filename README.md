@@ -60,3 +60,29 @@ npx firebase deploy
 
 ## 補足情報
 - Node の推奨バージョン: 22.x
+
+## Volta とシェル設定について
+このリポジトリは Node v22.x を想定しています。Volta を使っている場合、システム全体で常に Volta の Node を優先するには `~/.zshrc` に以下を追加してください:
+
+```bash
+# ~/.zshrc に追加
+export PATH="$HOME/.volta/bin:$PATH"
+```
+
+上記を追加後、新しいターミナルを開くと Volta の Node（v22.18.0）が優先されます。
+
+このリポジトリでは、ホームのシェル設定を直接編集しなくても Node22 を使えるように、プロジェクト内に `scripts/use-volta-node.sh` を用意しています。使い方:
+
+```bash
+# Node のバージョン確認
+./scripts/use-volta-node.sh node -v
+
+# npm install を Volta 経由で実行
+./scripts/use-volta-node.sh npm install
+
+# 開発サーバー起動
+./scripts/use-volta-node.sh npm run dev
+```
+
+## .nvmrc と Git
+プロジェクト内に `.nvmrc` を置いていますが、ローカルの Node バージョンファイル `.nvmrc` はリポジトリに含めない運用にするため、`.gitignore` に追加済みです。

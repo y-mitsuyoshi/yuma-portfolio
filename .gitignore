@@ -78,3 +78,6 @@ env/
 # Ignore build artifacts produced by CI or local experimentation
 .serverless/
 .vuepress/dist/
+
+# local node version file
+.nvmrc
