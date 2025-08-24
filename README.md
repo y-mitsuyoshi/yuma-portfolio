@@ -60,6 +60,3 @@ npx firebase deploy
 
 ## 補足情報
 - Node の推奨バージョン: 22.x
-- package.json に開発・公開で使う主要なスクリプトが定義されています。
-
-もし README に追加したいスクリーンショットやデプロイ先の詳細（Firebase プロジェクト ID 等）があれば教えてください。
