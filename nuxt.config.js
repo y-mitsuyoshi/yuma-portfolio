@@ -5,8 +5,7 @@ const gtmHeadTag = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':ne
 const gtmBodyTag = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
 
 module.exports = {
-  mode: 'universal',
-
+  target: 'static',
   /*
   ** Headers of the page
   */
