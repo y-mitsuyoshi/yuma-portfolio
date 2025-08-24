@@ -5,29 +5,29 @@
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
         <div>
-          <nuxt-link to="/" class="text-2xl font-bold text-gray-800"
-            >Yuma Mitsuyoshi</nuxt-link
+          <NuxtLink to="/" class="text-2xl font-bold text-gray-800"
+            >Yuma Mitsuyoshi</NuxtLink
           >
         </div>
         <div class="flex space-x-4">
-          <nuxt-link to="/" class="px-4 py-2 rounded hover:bg-gray-200"
-            >Home</nuxt-link
+          <NuxtLink to="/" class="px-4 py-2 rounded hover:bg-gray-200"
+            >Home</NuxtLink
           >
-          <nuxt-link to="/profile" class="px-4 py-2 rounded hover:bg-gray-200"
-            >Profile</nuxt-link
+          <NuxtLink to="/profile" class="px-4 py-2 rounded hover:bg-gray-200"
+            >Profile</NuxtLink
           >
-          <nuxt-link to="/skill" class="px-4 py-2 rounded hover:bg-gray-200"
-            >Skill</nuxt-link
+          <NuxtLink to="/skill" class="px-4 py-2 rounded hover:bg-gray-200"
+            >Skill</NuxtLink
           >
-          <nuxt-link to="/hobby" class="px-4 py-2 rounded hover:bg-gray-200"
-            >Hobby</nuxt-link
+          <NuxtLink to="/hobby" class="px-4 py-2 rounded hover:bg-gray-200"
+            >Hobby</NuxtLink
           >
         </div>
       </nav>
     </header>
 
     <main class="container mx-auto px-6 py-8">
-      <nuxt />
+      <NuxtPage />
     </main>
 
     <ContactCard />
@@ -47,8 +47,5 @@ export default {
 </script>
 
 <style>
-/* We will rely on Tailwind CSS for all styling */
-body {
-  @apply bg-gray-100;
-}
+/* All styling is done with Tailwind utility classes in templates. */
 </style>
