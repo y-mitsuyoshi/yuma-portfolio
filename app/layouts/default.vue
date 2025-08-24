@@ -1,25 +1,33 @@
 <template>
-  <div class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow-md">
+  <div class="bg-gray-900 text-gray-200 min-h-screen">
+    <header class="bg-gray-800/30 backdrop-blur-lg shadow-lg sticky top-0 z-50">
       <nav
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
         <div>
-          <NuxtLink to="/" class="text-2xl font-bold text-gray-800"
+          <NuxtLink to="/" class="text-2xl font-bold text-white"
             >Yuma Mitsuyoshi</NuxtLink
           >
         </div>
-        <div class="flex space-x-4">
-          <NuxtLink to="/" class="px-4 py-2 rounded hover:bg-gray-200"
+        <div class="flex space-x-2">
+          <NuxtLink
+            to="/"
+            class="px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
             >Home</NuxtLink
           >
-          <NuxtLink to="/profile" class="px-4 py-2 rounded hover:bg-gray-200"
+          <NuxtLink
+            to="/profile"
+            class="px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
             >Profile</NuxtLink
           >
-          <NuxtLink to="/skill" class="px-4 py-2 rounded hover:bg-gray-200"
+          <NuxtLink
+            to="/skill"
+            class="px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
             >Skill</NuxtLink
           >
-          <NuxtLink to="/hobby" class="px-4 py-2 rounded hover:bg-gray-200"
+          <NuxtLink
+            to="/hobby"
+            class="px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
             >Hobby</NuxtLink
           >
         </div>
@@ -47,5 +55,7 @@ export default {
 </script>
 
 <style>
-/* All styling is done with Tailwind utility classes in templates. */
+.router-link-exact-active {
+  @apply bg-gray-700 text-white;
+}
 </style>
