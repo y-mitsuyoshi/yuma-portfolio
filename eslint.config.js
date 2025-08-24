@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     node: true,
@@ -29,7 +28,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['layouts/*.vue', 'pages/**/*.vue'],
+      files: ['app/layouts/*.vue', 'app/pages/**/*.vue'],
       rules: {
         'vue/multi-word-component-names': 'off',
       },
