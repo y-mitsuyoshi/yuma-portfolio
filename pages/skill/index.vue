@@ -2,7 +2,6 @@
   <div>
     <h1 class="text-4xl font-bold text-center mb-8">Skill</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
       <div class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4">プログラミング言語</h2>
         <div>
@@ -17,7 +16,9 @@
 
       <div class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold mb-4">フレームワーク</h2>
-        <p class="text-gray-700">Ruby on Rails, Django, Bottle, Vue.js, Nuxt.js</p>
+        <p class="text-gray-700">
+          Ruby on Rails, Django, Bottle, Vue.js, Nuxt.js
+        </p>
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow-md">
@@ -35,13 +36,16 @@
         <p class="text-gray-700">Docker, Linux</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow-md col-span-1 md:col-span-2 lg:col-span-3">
+      <div
+        class="bg-white p-6 rounded-lg shadow-md col-span-1 md:col-span-2 lg:col-span-3"
+      >
         <h2 class="text-2xl font-semibold mb-4">その他</h2>
         <p class="text-gray-700">
-          機械学習, Slack, Git, Github, TravisCI, CircleCI, マイクロサービスアーキテクチャ, bugsnag, Sentry, Google Apps Script, VBA, gRPC, GraphQL
+          機械学習, Slack, Git, Github, TravisCI, CircleCI,
+          マイクロサービスアーキテクチャ, bugsnag, Sentry, Google Apps Script,
+          VBA, gRPC, GraphQL
         </p>
       </div>
-
     </div>
   </div>
 </template>
