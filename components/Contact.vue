@@ -1,60 +1,36 @@
 <template>
-  <div id="contact">
-    <div class="content has-text-centered">
-      <p>
-        <strong class="title is-2">Contact</strong>
-      </p>
-      <div>
-        <a
-          href="https://www.facebook.com/yuma.mitsuyoshi"
-          class="icon-margin">
-          <i class="fab fa-facebook-square fa-4x facebook-icon"></i>
-        </a>
-        <a
-          href="https://github.com/y-mitsuyoshi"
-          class="icon-margin">
-          <i class="fab fa-github-square fa-4x github-icon"></i>
-        </a>
-        <a
-          href="https://twitter.com/MitsuyoshiYuma"
-          class="icon-margin">
-          <i class="fab fa-twitter-square fa-4x twitter-icon"></i>
-        </a>
+  <div class="bg-gray-200 py-12">
+    <div class="container mx-auto px-6 text-center">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-800">Contact</h2>
+        <div class="flex justify-center space-x-6 mt-4">
+          <a href="https://www.facebook.com/yuma.mitsuyoshi" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">
+            <font-awesome-icon :icon="['fab', 'facebook-square']" size="3x" />
+          </a>
+          <a href="https://github.com/y-mitsuyoshi" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
+            <font-awesome-icon :icon="['fab', 'github-square']" size="3x" />
+          </a>
+          <a href="https://twitter.com/MitsuyoshiYuma" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-400">
+            <font-awesome-icon :icon="['fab', 'twitter-square']" size="3x" />
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="content has-text-centered">
-      <p>
-        <strong class="title is-2">Link</strong>
-      </p>
       <div>
-        <strong class="title is-3">
-          <a href="http://tabilike.hatenablog.com">ブログ</a>
-        </strong>
+        <h2 class="text-3xl font-bold text-gray-800">Link</h2>
+        <div class="mt-4">
+          <a href="http://tabilike.hatenablog.com" target="_blank" rel="noopener noreferrer" class="text-xl text-blue-500 hover:underline">
+            ブログ
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style>
-.contact {
-  background-color: rgb(253, 255, 231);
-  background-size: cover;
-}
+<script>
+export default {}
+</script>
 
-.facebook-icon {
-  color: #305097;
-}
-
-.github-icon {
-  color: black;
-}
-
-.twitter-icon {
-  color: #55acee;
-}
-
-.icon-margin {
-  margin-left: 10px;
-  margin-right: 10px;
-}
+<style scoped>
+/* Scoped styles can be added here if needed, but we are using Tailwind utility classes. */
 </style>

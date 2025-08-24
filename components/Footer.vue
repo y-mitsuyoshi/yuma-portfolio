@@ -1,18 +1,15 @@
 <template>
-  <div>
-    <footer class="footer footer-color">
-      <div class="content has-text-right">
-        <p>
-          <strong class="has-text-white">Product by Yuma Mitsuyoshi</strong>
-        </p>
-      </div>
-    </footer>
-  </div>
+  <footer class="bg-gray-800 text-white py-4 mt-8">
+    <div class="container mx-auto px-6 text-right">
+      <p>Product by Yuma Mitsuyoshi</p>
+    </div>
+  </footer>
 </template>
 
-<style>
-.footer-color {
-  background-color: black;
-  background-size: cover;
-}
+<script>
+export default {}
+</script>
+
+<style scoped>
+/* All styling is done with Tailwind CSS utility classes */
 </style>
