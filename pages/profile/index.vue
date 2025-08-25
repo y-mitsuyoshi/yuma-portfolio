@@ -185,28 +185,67 @@
           <div class="profile-card">
             <h2 class="card-title">
               <font-awesome-icon icon="laptop-code" class="card-icon text-green-600" />
-              Engineering Philosophy
+              Engineering Philosophy & Expertise
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 class="section-subtitle">🔧 技術的アプローチ</h3>
+                <h3 class="section-subtitle">🔧 技術的専門性</h3>
                 <ul class="philosophy-list">
-                  <li>サービス価値の最大化を重視した技術選定</li>
-                  <li>パフォーマンス・スケーラビリティ・保守性のバランス</li>
-                  <li>迅速な意思決定と柔軟な軌道修正</li>
-                  <li>継続的な改善と最適化</li>
+                  <li><strong>Ruby on Rails</strong> - 9年以上の実務経験、API設計・開発・運用</li>
+                  <li><strong>マイクロサービス</strong> - gRPC、DDD、クリーンアーキテクチャ</li>
+                  <li><strong>パフォーマンス最適化</strong> - DB設計、スロークエリ改善、負荷対策</li>
+                  <li><strong>モニタリング基盤</strong> - Sentry、X-Ray、Grafana導入</li>
+                  <li><strong>CI/CD改善</strong> - CircleCI最適化、コスト4割削減</li>
                 </ul>
               </div>
               
               <div>
-                <h3 class="section-subtitle">👥 チーム運営方針</h3>
+                <h3 class="section-subtitle">👥 マネジメント実績</h3>
                 <ul class="philosophy-list">
-                  <li>メンバーの成長と生産性向上の両立</li>
-                  <li>アジャイルな開発文化の醸成</li>
-                  <li>技術要件と事業要件のバランス調整</li>
-                  <li>オープンなコミュニケーション環境</li>
+                  <li><strong>チーム運営</strong> - スクラム開発導入、ベロシティ管理</li>
+                  <li><strong>メンバー育成</strong> - 1on1改善、技術勉強会企画</li>
+                  <li><strong>プロセス改善</strong> - レビュー品質向上、開発効率化</li>
+                  <li><strong>プロジェクト管理</strong> - 要件定義〜リリースまで一貫対応</li>
+                  <li><strong>組織改善</strong> - 採用面接、人材育成、文化醸成</li>
                 </ul>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="section-subtitle">💡 特徴的なプロジェクト経験</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="project-highlight">
+                  <div class="project-icon">🏗️</div>
+                  <div>
+                    <div class="project-title">バッチ処理基盤刷新</div>
+                    <div class="project-desc">crontab → Rundeck移行で運用性大幅改善</div>
+                  </div>
+                </div>
+                
+                <div class="project-highlight">
+                  <div class="project-icon">🤖</div>
+                  <div>
+                    <div class="project-title">AI機能実装</div>
+                    <div class="project-desc">ChatGPT活用、ストリーミング対応</div>
+                  </div>
+                </div>
+                
+                <div class="project-highlight">
+                  <div class="project-icon">📊</div>
+                  <div>
+                    <div class="project-title">モニタリング改善</div>
+                    <div class="project-desc">X-Ray・Sentry導入、可視化ダッシュボード構築</div>
+                  </div>
+                </div>
+                
+                <div class="project-highlight">
+                  <div class="project-icon">🔄</div>
+                  <div>
+                    <div class="project-title">DDD・GraphQL導入</div>
+                    <div class="project-desc">レガシーシステムのモダン化リファクタリング</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -361,6 +400,41 @@
   margin-right: 0.75rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
+}
+
+.project-highlight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.project-icon {
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  flex-shrink: 0;
+}
+
+.project-title {
+  font-weight: 600;
+  color: rgb(30 41 59);
+  margin-bottom: 0.25rem;
+}
+
+.project-desc {
+  color: rgb(100 116 139);
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {

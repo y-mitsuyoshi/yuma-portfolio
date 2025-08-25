@@ -117,14 +117,23 @@ const skillCategories = [
         ]
       },
       {
-        title: '扱える言語',
+        title: '実務経験あり',
         strength: 'secondary',
         items: [
-          { label: 'Python', emoji: '🐍', bgClass: 'bg-green-100', textClass: 'text-green-800' },
           { label: 'Go', emoji: '🐹', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' },
+          { label: 'Python', emoji: '🐍', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'PHP', emoji: '�', bgClass: 'bg-indigo-100', textClass: 'text-indigo-800' },
+          { label: 'Java', emoji: '☕', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
+          { label: 'VB.NET', emoji: '�', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
+        ]
+      },
+      {
+        title: '学習・分析経験',
+        strength: 'basic',
+        items: [
+          { label: 'R', emoji: '📊', bgClass: 'bg-gray-100', textClass: 'text-gray-800' },
           { label: 'Elixir', emoji: '⚗️', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
-          { label: 'PHP', emoji: '🐘', bgClass: 'bg-indigo-100', textClass: 'text-indigo-800' },
-          { label: 'R', emoji: '📊', bgClass: 'bg-gray-100', textClass: 'text-gray-800' }
+          { label: 'SQL', emoji: '🗃️', bgClass: 'bg-slate-100', textClass: 'text-slate-800' }
         ]
       }
     ]
@@ -139,39 +148,43 @@ const skillCategories = [
         strength: 'primary',
         items: [
           { label: 'Rails', emoji: '🚂', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'Sinatra', emoji: '🎵', bgClass: 'bg-red-100', textClass: 'text-red-800' }
+          { label: 'Sinatra', emoji: '🎵', bgClass: 'bg-red-100', textClass: 'text-red-800' },
+          { label: 'gRPC', emoji: '⚡', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
         ]
       },
       {
-        title: 'フロントエンド（扱える）',
+        title: 'フロントエンド（実務経験）',
         strength: 'secondary',
         items: [
           { label: 'Vue.js', emoji: '🖖', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'Nuxt.js', emoji: '🏔️', bgClass: 'bg-green-100', textClass: 'text-green-800' }
+          { label: 'Nuxt.js', emoji: '🏔️', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'jQuery', emoji: '📝', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
         ]
       },
       {
-        title: 'その他',
-        strength: 'basic',
+        title: 'その他フレームワーク',
+        strength: 'secondary',
         items: [
           { label: 'Django', emoji: '🐍', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'FastAPI', emoji: '🏃', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
-          { label: 'React', emoji: '⚛️', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' }
+          { label: 'bottle', emoji: '🍶', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'WordPress', emoji: '📝', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
+          { label: 'GraphQL', emoji: '🔗', bgClass: 'bg-pink-100', textClass: 'text-pink-800' }
         ]
       }
     ]
   },
 
   {
-    title: 'データベース',
+    title: 'データベース・ストレージ',
     icon: '🗄️',
     groups: [
       {
-        title: 'RDBMS',
+        title: 'RDBMS（実務経験）',
         strength: 'primary',
         items: [
           { label: 'MySQL', emoji: '🐬', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
           { label: 'PostgreSQL', emoji: '🐘', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
+          { label: 'Oracle', emoji: '🔺', bgClass: 'bg-red-100', textClass: 'text-red-800' },
           { label: 'SQLite', emoji: '💿', bgClass: 'bg-gray-100', textClass: 'text-gray-800' }
         ]
       },
@@ -180,63 +193,113 @@ const skillCategories = [
         strength: 'secondary',
         items: [
           { label: 'Redis', emoji: '📮', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'DynamoDB', emoji: '⚡', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' },
-          { label: 'MongoDB', emoji: '🍃', bgClass: 'bg-green-100', textClass: 'text-green-800' }
+          { label: 'DynamoDB', emoji: '⚡', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' }
         ]
       }
     ]
   },
 
   {
-    title: 'クラウド・インフラ',
+    title: 'クラウド・インフラ・OS',
     icon: '☁️',
     groups: [
       {
-        title: 'クラウド（扱える）',
+        title: 'クラウドサービス',
         strength: 'secondary',
         items: [
           { label: 'AWS', emoji: '🌩️', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'GoogleCloud', emoji: '☁️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
-      },
-      {
-        title: 'コンテナ',
-        strength: 'secondary',
-        items: [
-          { label: 'Docker', emoji: '🐳', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' }
+          { label: 'Fargate', emoji: '🚢', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
+          { label: 'CloudWatch', emoji: '📊', bgClass: 'bg-orange-100', textClass: 'text-orange-800' }
         ]
       },
       {
         title: 'OS・サーバー',
-        strength: 'basic',
+        strength: 'secondary',
         items: [
           { label: 'Linux', emoji: '🐧', bgClass: 'bg-gray-100', textClass: 'text-gray-800' },
-          { label: 'Nginx', emoji: '🌐', bgClass: 'bg-green-100', textClass: 'text-green-800' }
+          { label: 'Windows Server', emoji: '🪟', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
+        ]
+      },
+      {
+        title: 'コンテナ・ツール',
+        strength: 'basic',
+        items: [
+          { label: 'Docker', emoji: '🐳', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' },
+          { label: 'Git', emoji: '📂', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
+          { label: 'GitHub', emoji: '🐙', bgClass: 'bg-gray-100', textClass: 'text-gray-800' }
         ]
       }
     ]
   },
 
   {
-    title: 'マネジメント・開発運用',
-    icon: '👥',
+    title: '開発手法・ツール・監視',
+    icon: '🛠️',
     groups: [
       {
-        title: 'マネジメント・リーダーシップ',
+        title: '開発手法・アーキテクチャ',
         strength: 'primary',
         items: [
-          { label: 'チーム運営', emoji: '👥', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
-          { label: '技術選定', emoji: '🎯', bgClass: 'bg-indigo-100', textClass: 'text-indigo-800' },
-          { label: 'パフォーマンス改善', emoji: '⚡', bgClass: 'bg-pink-100', textClass: 'text-pink-800' }
+          { label: 'アジャイル開発', emoji: '🔄', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'スクラム開発', emoji: '🏃', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'DDD', emoji: '🏗️', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
+          { label: 'マイクロサービス', emoji: '🔧', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
         ]
       },
       {
-        title: '監視・運用',
+        title: '監視・運用ツール',
         strength: 'secondary',
         items: [
-          { label: 'Sentry', emoji: '🔍', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'Bugsnag', emoji: '🐛', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' },
-          { label: 'CloudWatch', emoji: '📈', bgClass: 'bg-orange-100', textClass: 'text-orange-800' }
+          { label: 'Sentry', emoji: '�', bgClass: 'bg-red-100', textClass: 'text-red-800' },
+          { label: 'X-Ray', emoji: '🔬', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
+          { label: 'Grafana', emoji: '📈', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
+          { label: 'Rundeck', emoji: '⚙️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
+        ]
+      },
+      {
+        title: 'CI/CD・その他',
+        strength: 'basic',
+        items: [
+          { label: 'CircleCI', emoji: '�', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'Jest', emoji: '🧪', bgClass: 'bg-red-100', textClass: 'text-red-800' },
+          { label: 'ESLint', emoji: '📝', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' }
+        ]
+      }
+    ]
+  },
+
+  {
+    title: 'マネジメント・リーダーシップ',
+    icon: '👥',
+    groups: [
+      {
+        title: 'チームマネジメント（強み）',
+        strength: 'primary',
+        items: [
+          { label: 'チーム運営', emoji: '👥', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
+          { label: 'メンバー育成', emoji: '�', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: '1on1運営', emoji: '🗣️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
+          { label: '採用面接', emoji: '🤝', bgClass: 'bg-pink-100', textClass: 'text-pink-800' }
+        ]
+      },
+      {
+        title: 'プロジェクトマネジメント',
+        strength: 'primary',
+        items: [
+          { label: 'プロジェクト管理', emoji: '📋', bgClass: 'bg-indigo-100', textClass: 'text-indigo-800' },
+          { label: '要件定義', emoji: '�', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
+          { label: '技術選定', emoji: '🎯', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
+          { label: 'パフォーマンス改善', emoji: '⚡', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' }
+        ]
+      },
+      {
+        title: '組織改善・教育',
+        strength: 'secondary',
+        items: [
+          { label: '勉強会企画', emoji: '📚', bgClass: 'bg-green-100', textClass: 'text-green-800' },
+          { label: 'レビュー改善', emoji: '�️', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
+          { label: 'VBAコーチング', emoji: '🏫', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
+          { label: 'コスト削減', emoji: '💰', bgClass: 'bg-green-100', textClass: 'text-green-800' }
         ]
       }
     ]
