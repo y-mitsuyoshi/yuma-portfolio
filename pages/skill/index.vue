@@ -130,8 +130,7 @@ const skillCategories = [
       {
         title: 'コンテナ',
         items: [
-          { label: 'Docker', emoji: '🐳', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' },
-          { label: 'Compose', emoji: '📦', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' }
+          { label: 'Docker', emoji: '🐳', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' }
         ]
       },
       {
