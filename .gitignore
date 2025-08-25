@@ -29,7 +29,7 @@ firebase-debug.log
 
 # Environment files
 .env
-.env.*
+.env.local
 
 # Local node/npm config (do not track local settings)
 .npmrc
