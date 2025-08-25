@@ -106,6 +106,25 @@
         </div>
       </div>
     </section>
+
+    <!-- My Creations Section -->
+    <section id="creations" class="py-20 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h3 class="text-3xl font-bold text-slate-800 mb-12">My Creations</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Zatsudan Gacha -->
+            <a href="https://zatsudan-gacha.app" target="_blank" rel="noopener noreferrer" class="overview-card">
+              <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <font-awesome-icon icon="comments" class="text-green-600 text-2xl" />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">雑談テーマガチャ</h4>
+              <p class="text-slate-600">ランダムな雑談テーマを生成するWebアプリ。会話のきっかけに困ったときに便利です。</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 

@@ -18,6 +18,7 @@
           <nuxt-link to="/" class="footer-link">Home</nuxt-link>
           <nuxt-link to="/profile" class="footer-link">Profile</nuxt-link>
           <nuxt-link to="/skill" class="footer-link">Skills</nuxt-link>
+          <nuxt-link to="/#creations" class="footer-link">Creations</nuxt-link>
           <nuxt-link to="/hobby" class="footer-link">Hobby</nuxt-link>
         </div>
         
