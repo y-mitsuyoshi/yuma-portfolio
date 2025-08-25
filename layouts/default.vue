@@ -15,7 +15,7 @@
     </header>
 
     <main class="container mx-auto px-6 py-8">
-      <nuxt />
+      <slot />
     </main>
 
     <Contact />
@@ -23,20 +23,14 @@
   </div>
 </template>
 
-<script>
-import Footer from '~/components/Footer.vue'
-import Contact from '~/components/Contact.vue'
-export default {
-  components: {
-    Footer,
-    Contact
-  }
-}
+<script setup>
+// Vue 3 Composition API with auto-import
+// Nuxt 4では自動的にコンポーネントがインポートされます
 </script>
 
 <style>
-/* We will rely on Tailwind CSS for all styling */
+/* Tailwind CSSを使用 */
 body {
-  @apply bg-gray-100;
+  background-color: #f3f4f6; /* bg-gray-100 */
 }
 </style>

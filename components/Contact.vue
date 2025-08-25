@@ -27,8 +27,9 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+// Vue 3 Composition API
+// FontAwesome アイコンは自動的に利用可能
 </script>
 
 <style scoped>

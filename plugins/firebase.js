@@ -1,4 +1,4 @@
-// Initialize Firebase using environment variables
+// plugins/firebase.js - Nuxt 4 & Vue 3対応
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 
@@ -13,12 +13,20 @@ const firebaseConfig = {
   measurementId: process.env.FIREBASE_MEASUREMENT_ID
 }
 
-if (process.client) {
-  const app = initializeApp(firebaseConfig)
-  try {
-    // analytics requires a browser environment
-    getAnalytics(app)
-  } catch (e) {
-    // analytics may fail in some environments; ignore
+export default defineNuxtPlugin(() => {
+  // クライアントサイドでのみ実行
+  if (import.meta.client) {
+    const app = initializeApp(firebaseConfig)
+    try {
+      getAnalytics(app)
+    } catch (e) {
+      // Analytics初期化エラーを無視
+      console.warn('Firebase Analytics initialization failed:', e)
+    }
+    return { 
+      provide: { 
+        firebaseApp: app 
+      } 
+    }
   }
-}
+})

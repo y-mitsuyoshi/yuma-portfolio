@@ -12,8 +12,9 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+// Vue 3 Composition API
+// Nuxt 4では自動的にheadやメタデータを管理
 </script>
 
 <style>

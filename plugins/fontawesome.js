@@ -1,12 +1,15 @@
-import Vue from 'vue'
+// plugins/fontawesome.js
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFacebookSquare, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 
-// This is important, we are going to let Nuxt.js worry about the CSS
+// CSSの自動追加を防ぐ（nuxt.configでスタイルを読み込んでいるため）
 config.autoAddCss = false
 
-// You can add your icons directly in this plugin. See https://github.com/FortAwesome/vue-fontawesome#basic
+// アイコンをライブラリに追加
 library.add(faFacebookSquare, faGithubSquare, faTwitterSquare)
 
-Vue.component('FontAwesomeIcon', FontAwesomeIcon)
+export default defineNuxtPlugin((nuxtApp) => {
+  // Vue 3 / Nuxt 4でのコンポーネント登録
+  nuxtApp.vueApp.component('FontAwesomeIcon', FontAwesomeIcon)
+})

@@ -37,8 +37,8 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+// Vue 3 Composition API
 </script>
 
 <style>
