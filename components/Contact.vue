@@ -9,7 +9,7 @@
         </div>
 
         <!-- Social Links -->
-        <div class="flex justify-center items-center space-x-8 mb-12">
+        <div class="social-links-container mb-12">
           <a
             href="https://www.facebook.com/yuma.mitsuyoshi"
             target="_blank"
@@ -136,6 +136,14 @@
 </template>
 
 <style scoped>
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 .social-link {
   display: flex;
   flex-direction: column;
@@ -147,6 +155,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  min-width: 100px;
 }
 
 .social-link:hover {
@@ -234,8 +243,16 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .social-links-container {
+    gap: 1rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
   .social-link {
     padding: 0.75rem;
+    min-width: 85px;
+    flex: 0 0 auto;
   }
 
   .social-icon {
@@ -244,6 +261,27 @@
 
   .social-label {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links-container {
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .social-link {
+    padding: 0.5rem;
+    min-width: 75px;
+  }
+
+  .social-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .social-label {
+    font-size: 0.7rem;
   }
 }
 </style>
