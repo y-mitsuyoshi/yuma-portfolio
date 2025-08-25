@@ -38,6 +38,12 @@ import {
   faUser,
   faBriefcase,
   faLaptopCode,
+  faHome,
+  faHeart,
+  faBars,
+  faTimes,
+  faChevronDown,
+  faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 
 // CSSの自動追加を防ぐ（nuxt.configでスタイルを読み込んでいるため）
@@ -78,7 +84,13 @@ library.add(
   faChessBoard,
   faUser,
   faBriefcase,
-  faLaptopCode
+  faLaptopCode,
+  faHome,
+  faHeart,
+  faBars,
+  faTimes,
+  faChevronDown,
+  faUsers
 )
 
 export default defineNuxtPlugin((nuxtApp) => {
