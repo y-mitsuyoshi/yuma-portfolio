@@ -325,6 +325,15 @@
 </style>
 
 <script setup>
+// SEO設定
+useSeo({
+  title: 'Hobbies & Interests - Yuma Mitsuyoshi',
+  description: '仕事以外で楽しんでいること。ウイスキーなどのお酒、約30ヶ国の海外旅行経験、アート系映画鑑賞、ボードゲームなど、個人的な趣味と興味について詳しく紹介。',
+  keywords: 'Hobbies,Interests,Whiskey,Travel,Movies,Board Games,趣味,ウイスキー,海外旅行,映画,ボードゲーム,バックパッカー,ラガブーリン,ホドロフスキー',
+  type: 'website',
+  canonical: '/hobby'
+})
+
 // Analytics tracking
 const { $trackEvent } = useNuxtApp()
 
@@ -333,11 +342,5 @@ onMounted(() => {
     page: 'hobbies',
     section: 'personal_interests'
   })
-})
-
-// Meta and SEO
-useSeoMeta({
-  title: 'Hobbies - Yuma Mitsuyoshi',
-  description: 'Personal interests and hobbies including whiskey, travel, movies, and board games'
 })
 </script>

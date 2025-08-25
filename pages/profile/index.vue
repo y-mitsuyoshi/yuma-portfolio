@@ -526,6 +526,15 @@
 </style>
 
 <script setup>
+// SEO設定
+useSeo({
+  title: 'Profile - Yuma Mitsuyoshi',
+  description: 'Engineering Manager & Full-Stack Developer のプロフィール詳細。9年以上のエンジニア経験を通じてRuby on Railsを中心としたバックエンド開発に強みを持ち、チームマネジメント・技術選定・パフォーマンスチューニングを得意とします。',
+  keywords: 'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby on Rails,バックエンド開発,チームマネジメント,TRUSTDOCK,ココナラ,MERY',
+  type: 'website',
+  canonical: '/profile'
+})
+
 // Analytics tracking
 const { $trackEvent } = useNuxtApp()
 
@@ -534,11 +543,5 @@ onMounted(() => {
     page: 'profile',
     section: 'personal_info'
   })
-})
-
-// Meta and SEO
-useSeoMeta({
-  title: 'Profile - Yuma Mitsuyoshi',
-  description: 'Engineering Manager & Full-Stack Developer のプロフィール詳細'
 })
 </script>

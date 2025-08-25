@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yuma-portfolio.web.app/sitemap.xml
+
+# 不要なクロールを防ぐ
+Disallow: /debug-analytics
+Disallow: /_nuxt/
+Disallow: /.output/
+
+# Well-known paths
+Allow: /.well-known/
+
+# Images and assets
+Allow: /assets/
+Allow: /static/
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

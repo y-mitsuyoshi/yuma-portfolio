@@ -308,6 +308,14 @@
 </style>
 
 <script setup>
+// SEO設定
+useSeo({
+  title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
+  description: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。PHP、Go、Java、Vue.js、Nuxt.jsなどの技術スタックでWebアプリケーション開発。',
+  keywords: 'Yuma Mitsuyoshi,Engineering Manager,Full-Stack Developer,Backend Developer,PHP,Go,Java,Vue.js,Nuxt.js,Web Development,Team Management,技術マネジメント,フルスタック開発,バックエンド開発',
+  type: 'website'
+})
+
 // Analytics tracking functions
 const { $trackEvent } = useNuxtApp()
 
@@ -332,11 +340,5 @@ onMounted(() => {
     page: 'home',
     action: 'hero_section_viewed'
   })
-})
-
-// Meta and SEO
-useSeoMeta({
-  title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
-  description: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。'
 })
 </script>

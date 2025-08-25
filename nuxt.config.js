@@ -12,18 +12,43 @@ export default defineNuxtConfig({
   // 互換性の日付設定
   compatibilityDate: '2025-08-25',
 
-  // Nuxt 4のデフォルトでSPAモード
-  ssr: false,
+  // SEO向上のためSSGを有効化
+  ssr: true,
 
   app: {
     head: {
-      title: pkg.name,
+      title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: pkg.description },
+        { hid: 'description', name: 'description', content: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。' },
+        { name: 'keywords', content: 'Yuma Mitsuyoshi,Engineering Manager,Full-Stack Developer,Backend Developer,PHP,Go,Java,Vue.js,Nuxt.js,Web Development,Team Management,技術マネジメント,フルスタック開発,バックエンド開発' },
+        { name: 'author', content: 'Yuma Mitsuyoshi' },
+        { name: 'robots', content: 'index,follow' },
+        { name: 'googlebot', content: 'index,follow' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { property: 'og:site_name', content: 'Yuma Mitsuyoshi Portfolio' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'ja_JP' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@MitsuyoshiYuma' },
+        { name: 'twitter:creator', content: '@MitsuyoshiYuma' },
+        { name: 'theme-color', content: '#2563eb' },
+        { name: 'msapplication-TileColor', content: '#2563eb' },
+        { name: 'application-name', content: 'Yuma Mitsuyoshi Portfolio' },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+        { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#2563eb' },
+        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: '//www.googletagmanager.com' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+      ],
       script: [
         {
           hid: 'gtmHead',

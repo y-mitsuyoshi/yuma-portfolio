@@ -612,6 +612,15 @@ const skillCategories = [
   },
 ]
 
+// SEO設定
+useSeo({
+  title: 'Technical Skills - Yuma Mitsuyoshi',
+  description: 'プログラミング言語、フレームワーク、ツール、技術的専門知識の詳細。Ruby on Rails、JavaScript、Go、Python、PHP、Java、Vue.js、Nuxt.js、AWS、チームマネジメントなどの実務経験とスキルレベル。',
+  keywords: 'Technical Skills,Programming Languages,Ruby on Rails,JavaScript,TypeScript,Go,Python,PHP,Java,Vue.js,Nuxt.js,AWS,Database,チームマネジメント,DDD,マイクロサービス',
+  type: 'website',
+  canonical: '/skill'
+})
+
 // Analytics tracking
 const { $trackEvent } = useNuxtApp()
 
@@ -620,12 +629,6 @@ onMounted(() => {
     page: 'skills',
     section: 'technical_skills'
   })
-})
-
-// Meta and SEO
-useSeoMeta({
-  title: 'Skills - Yuma Mitsuyoshi',
-  description: 'Programming languages, frameworks, tools, and technical expertise'
 })
 </script>
 

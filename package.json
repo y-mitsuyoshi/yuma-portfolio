@@ -1,8 +1,8 @@
 {
   "name": "yuma-portfolio",
   "version": "1.0.0",
-  "description": "My slick Nuxt.js project",
-  "author": "yuma",
+  "description": "Yuma Mitsuyoshi's Portfolio - Engineering Manager & Full-Stack Developer",
+  "author": "Yuma Mitsuyoshi <yuma@example.com>",
   "private": true,
   "scripts": {
     "build": "nuxt build",
