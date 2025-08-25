@@ -31,6 +31,10 @@ firebase-debug.log
 .env
 .env.*
 
+# Local node/npm config (do not track local settings)
+.npmrc
+.nvmrc
+
 # Logs
 logs/
 *.log
