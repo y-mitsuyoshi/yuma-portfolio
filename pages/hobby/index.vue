@@ -46,7 +46,6 @@
             <p class="hobby-description">
               特に好きな国は<span class="country-highlight">ハンガリー</span>と<span class="country-highlight">ウズベキスタン</span>。
               ハンガリーはデザートや食べ物がおいしいのが魅力です。ウズベキスタンとハンガリーどちらも建造物が素晴らしかったです。
-              今でも長期休暇があれば、フラっと一人旅に出かけています！
             </p>
           </div>
         </div>
