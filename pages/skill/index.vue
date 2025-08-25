@@ -124,7 +124,7 @@ const skillCategories = [
         title: 'クラウド（扱える）',
         items: [
           { label: 'AWS', emoji: '🌩️', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'GCP', emoji: '☁️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
+          { label: 'GoogleCloud', emoji: '☁️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
         ]
       },
       {
