@@ -31,6 +31,10 @@
               <font-awesome-icon icon="laptop-code" class="w-4 h-4 mr-2" />
               Skills
             </nuxt-link>
+            <nuxt-link to="/#creations" class="nav-link">
+              <font-awesome-icon icon="lightbulb" class="w-4 h-4 mr-2" />
+              Creations
+            </nuxt-link>
             <nuxt-link to="/hobby" class="nav-link">
               <font-awesome-icon icon="heart" class="w-4 h-4 mr-2" />
               Hobby
@@ -59,6 +63,10 @@
             <nuxt-link to="/skill" @click="mobileMenuOpen = false" class="mobile-nav-link">
               <font-awesome-icon icon="laptop-code" class="w-4 h-4 mr-3" />
               Skills
+            </nuxt-link>
+            <nuxt-link to="/#creations" @click="mobileMenuOpen = false" class="mobile-nav-link">
+              <font-awesome-icon icon="lightbulb" class="w-4 h-4 mr-3" />
+              Creations
             </nuxt-link>
             <nuxt-link to="/hobby" @click="mobileMenuOpen = false" class="mobile-nav-link">
               <font-awesome-icon icon="heart" class="w-4 h-4 mr-3" />

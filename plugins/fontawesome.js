@@ -44,6 +44,8 @@ import {
   faTimes,
   faChevronDown,
   faUsers,
+  faComments,
+  faLightbulb,
 } from '@fortawesome/free-solid-svg-icons'
 
 // CSSの自動追加を防ぐ（nuxt.configでスタイルを読み込んでいるため）
@@ -90,7 +92,9 @@ library.add(
   faBars,
   faTimes,
   faChevronDown,
-  faUsers
+  faUsers,
+  faComments,
+  faLightbulb
 )
 
 export default defineNuxtPlugin((nuxtApp) => {
