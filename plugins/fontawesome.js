@@ -31,6 +31,13 @@ import {
   faChartLine,
   faProjectDiagram,
   faSitemap,
+  faWhiskeyGlass,
+  faPlaneDeparture,
+  faFilm,
+  faChessBoard,
+  faUser,
+  faBriefcase,
+  faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons'
 
 // CSSの自動追加を防ぐ（nuxt.configでスタイルを読み込んでいるため）
@@ -64,7 +71,14 @@ library.add(
   faBug,
   faChartLine,
   faProjectDiagram,
-  faSitemap
+  faSitemap,
+  faWhiskeyGlass,
+  faPlaneDeparture,
+  faFilm,
+  faChessBoard,
+  faUser,
+  faBriefcase,
+  faLaptopCode
 )
 
 export default defineNuxtPlugin((nuxtApp) => {
