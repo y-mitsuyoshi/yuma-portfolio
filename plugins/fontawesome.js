@@ -19,6 +19,7 @@ import {
   faGitAlt,
   faGithub,
   faGitlab,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faRss,
@@ -95,6 +96,7 @@ library.add(
   faUsers,
   faComments,
   faLightbulb,
+  faInstagram,
 )
 
 export default defineNuxtPlugin((nuxtApp) => {

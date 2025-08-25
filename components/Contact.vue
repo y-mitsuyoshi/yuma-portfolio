@@ -25,6 +25,20 @@
           </a>
 
           <a
+            href="https://www.instagram.com/yuma.mitsuyoshi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link instagram"
+            aria-label="Instagram"
+          >
+            <font-awesome-icon
+              :icon="['fab', 'instagram']"
+              class="social-icon"
+            />
+            <span class="social-label">Instagram</span>
+          </a>
+
+          <a
             href="https://github.com/y-mitsuyoshi"
             target="_blank"
             rel="noopener noreferrer"
@@ -169,6 +183,10 @@
 
 .social-link.github:hover .social-icon {
   color: #ffffff;
+}
+
+.social-link.instagram:hover .social-icon {
+  color: #e1306c;
 }
 
 .social-link.x:hover .social-icon {
