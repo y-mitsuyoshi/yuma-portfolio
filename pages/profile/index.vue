@@ -3,7 +3,10 @@
     <h1 class="text-4xl font-bold text-center mb-8">Profile</h1>
     <div class="space-y-8">
       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">Summary</h2>
+        <h2 class="text-2xl font-semibold mb-4 flex items-center">
+          <font-awesome-icon icon="user" class="mr-3 text-gray-500" />
+          Summary
+        </h2>
         <p class="text-gray-700 leading-relaxed">
           1990年三重県生まれ、奈良県育ちのWebエンジニア・エンジニアリングマネージャーです。関西学院大学大学院で計量社会学を専攻し、統計解析とプログラミングの基礎を習得しました。
           <br/><br/>
@@ -16,31 +19,34 @@
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">経歴・実績</h2>
+        <h2 class="text-2xl font-semibold mb-4 flex items-center">
+          <font-awesome-icon icon="briefcase" class="mr-3 text-gray-500" />
+          経歴・実績
+        </h2>
         <div class="text-gray-700 leading-relaxed">
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">学歴</h3>
             <p>2013年3月 関西学院大学社会学部 卒業</p>
             <p>2015年3月 関西学院大学大学院社会学研究科 修了</p>
           </div>
-          
+
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">職歴</h3>
             <p><strong>2024年11月 - 現在</strong> 株式会社TRUSTDOCK（エンジニアリングマネージャー）</p>
             <p class="text-sm text-gray-600 ml-4">eKYC・本人確認サービスの開発チーム運営・技術戦略策定</p>
-            
+
             <p><strong>2022年1月 - 2024年10月</strong> 株式会社ココナラ（チームマネージャー）</p>
             <p class="text-sm text-gray-600 ml-4">スキルマーケット「ココナラ」の開発チーム運営・バックエンド開発</p>
-            
+
             <p><strong>2021年5月 - 2021年12月</strong> フリーランスエンジニア</p>
             <p class="text-sm text-gray-600 ml-4">Ruby on Rails / Vue.js を用いたWebアプリケーション開発</p>
-            
+
             <p><strong>2019年1月 - 2021年4月</strong> 株式会社MERY（エンジニア）</p>
             <p class="text-sm text-gray-600 ml-4">女性向けライフスタイルメディア「MERY」の開発・運用</p>
-            
+
             <p><strong>2016年12月 - 2018年12月</strong> 株式会社ミンカブ・ジ・インフォノイド（エンジニア）</p>
             <p class="text-sm text-gray-600 ml-4">金融情報サービスの開発・データ分析基盤構築</p>
-            
+
             <p><strong>2015年4月 - 2016年11月</strong> SIer企業（システムエンジニア）</p>
             <p class="text-sm text-gray-600 ml-4">官公庁向けシステム開発・保守</p>
           </div>
@@ -48,7 +54,10 @@
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-2xl font-semibold mb-4">エンジニアとしての強み・志向</h2>
+        <h2 class="text-2xl font-semibold mb-4 flex items-center">
+          <font-awesome-icon icon="laptop-code" class="mr-3 text-gray-500" />
+          エンジニアとしての強み・志向
+        </h2>
         <div class="text-gray-700 leading-relaxed">
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">技術的強み</h3>
@@ -59,7 +68,7 @@
               <li><strong>フロントエンド・インフラ</strong>：Vue.js / AWS 等も扱えるが補助的な位置づけ</li>
             </ul>
           </div>
-          
+
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">マネジメント・ヒューマンスキル</h3>
             <ul class="list-disc list-inside ml-4 space-y-1">
@@ -69,7 +78,7 @@
               <li><strong>ステークホルダー調整</strong>：技術要件と事業要件のバランス調整</li>
             </ul>
           </div>
-          
+
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">開発・チーム運営の考え方</h3>
             <ul class="list-disc list-inside ml-4 space-y-1">
