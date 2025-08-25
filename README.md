@@ -55,13 +55,46 @@ npm run generate
 
 ## Firebase デプロイ
 
-```bash
-# 静的サイトを生成
-npm run generate
+以下の手順で静的サイトを Firebase Hosting にデプロイできます：
 
-# Firebase Hostingにデプロイ
-npx firebase deploy
+### 初回セットアップ（必要に応じて）
+
+Firebase CLI にログイン
+
+```bash
+npx firebase login
 ```
+
+プロジェクトを選択（初回のみ）
+
+```bash
+npx firebase use --add
+# 対話式でプロジェクトを選択
+```
+
+### デプロイ実行
+
+静的ファイルを生成
+
+```bash
+npm run generate
+```
+
+Firebase Hosting にデプロイ
+
+```bash
+npx firebase deploy --only hosting
+```
+
+デプロイが完了すると、コンソールに公開URLが表示されます。
+
+**公開サイト**: <https://yuma-portfolio.web.app>
+
+### 注意事項
+
+- このプロジェクトでは `firebase.json` の `hosting.public` が `.output/public` に設定されています
+- Nuxt 4 の `npm run generate` コマンドは静的ファイルを `.output/public` に出力します
+- デプロイ前に必ず `npm run generate` で最新のファイルを生成してください
 
 ## 利用可能なスクリプト
 
