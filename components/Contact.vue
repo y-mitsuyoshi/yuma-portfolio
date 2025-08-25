@@ -13,16 +13,12 @@
           <a href="https://twitter.com/MitsuyoshiYuma" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-400">
             <font-awesome-icon :icon="['fab', 'twitter-square']" size="3x" />
           </a>
-        </div>
-      </div>
-      <div>
-        <h2 class="text-3xl font-bold text-gray-800">Link</h2>
-        <div class="mt-4">
-          <a href="http://tabilike.hatenablog.com" target="_blank" rel="noopener noreferrer" class="text-xl text-blue-500 hover:underline">
-            ブログ
+          <a href="http://tabilike.hatenablog.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-orange-500">
+            <font-awesome-icon :icon="['fas', 'rss']" size="3x" />
           </a>
         </div>
       </div>
+  <!-- Link section removed; blog RSS icon moved to Contact social icons -->
     </div>
   </div>
 </template>
