@@ -330,10 +330,6 @@
   </div>
 </template>
 
-<script setup>
-// Vue 3 Composition API
-</script>
-
 <style scoped>
 .profile-card {
   background: white;
@@ -528,3 +524,21 @@
   }
 }
 </style>
+
+<script setup>
+// Analytics tracking
+const { $trackEvent } = useNuxtApp()
+
+onMounted(() => {
+  $trackEvent('page_view', {
+    page: 'profile',
+    section: 'personal_info'
+  })
+})
+
+// Meta and SEO
+useSeoMeta({
+  title: 'Profile - Yuma Mitsuyoshi',
+  description: 'Engineering Manager & Full-Stack Developer のプロフィール詳細'
+})
+</script>

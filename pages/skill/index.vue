@@ -611,6 +611,22 @@ const skillCategories = [
     ],
   },
 ]
+
+// Analytics tracking
+const { $trackEvent } = useNuxtApp()
+
+onMounted(() => {
+  $trackEvent('page_view', {
+    page: 'skills',
+    section: 'technical_skills'
+  })
+})
+
+// Meta and SEO
+useSeoMeta({
+  title: 'Skills - Yuma Mitsuyoshi',
+  description: 'Programming languages, frameworks, tools, and technical expertise'
+})
 </script>
 
 <style scoped>

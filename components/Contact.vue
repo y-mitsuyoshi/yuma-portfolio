@@ -16,6 +16,7 @@
             rel="noopener noreferrer"
             class="social-link facebook"
             aria-label="Facebook"
+            @click="trackSocialClick('facebook')"
           >
             <font-awesome-icon
               :icon="['fab', 'facebook-square']"
@@ -30,6 +31,7 @@
             rel="noopener noreferrer"
             class="social-link instagram"
             aria-label="Instagram"
+            @click="trackSocialClick('instagram')"
           >
             <font-awesome-icon
               :icon="['fab', 'instagram']"
@@ -44,6 +46,7 @@
             rel="noopener noreferrer"
             class="social-link github"
             aria-label="GitHub"
+            @click="trackSocialClick('github')"
           >
             <font-awesome-icon
               :icon="['fab', 'github-square']"
@@ -131,11 +134,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-// Vue 3 Composition API
-// FontAwesome アイコンは自動的に利用可能
-</script>
 
 <style scoped>
 .social-link {
@@ -249,3 +247,23 @@
   }
 }
 </style>
+
+<script setup>
+// Analytics tracking functions
+const { $trackEvent } = useNuxtApp()
+
+const trackSocialClick = (platform) => {
+  $trackEvent('social_link_click', {
+    platform: platform,
+    section: 'contact',
+    action: 'external_link'
+  })
+}
+
+// Track contact section view
+onMounted(() => {
+  $trackEvent('contact_section_viewed', {
+    section: 'contact'
+  })
+})
+</script>

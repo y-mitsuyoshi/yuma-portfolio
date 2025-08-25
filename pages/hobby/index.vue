@@ -150,10 +150,6 @@
   </div>
 </template>
 
-<script setup>
-// Vue 3 Composition API
-</script>
-
 <style scoped>
 .hobby-card {
   display: flex;
@@ -327,3 +323,21 @@
   }
 }
 </style>
+
+<script setup>
+// Analytics tracking
+const { $trackEvent } = useNuxtApp()
+
+onMounted(() => {
+  $trackEvent('page_view', {
+    page: 'hobbies',
+    section: 'personal_interests'
+  })
+})
+
+// Meta and SEO
+useSeoMeta({
+  title: 'Hobbies - Yuma Mitsuyoshi',
+  description: 'Personal interests and hobbies including whiskey, travel, movies, and board games'
+})
+</script>

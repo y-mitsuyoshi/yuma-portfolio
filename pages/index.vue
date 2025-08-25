@@ -57,11 +57,19 @@
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <nuxt-link to="/profile" class="hero-btn hero-btn-primary">
+            <nuxt-link 
+              to="/profile" 
+              class="hero-btn hero-btn-primary"
+              @click="trackProfileClick"
+            >
               <font-awesome-icon icon="user" class="mr-2" />
               Profile を見る
             </nuxt-link>
-            <nuxt-link to="/skill" class="hero-btn hero-btn-secondary">
+            <nuxt-link 
+              to="/skill" 
+              class="hero-btn hero-btn-secondary"
+              @click="trackSkillClick"
+            >
               <font-awesome-icon icon="laptop-code" class="mr-2" />
               Skills を見る
             </nuxt-link>
@@ -193,11 +201,6 @@
   </div>
 </template>
 
-<script setup>
-// Vue 3 Composition API with auto-import
-// Home page
-</script>
-
 <style scoped>
 /* Hero Buttons */
 .hero-btn {
@@ -303,3 +306,37 @@
   animation-delay: 1s;
 }
 </style>
+
+<script setup>
+// Analytics tracking functions
+const { $trackEvent } = useNuxtApp()
+
+// Hero section interactions
+const trackProfileClick = () => {
+  $trackEvent('hero_profile_click', {
+    button_text: 'Profile を見る',
+    section: 'hero'
+  })
+}
+
+const trackSkillClick = () => {
+  $trackEvent('hero_skill_click', {
+    button_text: 'Skills を見る', 
+    section: 'hero'
+  })
+}
+
+// Page view tracking (automatic via plugin)
+onMounted(() => {
+  $trackEvent('page_engagement', {
+    page: 'home',
+    action: 'hero_section_viewed'
+  })
+})
+
+// Meta and SEO
+useSeoMeta({
+  title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
+  description: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。'
+})
+</script>

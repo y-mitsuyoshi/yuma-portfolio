@@ -1,6 +1,6 @@
 // plugins/firebase.js - Nuxt 4 & Vue 3対応
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+import { getAnalytics, logEvent, setCurrentScreen } from 'firebase/analytics'
 
 export default defineNuxtPlugin(() => {
   // クライアントサイドでのみ実行
@@ -18,19 +18,49 @@ export default defineNuxtPlugin(() => {
     }
 
     const app = initializeApp(firebaseConfig)
+    let analytics = null
+
     try {
       // measurementId が空だと Analytics 初期化は失敗するため、存在チェック
       if (firebaseConfig.measurementId) {
-        getAnalytics(app)
+        analytics = getAnalytics(app)
       }
     } catch (e) {
       // Analytics初期化エラーを無視
-      console.warn('Firebase Analytics initialization failed:', e)
     }
+
+    // Analytics ヘルパー関数
+    const trackEvent = (eventName, parameters = {}) => {
+      if (analytics) {
+        logEvent(analytics, eventName, parameters)
+      }
+    }
+
+    const trackPageView = (pageName) => {
+      if (analytics) {
+        setCurrentScreen(analytics, pageName)
+        logEvent(analytics, 'page_view', { 
+          page_title: pageName,
+          page_location: window.location.href 
+        })
+      }
+    }
+
+    // ルート変更時の自動追跡
+    const router = useRouter()
+    router.afterEach((to) => {
+      nextTick(() => {
+        const pageName = to.meta?.title || to.name || to.path
+        trackPageView(pageName)
+      })
+    })
 
     return {
       provide: {
         firebaseApp: app,
+        analytics,
+        trackEvent,
+        trackPageView,
       },
     }
   }
