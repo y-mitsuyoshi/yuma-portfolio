@@ -29,11 +29,6 @@ $ yarn run generate
 $ npx firebase deploy
 ```
 
-参考
-https://tabilike.hatenablog.com/entry/2018/12/25/144504
-
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 # yuma-portfolio
 
 
