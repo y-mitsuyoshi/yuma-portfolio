@@ -33,22 +33,22 @@
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">職歴</h3>
             <p><strong>2024年11月 - 現在</strong> 株式会社TRUSTDOCK（エンジニアリングマネージャー）</p>
-            <p class="text-sm text-gray-600 ml-4">eKYC・本人確認サービスの開発チーム運営・技術戦略策定</p>
+            <p class="text-sm text-gray-600 ml-4">eKYC・本人確認APIサービスのバックエンドチームにて、エンジニアリングマネージャーとしてチームを牽引。</p>
 
             <p><strong>2022年1月 - 2024年10月</strong> 株式会社ココナラ（チームマネージャー）</p>
-            <p class="text-sm text-gray-600 ml-4">スキルマーケット「ココナラ」の開発チーム運営・バックエンド開発</p>
+            <p class="text-sm text-gray-600 ml-4">バックエンド開発部にて、新規機能開発や開発基盤改善を担当。後にチームマネージャーとして組織改善やメンバー育成、eKYC導入等のプロジェクトを推進。</p>
 
             <p><strong>2021年5月 - 2021年12月</strong> フリーランスエンジニア</p>
-            <p class="text-sm text-gray-600 ml-4">Ruby on Rails / Vue.js を用いたWebアプリケーション開発</p>
+            <p class="text-sm text-gray-600 ml-4">株式会社じげんにて、Ruby on Railsを用いたアルバイト求人サイトの保守・機能開発に従事。</p>
 
             <p><strong>2019年1月 - 2021年4月</strong> 株式会社MERY（エンジニア）</p>
-            <p class="text-sm text-gray-600 ml-4">女性向けライフスタイルメディア「MERY」の開発・運用</p>
+            <p class="text-sm text-gray-600 ml-4">女性向けメディアの許諾管理システムを中心に、リファクタリング(DDD/GraphQL)・保守・新規開発(Go)を担当。PMとしてInstagram連携システムの構築も主導。</p>
 
-            <p><strong>2016年12月 - 2018年12月</strong> 株式会社ミンカブ・ジ・インフォノイド（エンジニア）</p>
-            <p class="text-sm text-gray-600 ml-4">金融情報サービスの開発・データ分析基盤構築</p>
+            <p><strong>2016年12月 - 2018年12月</strong> 株式会社ミンカブ・ジ・インフォノイド（エンジニア / メインエンジニア）</p>
+            <p class="text-sm text-gray-600 ml-4">金融情報サービスのデータプロバイダー移行、ニュースサイト刷新、Vue.js導入によるモダン化、Pythonでのスパムフィルター開発など、複数のプロジェクトを推進。</p>
 
-            <p><strong>2015年4月 - 2016年11月</strong> SIer企業（システムエンジニア）</p>
-            <p class="text-sm text-gray-600 ml-4">官公庁向けシステム開発・保守</p>
+            <p><strong>2015年4月 - 2016年11月</strong> 株式会社リンクレア（システムエンジニア）</p>
+            <p class="text-sm text-gray-600 ml-4">SIerとして、在庫管理・駐車場管理・基幹システムなど、多様な顧客のWebアプリケーション開発・テスト・保守を経験。</p>
           </div>
         </div>
       </div>
