@@ -4,7 +4,9 @@
       <div class="flex flex-col md:flex-row justify-between items-center">
         <!-- Left side - Brand -->
         <div class="flex items-center mb-4 md:mb-0">
-          <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+          <div
+            class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3"
+          >
             <span class="text-white font-bold text-sm">Y</span>
           </div>
           <div>
@@ -12,7 +14,7 @@
             <div class="text-xs text-slate-500">Engineering Manager</div>
           </div>
         </div>
-        
+
         <!-- Center - Navigation -->
         <div class="hidden md:flex items-center space-x-6 mb-4 md:mb-0">
           <nuxt-link to="/" class="footer-link">Home</nuxt-link>
@@ -21,11 +23,13 @@
           <nuxt-link to="/#creations" class="footer-link">Creations</nuxt-link>
           <nuxt-link to="/hobby" class="footer-link">Hobby</nuxt-link>
         </div>
-        
+
         <!-- Right side - Tech Stack -->
         <div class="text-center md:text-right">
           <div class="text-sm text-slate-500 mb-1">Built with</div>
-          <div class="flex items-center justify-center md:justify-end space-x-2 text-xs">
+          <div
+            class="flex items-center justify-center md:justify-end space-x-2 text-xs"
+          >
             <span class="tech-badge">Nuxt 4</span>
             <span class="tech-badge">Vue 3</span>
             <span class="tech-badge">Tailwind</span>
@@ -33,9 +37,11 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Bottom row -->
-      <div class="mt-6 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm">
+      <div
+        class="mt-6 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm"
+      >
         <div class="text-slate-500 mb-2 md:mb-0">
           © 2025 Yuma Mitsuyoshi. All rights reserved.
         </div>
@@ -45,7 +51,10 @@
             Made with passion
           </span>
           <span class="flex items-center">
-            <font-awesome-icon icon="laptop-code" class="w-4 h-4 mr-1 text-blue-500" />
+            <font-awesome-icon
+              icon="laptop-code"
+              class="w-4 h-4 mr-1 text-blue-500"
+            />
             Open Source
           </span>
         </div>

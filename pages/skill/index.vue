@@ -3,11 +3,17 @@
     <div class="container mx-auto px-6 max-w-6xl">
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <div class="w-24 h-24 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-6 shadow-xl">
+        <div
+          class="w-24 h-24 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-6 shadow-xl"
+        >
           <font-awesome-icon icon="laptop-code" class="text-white text-2xl" />
         </div>
-        <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Technical Skills</h1>
-        <p class="text-xl text-slate-600">バックエンド開発を軸とした技術スタック</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          Technical Skills
+        </h1>
+        <p class="text-xl text-slate-600">
+          バックエンド開発を軸とした技術スタック
+        </p>
       </div>
 
       <!-- Skills Matrix -->
@@ -27,7 +33,11 @@
 
           <!-- Skill Groups -->
           <div class="space-y-6">
-            <div v-for="group in category.groups" :key="group.title" class="skill-group">
+            <div
+              v-for="group in category.groups"
+              :key="group.title"
+              class="skill-group"
+            >
               <h3 class="group-title">
                 <span :class="`strength-indicator ${group.strength}`"></span>
                 {{ group.title }}
@@ -38,8 +48,8 @@
                   :key="item.label"
                   :label="item.label"
                   :emoji="item.emoji"
-                  :bgClass="item.bgClass"
-                  :textClass="item.textClass"
+                  :bg-class="item.bgClass"
+                  :text-class="item.textClass"
                 />
               </div>
             </div>
@@ -48,12 +58,16 @@
       </div>
 
       <!-- Strength Overview -->
-      <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
+      <div
+        class="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-slate-200"
+      >
         <div class="text-center mb-8">
-          <h2 class="text-3xl font-bold text-slate-800 mb-4">Strength Distribution</h2>
+          <h2 class="text-3xl font-bold text-slate-800 mb-4">
+            Strength Distribution
+          </h2>
           <p class="text-slate-600">技術領域ごとの習熟度</p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="strength-overview-card primary">
             <div class="strength-icon">🎯</div>
@@ -61,14 +75,16 @@
             <p class="strength-description">Ruby on Rails バックエンド開発</p>
             <div class="strength-bar primary-bar"></div>
           </div>
-          
+
           <div class="strength-overview-card secondary">
             <div class="strength-icon">⚡</div>
             <h3 class="strength-category">Proficient</h3>
-            <p class="strength-description">フルスタック開発・チームマネジメント</p>
+            <p class="strength-description">
+              フルスタック開発・チームマネジメント
+            </p>
             <div class="strength-bar secondary-bar"></div>
           </div>
-          
+
           <div class="strength-overview-card basic">
             <div class="strength-icon">🔧</div>
             <h3 class="strength-category">Working Knowledge</h3>
@@ -111,32 +127,87 @@ const skillCategories = [
         title: '主要言語（強み）',
         strength: 'primary',
         items: [
-          { label: 'Ruby', emoji: '💎', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'JavaScript', emoji: '📜', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' },
-          { label: 'TypeScript', emoji: '🔷', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'Ruby',
+            emoji: '💎',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'JavaScript',
+            emoji: '📜',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
+          },
+          {
+            label: 'TypeScript',
+            emoji: '🔷',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: '実務経験あり',
         strength: 'secondary',
         items: [
-          { label: 'Go', emoji: '🐹', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' },
-          { label: 'Python', emoji: '🐍', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'PHP', emoji: '�', bgClass: 'bg-indigo-100', textClass: 'text-indigo-800' },
-          { label: 'Java', emoji: '☕', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'VB.NET', emoji: '�', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'Go',
+            emoji: '🐹',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
+          },
+          {
+            label: 'Python',
+            emoji: '🐍',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'PHP',
+            emoji: '�',
+            bgClass: 'bg-indigo-100',
+            textClass: 'text-indigo-800',
+          },
+          {
+            label: 'Java',
+            emoji: '☕',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'VB.NET',
+            emoji: '�',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: '学習・分析経験',
         strength: 'basic',
         items: [
-          { label: 'R', emoji: '📊', bgClass: 'bg-gray-100', textClass: 'text-gray-800' },
-          { label: 'Elixir', emoji: '⚗️', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
-          { label: 'SQL', emoji: '🗃️', bgClass: 'bg-slate-100', textClass: 'text-slate-800' }
-        ]
-      }
-    ]
+          {
+            label: 'R',
+            emoji: '📊',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
+          },
+          {
+            label: 'Elixir',
+            emoji: '⚗️',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
+          },
+          {
+            label: 'SQL',
+            emoji: '🗃️',
+            bgClass: 'bg-slate-100',
+            textClass: 'text-slate-800',
+          },
+        ],
+      },
+    ],
   },
 
   {
@@ -147,31 +218,81 @@ const skillCategories = [
         title: 'バックエンド（強み）',
         strength: 'primary',
         items: [
-          { label: 'Rails', emoji: '🚂', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'Sinatra', emoji: '🎵', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'gRPC', emoji: '⚡', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'Rails',
+            emoji: '🚂',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'Sinatra',
+            emoji: '🎵',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'gRPC',
+            emoji: '⚡',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: 'フロントエンド（実務経験）',
         strength: 'secondary',
         items: [
-          { label: 'Vue.js', emoji: '🖖', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'Nuxt.js', emoji: '🏔️', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'jQuery', emoji: '📝', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'Vue.js',
+            emoji: '🖖',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'Nuxt.js',
+            emoji: '🏔️',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'jQuery',
+            emoji: '📝',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: 'その他フレームワーク',
         strength: 'secondary',
         items: [
-          { label: 'Django', emoji: '🐍', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'bottle', emoji: '🍶', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'WordPress', emoji: '📝', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
-          { label: 'GraphQL', emoji: '🔗', bgClass: 'bg-pink-100', textClass: 'text-pink-800' }
-        ]
-      }
-    ]
+          {
+            label: 'Django',
+            emoji: '🐍',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'bottle',
+            emoji: '🍶',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'WordPress',
+            emoji: '📝',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
+            label: 'GraphQL',
+            emoji: '🔗',
+            bgClass: 'bg-pink-100',
+            textClass: 'text-pink-800',
+          },
+        ],
+      },
+    ],
   },
 
   {
@@ -182,21 +303,51 @@ const skillCategories = [
         title: 'RDBMS（実務経験）',
         strength: 'primary',
         items: [
-          { label: 'MySQL', emoji: '🐬', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'PostgreSQL', emoji: '🐘', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
-          { label: 'Oracle', emoji: '🔺', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'SQLite', emoji: '💿', bgClass: 'bg-gray-100', textClass: 'text-gray-800' }
-        ]
+          {
+            label: 'MySQL',
+            emoji: '🐬',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'PostgreSQL',
+            emoji: '🐘',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
+            label: 'Oracle',
+            emoji: '🔺',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'SQLite',
+            emoji: '💿',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
+          },
+        ],
       },
       {
         title: 'NoSQL・KVS',
         strength: 'secondary',
         items: [
-          { label: 'Redis', emoji: '📮', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'DynamoDB', emoji: '⚡', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' }
-        ]
-      }
-    ]
+          {
+            label: 'Redis',
+            emoji: '📮',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'DynamoDB',
+            emoji: '⚡',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
+          },
+        ],
+      },
+    ],
   },
 
   {
@@ -207,29 +358,69 @@ const skillCategories = [
         title: 'クラウドサービス',
         strength: 'secondary',
         items: [
-          { label: 'AWS', emoji: '🌩️', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'Fargate', emoji: '🚢', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'CloudWatch', emoji: '📊', bgClass: 'bg-orange-100', textClass: 'text-orange-800' }
-        ]
+          {
+            label: 'AWS',
+            emoji: '🌩️',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'Fargate',
+            emoji: '🚢',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'CloudWatch',
+            emoji: '📊',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+        ],
       },
       {
         title: 'OS・サーバー',
         strength: 'secondary',
         items: [
-          { label: 'Linux', emoji: '🐧', bgClass: 'bg-gray-100', textClass: 'text-gray-800' },
-          { label: 'Windows Server', emoji: '🪟', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'Linux',
+            emoji: '🐧',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
+          },
+          {
+            label: 'Windows Server',
+            emoji: '🪟',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: 'コンテナ・ツール',
         strength: 'basic',
         items: [
-          { label: 'Docker', emoji: '🐳', bgClass: 'bg-cyan-100', textClass: 'text-cyan-800' },
-          { label: 'Git', emoji: '📂', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'GitHub', emoji: '🐙', bgClass: 'bg-gray-100', textClass: 'text-gray-800' }
-        ]
-      }
-    ]
+          {
+            label: 'Docker',
+            emoji: '🐳',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
+          },
+          {
+            label: 'Git',
+            emoji: '📂',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'GitHub',
+            emoji: '🐙',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
+          },
+        ],
+      },
+    ],
   },
 
   {
@@ -240,32 +431,87 @@ const skillCategories = [
         title: '開発手法・アーキテクチャ',
         strength: 'primary',
         items: [
-          { label: 'アジャイル開発', emoji: '🔄', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'スクラム開発', emoji: '🏃', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'DDD', emoji: '🏗️', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
-          { label: 'マイクロサービス', emoji: '🔧', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'アジャイル開発',
+            emoji: '🔄',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'スクラム開発',
+            emoji: '🏃',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'DDD',
+            emoji: '🏗️',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
+          },
+          {
+            label: 'マイクロサービス',
+            emoji: '🔧',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: '監視・運用ツール',
         strength: 'secondary',
         items: [
-          { label: 'Sentry', emoji: '�', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'X-Ray', emoji: '🔬', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'Grafana', emoji: '📈', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'Rundeck', emoji: '⚙️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' }
-        ]
+          {
+            label: 'Sentry',
+            emoji: '�',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'X-Ray',
+            emoji: '🔬',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'Grafana',
+            emoji: '📈',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'Rundeck',
+            emoji: '⚙️',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+        ],
       },
       {
         title: 'CI/CD・その他',
         strength: 'basic',
         items: [
-          { label: 'CircleCI', emoji: '�', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'Jest', emoji: '🧪', bgClass: 'bg-red-100', textClass: 'text-red-800' },
-          { label: 'ESLint', emoji: '📝', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' }
-        ]
-      }
-    ]
+          {
+            label: 'CircleCI',
+            emoji: '�',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'Jest',
+            emoji: '🧪',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
+          },
+          {
+            label: 'ESLint',
+            emoji: '📝',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
+          },
+        ],
+      },
+    ],
   },
 
   {
@@ -276,34 +522,94 @@ const skillCategories = [
         title: 'チームマネジメント（強み）',
         strength: 'primary',
         items: [
-          { label: 'チーム運営', emoji: '👥', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
-          { label: 'メンバー育成', emoji: '�', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: '1on1運営', emoji: '🗣️', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
-          { label: '採用面接', emoji: '🤝', bgClass: 'bg-pink-100', textClass: 'text-pink-800' }
-        ]
+          {
+            label: 'チーム運営',
+            emoji: '👥',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
+          },
+          {
+            label: 'メンバー育成',
+            emoji: '�',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: '1on1運営',
+            emoji: '🗣️',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
+            label: '採用面接',
+            emoji: '🤝',
+            bgClass: 'bg-pink-100',
+            textClass: 'text-pink-800',
+          },
+        ],
       },
       {
         title: 'プロジェクトマネジメント',
         strength: 'primary',
         items: [
-          { label: 'プロジェクト管理', emoji: '📋', bgClass: 'bg-indigo-100', textClass: 'text-indigo-800' },
-          { label: '要件定義', emoji: '�', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
-          { label: '技術選定', emoji: '🎯', bgClass: 'bg-orange-100', textClass: 'text-orange-800' },
-          { label: 'パフォーマンス改善', emoji: '⚡', bgClass: 'bg-yellow-100', textClass: 'text-yellow-800' }
-        ]
+          {
+            label: 'プロジェクト管理',
+            emoji: '📋',
+            bgClass: 'bg-indigo-100',
+            textClass: 'text-indigo-800',
+          },
+          {
+            label: '要件定義',
+            emoji: '�',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
+            label: '技術選定',
+            emoji: '🎯',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'パフォーマンス改善',
+            emoji: '⚡',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
+          },
+        ],
       },
       {
         title: '組織改善・教育',
         strength: 'secondary',
         items: [
-          { label: '勉強会企画', emoji: '📚', bgClass: 'bg-green-100', textClass: 'text-green-800' },
-          { label: 'レビュー改善', emoji: '�️', bgClass: 'bg-purple-100', textClass: 'text-purple-800' },
-          { label: 'VBAコーチング', emoji: '🏫', bgClass: 'bg-blue-100', textClass: 'text-blue-800' },
-          { label: 'コスト削減', emoji: '💰', bgClass: 'bg-green-100', textClass: 'text-green-800' }
-        ]
-      }
-    ]
-  }
+          {
+            label: '勉強会企画',
+            emoji: '📚',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'レビュー改善',
+            emoji: '�️',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
+          },
+          {
+            label: 'VBAコーチング',
+            emoji: '🏫',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
+            label: 'コスト削減',
+            emoji: '💰',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+        ],
+      },
+    ],
+  },
 ]
 </script>
 
@@ -401,15 +707,27 @@ const skillCategories = [
 }
 
 .strength-overview-card.primary {
-  background: linear-gradient(135deg, rgb(220 252 231) 0%, rgb(187 247 208) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(220 252 231) 0%,
+    rgb(187 247 208) 100%
+  );
 }
 
 .strength-overview-card.secondary {
-  background: linear-gradient(135deg, rgb(219 234 254) 0%, rgb(191 219 254) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(219 234 254) 0%,
+    rgb(191 219 254) 100%
+  );
 }
 
 .strength-overview-card.basic {
-  background: linear-gradient(135deg, rgb(248 250 252) 0%, rgb(226 232 240) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(248 250 252) 0%,
+    rgb(226 232 240) 100%
+  );
 }
 
 .strength-icon {
@@ -456,7 +774,7 @@ const skillCategories = [
     flex-direction: column;
     text-align: center;
   }
-  
+
   .category-icon {
     margin-right: 0;
     margin-bottom: 0.5rem;
