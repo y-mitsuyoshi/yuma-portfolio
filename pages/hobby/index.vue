@@ -45,7 +45,7 @@
             </p>
             <p class="hobby-description">
               特に好きな国は<span class="country-highlight">ハンガリー</span>と<span class="country-highlight">ウズベキスタン</span>。
-              ハンガリーの美しい建築とドナウ川の景色、ウズベキスタンのシルクロードの歴史と温かい人々が印象的です。
+              ハンガリーはデザートや食べ物がおいしいのが魅力です。ウズベキスタンとハンガリーどちらも建造物が素晴らしかったです。
               今でも長期休暇があれば、フラっと一人旅に出かけています！
             </p>
           </div>
@@ -65,7 +65,7 @@
             <p class="hobby-description">
               好きな監督は<span class="director-highlight">アレハンドロ・ホドロフスキー</span>で、
               特に「<span class="movie-highlight">ホーリー・マウンテン</span>」の幻想的で哲学的な世界観に深く感動しました。
-              超現実的な映像表現と精神的なテーマが融合した作品に惹かれます。
+              アレハンドロ・ホドロフスキーはカルト的なところが好きです。
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@
           <div class="hobby-content">
             <h2 class="hobby-title">🎲 ボードゲーム</h2>
             <p class="hobby-description">
-              週末は友人たちと<strong class="highlight-text">ボードゲーム</strong>を楽しんでいます。
+              たまに<strong class="highlight-text">ボードゲーム</strong>を楽しんでいます。
               戦略性とコミュニケーションが融合したアナログゲームの魅力にハマっています。
             </p>
             <p class="hobby-description">
