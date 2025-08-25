@@ -12,9 +12,13 @@
           <div class="flex items-center">
             <nuxt-link to="/" class="group flex items-center space-x-2">
               <div
-                class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform"
+                class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden"
               >
-                <span class="text-white font-bold text-lg">Y</span>
+                <img 
+                  src="~/assets/icon.png" 
+                  alt="Yuma Mitsuyoshi" 
+                  class="w-6 h-6 object-contain"
+                />
               </div>
               <div class="hidden sm:block">
                 <div class="text-xl font-bold text-slate-800">

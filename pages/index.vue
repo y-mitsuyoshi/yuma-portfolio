@@ -24,9 +24,13 @@
           <!-- Profile Image -->
           <div class="mb-8">
             <div
-              class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl ring-4 ring-white"
+              class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl ring-4 ring-white overflow-hidden"
             >
-              <span class="text-white font-bold text-4xl">Y</span>
+              <img 
+                src="~/assets/icon.png" 
+                alt="Yuma Mitsuyoshi" 
+                class="w-20 h-20 object-contain"
+              />
             </div>
           </div>
 
