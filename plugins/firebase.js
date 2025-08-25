@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 }
 
 export default defineNuxtPlugin(() => {
@@ -23,10 +23,10 @@ export default defineNuxtPlugin(() => {
       // Analytics初期化エラーを無視
       console.warn('Firebase Analytics initialization failed:', e)
     }
-    return { 
-      provide: { 
-        firebaseApp: app 
-      } 
+    return {
+      provide: {
+        firebaseApp: app,
+      },
     }
   }
 })

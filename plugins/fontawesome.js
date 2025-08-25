@@ -78,7 +78,7 @@ library.add(
   faChessBoard,
   faUser,
   faBriefcase,
-  faLaptopCode
+  faLaptopCode,
 )
 
 export default defineNuxtPlugin((nuxtApp) => {

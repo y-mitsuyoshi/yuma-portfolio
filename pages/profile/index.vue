@@ -9,11 +9,12 @@
         </h2>
         <p class="text-gray-700 leading-relaxed">
           1990年三重県生まれ、奈良県育ちのWebエンジニア・エンジニアリングマネージャーです。関西学院大学大学院で計量社会学を専攻し、統計解析とプログラミングの基礎を習得しました。
-          <br/><br/>
-          9年以上のエンジニア経験を通じて、Ruby on Rails を中心としたバックエンド開発に強みを持ちます。
+          <br /><br />
+          9年以上のエンジニア経験を通じて、Ruby on Rails
+          を中心としたバックエンド開発に強みを持ちます。
           エンジニアとしてのスキルに加え、チームマネジメント・技術選定・パフォーマンスチューニングを得意とし、
           フットワークの軽さと柔軟性を活かした開発・運用改善に取り組んでいます。
-          <br/><br/>
+          <br /><br />
           現在は株式会社TRUSTDOCKでエンジニアリングマネージャーとして、eKYC・本人確認サービスの開発チーム運営と技術戦略に携わっています。
         </p>
       </div>
@@ -32,23 +33,53 @@
 
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">職歴</h3>
-            <p><strong>2024年11月 - 現在</strong> 株式会社TRUSTDOCK（エンジニアリングマネージャー）</p>
-            <p class="text-sm text-gray-600 ml-4">eKYC・本人確認APIサービスのバックエンドチームにて、エンジニアリングマネージャーとしてチームを牽引。</p>
+            <p>
+              <strong>2024年11月 - 現在</strong>
+              株式会社TRUSTDOCK（エンジニアリングマネージャー）
+            </p>
+            <p class="text-sm text-gray-600 ml-4">
+              eKYC・本人確認APIサービスのバックエンドチームにて、エンジニアリングマネージャーとしてチームを牽引。
+            </p>
 
-            <p><strong>2022年1月 - 2024年10月</strong> 株式会社ココナラ（チームマネージャー）</p>
-            <p class="text-sm text-gray-600 ml-4">バックエンド開発部にて、新規機能開発や開発基盤改善を担当。後にチームマネージャーとして組織改善やメンバー育成、eKYC導入等のプロジェクトを推進。</p>
+            <p>
+              <strong>2022年1月 - 2024年10月</strong>
+              株式会社ココナラ（チームマネージャー）
+            </p>
+            <p class="text-sm text-gray-600 ml-4">
+              バックエンド開発部にて、新規機能開発や開発基盤改善を担当。後にチームマネージャーとして組織改善やメンバー育成、eKYC導入等のプロジェクトを推進。
+            </p>
 
-            <p><strong>2021年5月 - 2021年12月</strong> フリーランスエンジニア</p>
-            <p class="text-sm text-gray-600 ml-4">株式会社じげんにて、Ruby on Railsを用いたアルバイト求人サイトの保守・機能開発に従事。</p>
+            <p>
+              <strong>2021年5月 - 2021年12月</strong> フリーランスエンジニア
+            </p>
+            <p class="text-sm text-gray-600 ml-4">
+              株式会社じげんにて、Ruby on
+              Railsを用いたアルバイト求人サイトの保守・機能開発に従事。
+            </p>
 
-            <p><strong>2019年1月 - 2021年4月</strong> 株式会社MERY（エンジニア）</p>
-            <p class="text-sm text-gray-600 ml-4">女性向けメディアの許諾管理システムを中心に、リファクタリング(DDD/GraphQL)・保守・新規開発(Go)を担当。PMとしてInstagram連携システムの構築も主導。</p>
+            <p>
+              <strong>2019年1月 - 2021年4月</strong> 株式会社MERY（エンジニア）
+            </p>
+            <p class="text-sm text-gray-600 ml-4">
+              女性向けメディアの許諾管理システムを中心に、リファクタリング(DDD/GraphQL)・保守・新規開発(Go)を担当。PMとしてInstagram連携システムの構築も主導。
+            </p>
 
-            <p><strong>2016年12月 - 2018年12月</strong> 株式会社ミンカブ・ジ・インフォノイド（エンジニア / メインエンジニア）</p>
-            <p class="text-sm text-gray-600 ml-4">金融情報サービスのデータプロバイダー移行、ニュースサイト刷新、Vue.js導入によるモダン化、Pythonでのスパムフィルター開発など、複数のプロジェクトを推進。</p>
+            <p>
+              <strong>2016年12月 - 2018年12月</strong>
+              株式会社ミンカブ・ジ・インフォノイド（エンジニア /
+              メインエンジニア）
+            </p>
+            <p class="text-sm text-gray-600 ml-4">
+              金融情報サービスのデータプロバイダー移行、ニュースサイト刷新、Vue.js導入によるモダン化、Pythonでのスパムフィルター開発など、複数のプロジェクトを推進。
+            </p>
 
-            <p><strong>2015年4月 - 2016年11月</strong> 株式会社リンクレア（システムエンジニア）</p>
-            <p class="text-sm text-gray-600 ml-4">SIerとして、在庫管理・駐車場管理・基幹システムなど、多様な顧客のWebアプリケーション開発・テスト・保守を経験。</p>
+            <p>
+              <strong>2015年4月 - 2016年11月</strong>
+              株式会社リンクレア（システムエンジニア）
+            </p>
+            <p class="text-sm text-gray-600 ml-4">
+              SIerとして、在庫管理・駐車場管理・基幹システムなど、多様な顧客のWebアプリケーション開発・テスト・保守を経験。
+            </p>
           </div>
         </div>
       </div>
@@ -62,28 +93,59 @@
           <div class="mb-4">
             <h3 class="text-lg font-semibold text-gray-800">技術的強み</h3>
             <ul class="list-disc list-inside ml-4 space-y-1">
-              <li><strong>バックエンド開発</strong>：Ruby on Rails を用いたAPI設計・開発・運用（主要領域）</li>
-              <li><strong>パフォーマンスチューニング</strong>：DB最適化、レスポンス改善、負荷対策</li>
-              <li><strong>技術選定・アーキテクチャ設計</strong>：サービス要件に応じた最適な技術スタック選択</li>
-              <li><strong>フロントエンド・インフラ</strong>：Vue.js / AWS 等も扱えるが補助的な位置づけ</li>
+              <li>
+                <strong>バックエンド開発</strong>：Ruby on Rails
+                を用いたAPI設計・開発・運用（主要領域）
+              </li>
+              <li>
+                <strong>パフォーマンスチューニング</strong
+                >：DB最適化、レスポンス改善、負荷対策
+              </li>
+              <li>
+                <strong>技術選定・アーキテクチャ設計</strong
+                >：サービス要件に応じた最適な技術スタック選択
+              </li>
+              <li>
+                <strong>フロントエンド・インフラ</strong>：Vue.js / AWS
+                等も扱えるが補助的な位置づけ
+              </li>
             </ul>
           </div>
 
           <div class="mb-4">
-            <h3 class="text-lg font-semibold text-gray-800">マネジメント・ヒューマンスキル</h3>
+            <h3 class="text-lg font-semibold text-gray-800">
+              マネジメント・ヒューマンスキル
+            </h3>
             <ul class="list-disc list-inside ml-4 space-y-1">
-              <li><strong>チームマネジメント</strong>：開発チームの運営・メンバー育成・目標設定</li>
-              <li><strong>フットワークの軽さ</strong>：迅速な課題対応と柔軟な方針転換</li>
-              <li><strong>柔軟性</strong>：変化する要件や技術トレンドへの適応力</li>
-              <li><strong>ステークホルダー調整</strong>：技術要件と事業要件のバランス調整</li>
+              <li>
+                <strong>チームマネジメント</strong
+                >：開発チームの運営・メンバー育成・目標設定
+              </li>
+              <li>
+                <strong>フットワークの軽さ</strong
+                >：迅速な課題対応と柔軟な方針転換
+              </li>
+              <li>
+                <strong>柔軟性</strong>：変化する要件や技術トレンドへの適応力
+              </li>
+              <li>
+                <strong>ステークホルダー調整</strong
+                >：技術要件と事業要件のバランス調整
+              </li>
             </ul>
           </div>
 
           <div class="mb-4">
-            <h3 class="text-lg font-semibold text-gray-800">開発・チーム運営の考え方</h3>
+            <h3 class="text-lg font-semibold text-gray-800">
+              開発・チーム運営の考え方
+            </h3>
             <ul class="list-disc list-inside ml-4 space-y-1">
-              <li>サービス価値の最大化を重視した技術選定とアーキテクチャ設計</li>
-              <li>パフォーマンス・スケーラビリティ・保守性のバランスを考慮した設計</li>
+              <li>
+                サービス価値の最大化を重視した技術選定とアーキテクチャ設計
+              </li>
+              <li>
+                パフォーマンス・スケーラビリティ・保守性のバランスを考慮した設計
+              </li>
               <li>チームの生産性向上とメンバーの成長を両立するマネジメント</li>
               <li>迅速な意思決定と柔軟な軌道修正によるアジャイルな開発運営</li>
             </ul>
