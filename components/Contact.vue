@@ -10,43 +10,52 @@
 
         <!-- Social Links -->
         <div class="flex justify-center items-center space-x-8 mb-12">
-          <a 
-            href="https://www.facebook.com/yuma.mitsuyoshi" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://www.facebook.com/yuma.mitsuyoshi"
+            target="_blank"
+            rel="noopener noreferrer"
             class="social-link facebook"
             aria-label="Facebook"
           >
-            <font-awesome-icon :icon="['fab', 'facebook-square']" class="social-icon" />
+            <font-awesome-icon
+              :icon="['fab', 'facebook-square']"
+              class="social-icon"
+            />
             <span class="social-label">Facebook</span>
           </a>
-          
-          <a 
-            href="https://github.com/y-mitsuyoshi" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+
+          <a
+            href="https://github.com/y-mitsuyoshi"
+            target="_blank"
+            rel="noopener noreferrer"
             class="social-link github"
             aria-label="GitHub"
           >
-            <font-awesome-icon :icon="['fab', 'github-square']" class="social-icon" />
+            <font-awesome-icon
+              :icon="['fab', 'github-square']"
+              class="social-icon"
+            />
             <span class="social-label">GitHub</span>
           </a>
-          
-          <a 
-            href="https://twitter.com/MitsuyoshiYuma" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="social-link twitter"
-            aria-label="Twitter"
+
+          <a
+            href="https://x.com/MitsuyoshiYuma"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link x"
+            aria-label="X"
           >
-            <font-awesome-icon :icon="['fab', 'twitter-square']" class="social-icon" />
-            <span class="social-label">Twitter</span>
+            <font-awesome-icon
+              :icon="['fab', 'x-twitter']"
+              class="social-icon"
+            />
+            <span class="social-label">X</span>
           </a>
-          
-          <a 
-            href="http://tabilike.hatenablog.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+
+          <a
+            href="http://tabilike.hatenablog.com"
+            target="_blank"
+            rel="noopener noreferrer"
             class="social-link blog"
             aria-label="Blog"
           >
@@ -56,8 +65,12 @@
         </div>
 
         <!-- Contact Info -->
-        <div class="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700">
-          <h3 class="text-2xl font-semibold text-white mb-6">Contact Information</h3>
+        <div
+          class="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700"
+        >
+          <h3 class="text-2xl font-semibold text-white mb-6">
+            Contact Information
+          </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300">
             <div class="contact-item">
               <div class="contact-icon">
@@ -68,7 +81,7 @@
                 <div class="contact-value">Yuma Mitsuyoshi</div>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <div class="contact-icon">
                 <font-awesome-icon icon="briefcase" />
@@ -78,7 +91,7 @@
                 <div class="contact-value">Engineering Manager</div>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <div class="contact-icon">
                 <font-awesome-icon icon="laptop-code" />
@@ -88,7 +101,7 @@
                 <div class="contact-value">Backend Development</div>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <div class="contact-icon">
                 <font-awesome-icon icon="users" />
@@ -158,8 +171,8 @@
   color: #ffffff;
 }
 
-.social-link.twitter:hover .social-icon {
-  color: #1da1f2;
+.social-link.x:hover .social-icon {
+  color: #000000;
 }
 
 .social-link.blog:hover .social-icon {
@@ -208,11 +221,11 @@
   .social-link {
     padding: 0.75rem;
   }
-  
+
   .social-icon {
     font-size: 2rem;
   }
-  
+
   .social-label {
     font-size: 0.75rem;
   }

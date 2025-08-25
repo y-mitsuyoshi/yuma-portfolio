@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   faFacebookSquare,
   faGithubSquare,
-  faTwitterSquare,
+  faXTwitter,
   faJs,
   faPython,
   faGolang,
@@ -55,7 +55,7 @@ config.autoAddCss = false
 library.add(
   faFacebookSquare,
   faGithubSquare,
-  faTwitterSquare,
+  faXTwitter,
   faRss,
   faGem,
   faJs,
@@ -94,7 +94,7 @@ library.add(
   faChevronDown,
   faUsers,
   faComments,
-  faLightbulb
+  faLightbulb,
 )
 
 export default defineNuxtPlugin((nuxtApp) => {
