@@ -148,9 +148,6 @@
                   <div class="timeline-content">
                     <div class="timeline-title">株式会社TRUSTDOCK</div>
                     <div class="timeline-role">開発グループマネージャー</div>
-                    <div class="timeline-desc">
-                      複数チームを管掌し、確実なデリバリー、生成AI活用による業務改善、キャリアラダー・評価制度の設計、開発生産性の可視化・AI活用推進を担当。
-                    </div>
                   </div>
                 </div>
 
@@ -159,9 +156,6 @@
                   <div class="timeline-content">
                     <div class="timeline-title">株式会社ココナラ</div>
                     <div class="timeline-role">チームマネージャー</div>
-                    <div class="timeline-desc">
-                      バックエンド開発部にて新規機能開発・開発基盤改善を担当。2チームのマネージャーとしてスクラム導入・レビュー改善・育成、認証基盤の導入等のプロジェクトを推進。
-                    </div>
                   </div>
                 </div>
 
@@ -169,22 +163,15 @@
                   <div class="timeline-date">2021年5月 - 2021年12月</div>
                   <div class="timeline-content">
                     <div class="timeline-title">フリーランスエンジニア</div>
-                    <div class="timeline-role">株式会社じげん（業務委託）</div>
-                    <div class="timeline-desc">
-                      Ruby on
-                      Railsを用いたアルバイト求人サイトの保守・機能開発に従事。
-                    </div>
+                    <div class="timeline-role">業務委託</div>
                   </div>
                 </div>
 
                 <div class="timeline-item">
-                  <div class="timeline-date">2019年1月 - 2021年4月</div>
+                  <div class="timeline-date">2019年1月 - 2021年12月</div>
                   <div class="timeline-content">
                     <div class="timeline-title">株式会社MERY</div>
                     <div class="timeline-role">エンジニア</div>
-                    <div class="timeline-desc">
-                      女性向けメディアの許諾管理システムを中心に、リファクタリング(DDD/GraphQL)・保守・新規開発(Go)を担当。PMとしてInstagram連携システムの構築も主導。
-                    </div>
                   </div>
                 </div>
 
@@ -194,12 +181,7 @@
                     <div class="timeline-title">
                       株式会社ミンカブ・ジ・インフォノイド
                     </div>
-                    <div class="timeline-role">
-                      エンジニア / メインエンジニア
-                    </div>
-                    <div class="timeline-desc">
-                      金融情報サービスのデータプロバイダー移行、ニュースサイト刷新、Vue.js導入によるモダン化、Pythonでのスパムフィルター開発など、複数のプロジェクトを推進。
-                    </div>
+                    <div class="timeline-role">エンジニア</div>
                   </div>
                 </div>
 
@@ -208,9 +190,6 @@
                   <div class="timeline-content">
                     <div class="timeline-title">SIer企業</div>
                     <div class="timeline-role">システムエンジニア</div>
-                    <div class="timeline-desc">
-                      SIerとして、在庫管理・駐車場管理・基幹システムなど、多様な顧客のWebアプリケーション開発・テスト・保守を経験。
-                    </div>
                   </div>
                 </div>
               </div>
