@@ -72,7 +72,9 @@
           <div class="strength-overview-card primary">
             <div class="strength-icon">🎯</div>
             <h3 class="strength-category">Core Strength</h3>
-            <p class="strength-description">Ruby / Go バックエンド開発・生成AI活用</p>
+            <p class="strength-description">
+              Ruby / Go バックエンド開発・生成AI活用
+            </p>
             <div class="strength-bar primary-bar"></div>
           </div>
 
@@ -681,10 +683,12 @@ const skillCategories = [
 // SEO設定
 useSeo({
   title: 'Technical Skills - Yuma Mitsuyoshi',
-  description: 'プログラミング言語、フレームワーク、クラウド・AI基盤、マネジメントの詳細。Ruby・Go・TypeScript、Vue.js・React、AWS Bedrock・SageMaker・Azure AI・Google Cloud、BigQuery・Datadog、キャリアラダー設計・開発生産性可視化などの実務経験。',
-  keywords: 'Technical Skills,Ruby,Go,TypeScript,Vue.js,React,AWS Bedrock,SageMaker,BigQuery,Datadog,生成AI,チームマネジメント,DDD,マイクロサービス',
+  description:
+    'プログラミング言語、フレームワーク、クラウド・AI基盤、マネジメントの詳細。Ruby・Go・TypeScript、Vue.js・React、AWS Bedrock・SageMaker・Azure AI・Google Cloud、BigQuery・Datadog、キャリアラダー設計・開発生産性可視化などの実務経験。',
+  keywords:
+    'Technical Skills,Ruby,Go,TypeScript,Vue.js,React,AWS Bedrock,SageMaker,BigQuery,Datadog,生成AI,チームマネジメント,DDD,マイクロサービス',
   type: 'website',
-  canonical: '/skill'
+  canonical: '/skill',
 })
 
 // Analytics tracking
@@ -693,7 +697,7 @@ const { $trackEvent } = useNuxtApp()
 onMounted(() => {
   $trackEvent('page_view', {
     page: 'skills',
-    section: 'technical_skills'
+    section: 'technical_skills',
   })
 })
 </script>

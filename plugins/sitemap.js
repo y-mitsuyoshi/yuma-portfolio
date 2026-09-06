@@ -6,36 +6,36 @@ export default defineNuxtPlugin(() => {
       url: '/',
       changefreq: 'weekly',
       priority: 1.0,
-      lastmod: new Date().toISOString()
+      lastmod: new Date().toISOString(),
     },
     {
       url: '/profile',
       changefreq: 'monthly',
       priority: 0.8,
-      lastmod: new Date().toISOString()
+      lastmod: new Date().toISOString(),
     },
     {
       url: '/skill',
       changefreq: 'monthly',
       priority: 0.8,
-      lastmod: new Date().toISOString()
+      lastmod: new Date().toISOString(),
     },
     {
       url: '/hobby',
       changefreq: 'monthly',
       priority: 0.6,
-      lastmod: new Date().toISOString()
-    }
+      lastmod: new Date().toISOString(),
+    },
   ]
 
   // サイトマップXMLを生成
   const generateSitemap = () => {
     const baseUrl = 'https://yuma-portfolio.web.app'
-    
+
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`
 
-    sitemapRoutes.forEach(route => {
+    sitemapRoutes.forEach((route) => {
       sitemap += `
   <url>
     <loc>${baseUrl}${route.url}</loc>
@@ -54,7 +54,7 @@ export default defineNuxtPlugin(() => {
   // robots.txtを生成
   const generateRobots = () => {
     const baseUrl = 'https://yuma-portfolio.web.app'
-    
+
     return `User-agent: *
 Allow: /
 
@@ -71,7 +71,7 @@ Disallow: /.output/`
   return {
     provide: {
       generateSitemap,
-      generateRobots
-    }
+      generateRobots,
+    },
   }
 })

@@ -26,9 +26,9 @@
             <div
               class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl ring-4 ring-white overflow-hidden"
             >
-              <img 
-                src="~/assets/icon.png" 
-                alt="Yuma Mitsuyoshi" 
+              <img
+                src="~/assets/icon.png"
+                alt="Yuma Mitsuyoshi"
                 class="w-20 h-20 object-contain"
               />
             </div>
@@ -57,16 +57,16 @@
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <nuxt-link 
-              to="/profile" 
+            <nuxt-link
+              to="/profile"
               class="hero-btn hero-btn-primary"
               @click="trackProfileClick"
             >
               <font-awesome-icon icon="user" class="mr-2" />
               Profile を見る
             </nuxt-link>
-            <nuxt-link 
-              to="/skill" 
+            <nuxt-link
+              to="/skill"
               class="hero-btn hero-btn-secondary"
               @click="trackSkillClick"
             >
@@ -201,6 +201,44 @@
   </div>
 </template>
 
+<script setup>
+// SEO設定
+useSeo({
+  title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
+  description:
+    'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
+  keywords:
+    'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
+  type: 'website',
+})
+
+// Analytics tracking functions
+const { $trackEvent } = useNuxtApp()
+
+// Hero section interactions
+const trackProfileClick = () => {
+  $trackEvent('hero_profile_click', {
+    button_text: 'Profile を見る',
+    section: 'hero',
+  })
+}
+
+const trackSkillClick = () => {
+  $trackEvent('hero_skill_click', {
+    button_text: 'Skills を見る',
+    section: 'hero',
+  })
+}
+
+// Page view tracking (automatic via plugin)
+onMounted(() => {
+  $trackEvent('page_engagement', {
+    page: 'home',
+    action: 'hero_section_viewed',
+  })
+})
+</script>
+
 <style scoped>
 /* Hero Buttons */
 .hero-btn {
@@ -306,39 +344,3 @@
   animation-delay: 1s;
 }
 </style>
-
-<script setup>
-// SEO設定
-useSeo({
-  title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
-  description: 'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
-  keywords: 'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
-  type: 'website'
-})
-
-// Analytics tracking functions
-const { $trackEvent } = useNuxtApp()
-
-// Hero section interactions
-const trackProfileClick = () => {
-  $trackEvent('hero_profile_click', {
-    button_text: 'Profile を見る',
-    section: 'hero'
-  })
-}
-
-const trackSkillClick = () => {
-  $trackEvent('hero_skill_click', {
-    button_text: 'Skills を見る', 
-    section: 'hero'
-  })
-}
-
-// Page view tracking (automatic via plugin)
-onMounted(() => {
-  $trackEvent('page_engagement', {
-    page: 'home',
-    action: 'hero_section_viewed'
-  })
-})
-</script>

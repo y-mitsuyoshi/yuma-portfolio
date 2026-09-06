@@ -5,7 +5,7 @@
         <h1 class="text-3xl font-bold text-slate-800 mb-8">
           🔍 Analytics Debug Console
         </h1>
-        
+
         <div class="space-y-6">
           <!-- Test Event Buttons -->
           <div class="bg-slate-50 rounded-xl p-6">
@@ -13,28 +13,16 @@
               Test Custom Events
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <button 
-                @click="testButtonClick"
-                class="btn btn-primary"
-              >
+              <button class="btn btn-primary" @click="testButtonClick">
                 Test Button Click
               </button>
-              <button 
-                @click="testSocialClick"
-                class="btn btn-secondary"
-              >
+              <button class="btn btn-secondary" @click="testSocialClick">
                 Test Social Link
               </button>
-              <button 
-                @click="testPageEngagement"
-                class="btn btn-success"
-              >
+              <button class="btn btn-success" @click="testPageEngagement">
                 Test Page Engagement
               </button>
-              <button 
-                @click="testCustomEvent"
-                class="btn btn-warning"
-              >
+              <button class="btn btn-warning" @click="testCustomEvent">
                 Test Custom Event
               </button>
             </div>
@@ -47,8 +35,9 @@
             </h2>
             <div class="bg-slate-800 rounded-lg p-4">
               <code class="text-green-400 text-sm">
-                // Events are sent to Google Analytics<br/>
-                // Check Browser DevTools → Network tab for 'collect' requests<br/>
+                // Events are sent to Google Analytics<br />
+                // Check Browser DevTools → Network tab for 'collect'
+                requests<br />
                 // Or use GA4 DebugView for real-time verification
               </code>
             </div>
@@ -71,8 +60,8 @@
 
           <!-- Back to Home -->
           <div class="text-center">
-            <nuxt-link 
-              to="/" 
+            <nuxt-link
+              to="/"
               class="btn btn-outline"
               @click="trackNavigationClick"
             >
@@ -84,6 +73,65 @@
     </div>
   </div>
 </template>
+
+<script setup>
+// Analytics tracking
+const { $trackEvent } = useNuxtApp()
+
+// Test event functions
+const testButtonClick = () => {
+  $trackEvent('test_button_click', {
+    button_type: 'test',
+    timestamp: new Date().toISOString(),
+    page: 'debug',
+  })
+}
+
+const testSocialClick = () => {
+  $trackEvent('test_social_click', {
+    platform: 'test_platform',
+    action: 'test_click',
+    timestamp: new Date().toISOString(),
+  })
+}
+
+const testPageEngagement = () => {
+  $trackEvent('test_page_engagement', {
+    engagement_time: Math.floor(Math.random() * 60) + 10,
+    scroll_depth: Math.floor(Math.random() * 100),
+    timestamp: new Date().toISOString(),
+  })
+}
+
+const testCustomEvent = () => {
+  $trackEvent('test_custom_event', {
+    custom_parameter_1: 'test_value_1',
+    custom_parameter_2: 42,
+    custom_parameter_3: true,
+    timestamp: new Date().toISOString(),
+  })
+}
+
+const trackNavigationClick = () => {
+  $trackEvent('debug_navigation', {
+    destination: 'home',
+    source: 'debug_page',
+  })
+}
+
+// Page tracking
+onMounted(() => {
+  $trackEvent('debug_page_accessed', {
+    access_time: new Date().toISOString(),
+  })
+})
+
+// Meta
+useSeoMeta({
+  title: 'Analytics Debug - Yuma Portfolio',
+  description: 'Analytics debugging and testing console',
+})
+</script>
 
 <style scoped>
 .btn {
@@ -139,62 +187,3 @@
   background-color: rgb(248 250 252);
 }
 </style>
-
-<script setup>
-// Analytics tracking
-const { $trackEvent } = useNuxtApp()
-
-// Test event functions
-const testButtonClick = () => {
-  $trackEvent('test_button_click', {
-    button_type: 'test',
-    timestamp: new Date().toISOString(),
-    page: 'debug'
-  })
-}
-
-const testSocialClick = () => {
-  $trackEvent('test_social_click', {
-    platform: 'test_platform',
-    action: 'test_click',
-    timestamp: new Date().toISOString()
-  })
-}
-
-const testPageEngagement = () => {
-  $trackEvent('test_page_engagement', {
-    engagement_time: Math.floor(Math.random() * 60) + 10,
-    scroll_depth: Math.floor(Math.random() * 100),
-    timestamp: new Date().toISOString()
-  })
-}
-
-const testCustomEvent = () => {
-  $trackEvent('test_custom_event', {
-    custom_parameter_1: 'test_value_1',
-    custom_parameter_2: 42,
-    custom_parameter_3: true,
-    timestamp: new Date().toISOString()
-  })
-}
-
-const trackNavigationClick = () => {
-  $trackEvent('debug_navigation', {
-    destination: 'home',
-    source: 'debug_page'
-  })
-}
-
-// Page tracking
-onMounted(() => {
-  $trackEvent('debug_page_accessed', {
-    access_time: new Date().toISOString()
-  })
-})
-
-// Meta
-useSeoMeta({
-  title: 'Analytics Debug - Yuma Portfolio',
-  description: 'Analytics debugging and testing console'
-})
-</script>

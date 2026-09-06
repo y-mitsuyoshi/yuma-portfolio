@@ -135,6 +135,26 @@
   </section>
 </template>
 
+<script setup>
+// Analytics tracking functions
+const { $trackEvent } = useNuxtApp()
+
+const trackSocialClick = (platform) => {
+  $trackEvent('social_link_click', {
+    platform: platform,
+    section: 'contact',
+    action: 'external_link',
+  })
+}
+
+// Track contact section view
+onMounted(() => {
+  $trackEvent('contact_section_viewed', {
+    section: 'contact',
+  })
+})
+</script>
+
 <style scoped>
 .social-links-container {
   display: flex;
@@ -285,23 +305,3 @@
   }
 }
 </style>
-
-<script setup>
-// Analytics tracking functions
-const { $trackEvent } = useNuxtApp()
-
-const trackSocialClick = (platform) => {
-  $trackEvent('social_link_click', {
-    platform: platform,
-    section: 'contact',
-    action: 'external_link'
-  })
-}
-
-// Track contact section view
-onMounted(() => {
-  $trackEvent('contact_section_viewed', {
-    section: 'contact'
-  })
-})
-</script>

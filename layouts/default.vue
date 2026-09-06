@@ -14,9 +14,9 @@
               <div
                 class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden"
               >
-                <img 
-                  src="~/assets/icon.png" 
-                  alt="Yuma Mitsuyoshi" 
+                <img
+                  src="~/assets/icon.png"
+                  alt="Yuma Mitsuyoshi"
                   class="w-6 h-6 object-contain"
                 />
               </div>

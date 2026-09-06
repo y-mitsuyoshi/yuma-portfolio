@@ -7,13 +7,16 @@ export const useSeo = (options = {}) => {
     siteName: 'Yuma Mitsuyoshi Portfolio',
     siteUrl: 'https://yuma-portfolio.web.app',
     authorName: 'Yuma Mitsuyoshi',
-    defaultTitle: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
-    defaultDescription: 'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
+    defaultTitle:
+      'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
+    defaultDescription:
+      'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
     defaultImage: '/og-image.png',
-    defaultKeywords: 'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
+    defaultKeywords:
+      'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
     twitterHandle: '@MitsuyoshiYuma',
     language: 'ja',
-    locale: 'ja_JP'
+    locale: 'ja_JP',
   }
 
   const {
@@ -28,17 +31,20 @@ export const useSeo = (options = {}) => {
     author = siteConfig.authorName,
     canonical = '',
     noindex = false,
-    nofollow = false
+    nofollow = false,
   } = options
 
   // 完全なURL生成
   const fullUrl = canonical || `${siteConfig.siteUrl}${useRoute().path}`
-  const fullImageUrl = image.startsWith('http') ? image : `${siteConfig.siteUrl}${image}`
+  const fullImageUrl = image.startsWith('http')
+    ? image
+    : `${siteConfig.siteUrl}${image}`
 
   // ページタイトルの生成
-  const pageTitle = title === siteConfig.defaultTitle 
-    ? title 
-    : `${title} | ${siteConfig.siteName}`
+  const pageTitle =
+    title === siteConfig.defaultTitle
+      ? title
+      : `${title} | ${siteConfig.siteName}`
 
   // メタタグの設定
   useSeoMeta({
@@ -48,7 +54,7 @@ export const useSeo = (options = {}) => {
     keywords,
     author,
     robots: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`,
-    
+
     // Open Graph
     ogTitle: pageTitle,
     ogDescription: description,
@@ -58,7 +64,7 @@ export const useSeo = (options = {}) => {
     ogType: type,
     ogSiteName: siteConfig.siteName,
     ogLocale: siteConfig.locale,
-    
+
     // Twitter Card
     twitterCard: 'summary_large_image',
     twitterSite: siteConfig.twitterHandle,
@@ -67,21 +73,21 @@ export const useSeo = (options = {}) => {
     twitterDescription: description,
     twitterImage: fullImageUrl,
     twitterImageAlt: `${title} - ${siteConfig.siteName}`,
-    
+
     // Article specific (for blog posts, etc.)
     ...(type === 'article' && {
       articleAuthor: author,
       articleSection: section,
       ...(publishedTime && { articlePublishedTime: publishedTime }),
-      ...(modifiedTime && { articleModifiedTime: modifiedTime })
+      ...(modifiedTime && { articleModifiedTime: modifiedTime }),
     }),
-    
+
     // Additional meta tags
     viewport: 'width=device-width, initial-scale=1',
     charset: 'utf-8',
     httpEquiv: {
-      'X-UA-Compatible': 'IE=edge'
-    }
+      'X-UA-Compatible': 'IE=edge',
+    },
   })
 
   // カノニカルURL
@@ -89,9 +95,9 @@ export const useSeo = (options = {}) => {
     link: [
       {
         rel: 'canonical',
-        href: fullUrl
-      }
-    ]
+        href: fullUrl,
+      },
+    ],
   })
 
   // 構造化データ（JSON-LD）
@@ -109,41 +115,41 @@ export const useSeo = (options = {}) => {
       jobTitle: 'Engineering Manager & Full-Stack Developer',
       worksFor: {
         '@type': 'Organization',
-        name: 'Various Companies'
+        name: 'Various Companies',
       },
       sameAs: [
         'https://github.com/y-mitsuyoshi',
         'https://x.com/MitsuyoshiYuma',
         'https://www.facebook.com/yuma.mitsuyoshi',
-        'https://www.instagram.com/yuma.mitsuyoshi/'
-      ]
+        'https://www.instagram.com/yuma.mitsuyoshi/',
+      ],
     },
     publisher: {
       '@type': 'Person',
       name: siteConfig.authorName,
-      url: siteConfig.siteUrl
+      url: siteConfig.siteUrl,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': fullUrl
+      '@id': fullUrl,
     },
     inLanguage: siteConfig.language,
     ...(publishedTime && { datePublished: publishedTime }),
-    ...(modifiedTime && { dateModified: modifiedTime })
+    ...(modifiedTime && { dateModified: modifiedTime }),
   }
 
   useHead({
     script: [
       {
         type: 'application/ld+json',
-        innerHTML: JSON.stringify(structuredData)
-      }
-    ]
+        innerHTML: JSON.stringify(structuredData),
+      },
+    ],
   })
 
   return {
     siteConfig,
     fullUrl,
-    pageTitle
+    pageTitle,
   }
 }

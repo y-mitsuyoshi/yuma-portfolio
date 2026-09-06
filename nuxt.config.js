@@ -21,8 +21,17 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。' },
-        { name: 'keywords', content: 'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント' },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
+        },
+        {
+          name: 'keywords',
+          content:
+            'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
+        },
         { name: 'author', content: 'Yuma Mitsuyoshi' },
         { name: 'robots', content: 'index,follow' },
         { name: 'googlebot', content: 'index,follow' },
@@ -39,15 +48,33 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: '/apple-touch-icon.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-32x32.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicon-16x16.png',
+        },
         { rel: 'manifest', href: '/site.webmanifest' },
         { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#2563eb' },
         { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: '//www.googletagmanager.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
       ],
       script: [
         {
@@ -84,15 +111,16 @@ export default defineNuxtConfig({
   // ランタイム設定
   runtimeConfig: {
     public: {
-  // Firebase client-side config (set these in your .env or hosting environment)
-  FIREBASE_API_KEY: process.env.FIREBASE_API_KEY || '',
-  FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN || '',
-  FIREBASE_DATABASE_URL: process.env.FIREBASE_DATABASE_URL || '',
-  FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID || '',
-  FIREBASE_STORAGE_BUCKET: process.env.FIREBASE_STORAGE_BUCKET || '',
-  FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID || '',
-  FIREBASE_APP_ID: process.env.FIREBASE_APP_ID || '',
-  FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID || '',
+      // Firebase client-side config (set these in your .env or hosting environment)
+      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY || '',
+      FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN || '',
+      FIREBASE_DATABASE_URL: process.env.FIREBASE_DATABASE_URL || '',
+      FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID || '',
+      FIREBASE_STORAGE_BUCKET: process.env.FIREBASE_STORAGE_BUCKET || '',
+      FIREBASE_MESSAGING_SENDER_ID:
+        process.env.FIREBASE_MESSAGING_SENDER_ID || '',
+      FIREBASE_APP_ID: process.env.FIREBASE_APP_ID || '',
+      FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID || '',
     },
   },
 

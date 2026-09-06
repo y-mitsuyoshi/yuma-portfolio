@@ -147,9 +147,7 @@
                   <div class="timeline-date">2024年11月 - 現在</div>
                   <div class="timeline-content">
                     <div class="timeline-title">株式会社TRUSTDOCK</div>
-                    <div class="timeline-role">
-                      開発グループマネージャー
-                    </div>
+                    <div class="timeline-role">開発グループマネージャー</div>
                     <div class="timeline-desc">
                       eKYC・本人確認プラットフォームの複数チームを管掌。法令対応の確実なデリバリー、生成AI活用による業務改善、キャリアラダー・評価制度の設計、開発生産性の可視化・AI活用推進を担当。
                     </div>
@@ -238,12 +236,11 @@
                     10年以上の実務経験、API設計・開発・運用
                   </li>
                   <li>
-                    <strong>生成AI活用</strong> -
-                    業務改善・社内へのAI導入推進
+                    <strong>生成AI活用</strong> - 業務改善・社内へのAI導入推進
                   </li>
                   <li>
-                    <strong>データ基盤・可視化</strong> -
-                    BigQuery集約、Looker Studio可視化、DORA計測
+                    <strong>データ基盤・可視化</strong> - BigQuery集約、Looker
+                    Studio可視化、DORA計測
                   </li>
                   <li>
                     <strong>マイクロサービス</strong> -
@@ -268,7 +265,8 @@
                     IC/EMキャリアラダー策定、1on1・評価運用、面接官育成
                   </li>
                   <li>
-                    <strong>プロセス改善</strong> - レビュー改善、開発生産性の可視化
+                    <strong>プロセス改善</strong> -
+                    レビュー改善、開発生産性の可視化
                   </li>
                   <li>
                     <strong>プロジェクト管理</strong> -
@@ -332,6 +330,29 @@
     </div>
   </div>
 </template>
+
+<script setup>
+// SEO設定
+useSeo({
+  title: 'Profile - Yuma Mitsuyoshi',
+  description:
+    '開発グループマネージャー兼バックエンドエンジニアのプロフィール。10年以上の実務経験でRuby・Goを中心に開発し、eKYC基盤のマネジメント、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
+  keywords:
+    'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby,Go,バックエンド開発,チームマネジメント,生成AI,TRUSTDOCK,ココナラ,MERY',
+  type: 'website',
+  canonical: '/profile',
+})
+
+// Analytics tracking
+const { $trackEvent } = useNuxtApp()
+
+onMounted(() => {
+  $trackEvent('page_view', {
+    page: 'profile',
+    section: 'personal_info',
+  })
+})
+</script>
 
 <style scoped>
 .profile-card {
@@ -527,24 +548,3 @@
   }
 }
 </style>
-
-<script setup>
-// SEO設定
-useSeo({
-  title: 'Profile - Yuma Mitsuyoshi',
-  description: '開発グループマネージャー兼バックエンドエンジニアのプロフィール。10年以上の実務経験でRuby・Goを中心に開発し、eKYC基盤のマネジメント、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
-  keywords: 'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby,Go,バックエンド開発,チームマネジメント,生成AI,TRUSTDOCK,ココナラ,MERY',
-  type: 'website',
-  canonical: '/profile'
-})
-
-// Analytics tracking
-const { $trackEvent } = useNuxtApp()
-
-onMounted(() => {
-  $trackEvent('page_view', {
-    page: 'profile',
-    section: 'personal_info'
-  })
-})
-</script>

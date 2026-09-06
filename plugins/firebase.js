@@ -39,9 +39,9 @@ export default defineNuxtPlugin(() => {
     const trackPageView = (pageName) => {
       if (analytics) {
         setCurrentScreen(analytics, pageName)
-        logEvent(analytics, 'page_view', { 
+        logEvent(analytics, 'page_view', {
           page_title: pageName,
-          page_location: window.location.href 
+          page_location: window.location.href,
         })
       }
     }
