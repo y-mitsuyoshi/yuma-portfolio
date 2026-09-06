@@ -21,8 +21,8 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。' },
-        { name: 'keywords', content: 'Yuma Mitsuyoshi,Engineering Manager,Full-Stack Developer,Backend Developer,PHP,Go,Java,Vue.js,Nuxt.js,Web Development,Team Management,技術マネジメント,フルスタック開発,バックエンド開発' },
+        { hid: 'description', name: 'description', content: 'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。' },
+        { name: 'keywords', content: 'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント' },
         { name: 'author', content: 'Yuma Mitsuyoshi' },
         { name: 'robots', content: 'index,follow' },
         { name: 'googlebot', content: 'index,follow' },

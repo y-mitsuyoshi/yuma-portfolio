@@ -36,7 +36,7 @@
               </div>
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-pink-500 rounded-full mr-3"></div>
-                <span class="text-slate-600">💼 9年以上のエンジニア経験</span>
+                <span class="text-slate-600">💼 10年以上のエンジニア経験</span>
               </div>
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
@@ -91,18 +91,18 @@
             </h2>
             <div class="text-slate-700 leading-relaxed space-y-4">
               <p>
-                1990年三重県生まれ、奈良県育ちのWebエンジニア・エンジニアリングマネージャーです。関西学院大学大学院で計量社会学を専攻し、統計解析とプログラミングの基礎を習得しました。
+                三重県生まれ、奈良県育ちのWebエンジニア・開発グループマネージャーです。関西学院大学大学院で計量社会学を専攻し、統計解析とプログラミングの基礎を習得しました。
               </p>
               <p>
-                9年以上のエンジニア経験を通じて、<strong class="text-blue-600"
-                  >Ruby on Rails を中心としたバックエンド開発</strong
+                10年以上のエンジニア経験を通じて、<strong class="text-blue-600"
+                  >Ruby / Go を中心としたバックエンド開発</strong
                 >に強みを持ちます。
-                エンジニアとしてのスキルに加え、チームマネジメント・技術選定・パフォーマンスチューニングを得意とし、
-                フットワークの軽さと柔軟性を活かした開発・運用改善に取り組んでいます。
+                生成AI活用による業務改善、データに基づく開発生産性の可視化、
+                チームマネジメント・技術選定・パフォーマンスチューニングを得意としています。
               </p>
               <p>
                 現在は<strong class="text-purple-600">株式会社TRUSTDOCK</strong
-                >でエンジニアリングマネージャーとして、eKYC・本人確認サービスの開発チーム運営と技術戦略に携わっています。
+                >で開発グループマネージャーとして、eKYC・本人確認サービスの複数チーム運営と技術戦略に携わっています。
               </p>
             </div>
           </div>
@@ -148,10 +148,10 @@
                   <div class="timeline-content">
                     <div class="timeline-title">株式会社TRUSTDOCK</div>
                     <div class="timeline-role">
-                      エンジニアリングマネージャー
+                      開発グループマネージャー
                     </div>
                     <div class="timeline-desc">
-                      eKYC・本人確認APIサービスのバックエンドチームにて、エンジニアリングマネージャーとしてチームを牽引。
+                      eKYC・本人確認プラットフォームの複数チームを管掌。法令対応の確実なデリバリー、生成AI活用による業務改善、キャリアラダー・評価制度の設計、開発生産性の可視化・AI活用推進を担当。
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@
                     <div class="timeline-title">株式会社ココナラ</div>
                     <div class="timeline-role">チームマネージャー</div>
                     <div class="timeline-desc">
-                      バックエンド開発部にて、新規機能開発や開発基盤改善を担当。後にチームマネージャーとして組織改善やメンバー育成、eKYC導入等のプロジェクトを推進。
+                      バックエンド開発部にて新規機能開発・開発基盤改善を担当。2チームのマネージャーとしてスクラム導入・レビュー改善・育成、eKYC導入等のプロジェクトを推進。
                     </div>
                   </div>
                 </div>
@@ -234,23 +234,24 @@
                 <h3 class="section-subtitle">🔧 技術的専門性</h3>
                 <ul class="philosophy-list">
                   <li>
-                    <strong>Ruby on Rails</strong> -
-                    9年以上の実務経験、API設計・開発・運用
+                    <strong>Ruby / Go</strong> -
+                    10年以上の実務経験、API設計・開発・運用
+                  </li>
+                  <li>
+                    <strong>生成AI活用</strong> -
+                    業務改善・社内へのAI導入推進
+                  </li>
+                  <li>
+                    <strong>データ基盤・可視化</strong> -
+                    BigQuery集約、Looker Studio可視化、DORA計測
                   </li>
                   <li>
                     <strong>マイクロサービス</strong> -
-                    gRPC、DDD、クリーンアーキテクチャ
+                    gRPC、GraphQL、DDD、クリーンアーキテクチャ
                   </li>
                   <li>
-                    <strong>パフォーマンス最適化</strong> -
-                    DB設計、スロークエリ改善、負荷対策
-                  </li>
-                  <li>
-                    <strong>モニタリング基盤</strong> -
-                    Sentry、X-Ray、Grafana導入
-                  </li>
-                  <li>
-                    <strong>CI/CD改善</strong> - CircleCI最適化、コスト4割削減
+                    <strong>安定運用・監視</strong> -
+                    Datadog、Sentry、パフォーマンス改善、法令対応の確実なデリバリー
                   </li>
                 </ul>
               </div>
@@ -259,21 +260,23 @@
                 <h3 class="section-subtitle">👥 マネジメント実績</h3>
                 <ul class="philosophy-list">
                   <li>
-                    <strong>チーム運営</strong> -
-                    スクラム開発導入、ベロシティ管理
+                    <strong>組織運営</strong> -
+                    複数チームの管掌、スクラム開発導入
                   </li>
                   <li>
-                    <strong>メンバー育成</strong> - 1on1改善、技術勉強会企画
+                    <strong>制度設計・育成</strong> -
+                    IC/EMキャリアラダー策定、1on1・評価運用、面接官育成
                   </li>
                   <li>
-                    <strong>プロセス改善</strong> - レビュー品質向上、開発効率化
+                    <strong>プロセス改善</strong> - レビュー改善、開発生産性の可視化
                   </li>
                   <li>
                     <strong>プロジェクト管理</strong> -
-                    要件定義〜リリースまで一貫対応
+                    要件定義〜リリースまで一貫対応、新規パッケージ開発主導
                   </li>
                   <li>
-                    <strong>組織改善</strong> - 採用面接、人材育成、文化醸成
+                    <strong>資格</strong> - Google Cloud Professional Cloud
+                    Architect（2026年取得）
                   </li>
                 </ul>
               </div>
@@ -283,21 +286,11 @@
               <h3 class="section-subtitle">💡 特徴的なプロジェクト経験</h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="project-highlight">
-                  <div class="project-icon">🏗️</div>
-                  <div>
-                    <div class="project-title">バッチ処理基盤刷新</div>
-                    <div class="project-desc">
-                      crontab → Rundeck移行で運用性大幅改善
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project-highlight">
                   <div class="project-icon">🤖</div>
                   <div>
-                    <div class="project-title">AI機能実装</div>
+                    <div class="project-title">生成AI活用による業務改善</div>
                     <div class="project-desc">
-                      ChatGPT活用、ストリーミング対応
+                      業務へのAI導入・改善推進、運用効率化に貢献
                     </div>
                   </div>
                 </div>
@@ -305,19 +298,29 @@
                 <div class="project-highlight">
                   <div class="project-icon">📊</div>
                   <div>
-                    <div class="project-title">モニタリング改善</div>
+                    <div class="project-title">開発生産性の可視化</div>
                     <div class="project-desc">
-                      X-Ray・Sentry導入、可視化ダッシュボード構築
+                      GitHub・管理データを集約しリードタイム等を可視化
                     </div>
                   </div>
                 </div>
 
                 <div class="project-highlight">
-                  <div class="project-icon">🔄</div>
+                  <div class="project-icon">👥</div>
                   <div>
-                    <div class="project-title">DDD・GraphQL導入</div>
+                    <div class="project-title">評価制度・組織づくり</div>
                     <div class="project-desc">
-                      レガシーシステムのモダン化リファクタリング
+                      IC/EMキャリアラダー策定、評価・運用と面接体制の拡大
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-highlight">
+                  <div class="project-icon">🛡️</div>
+                  <div>
+                    <div class="project-title">法令対応・確実なデリバリー</div>
+                    <div class="project-desc">
+                      eKYC周辺の制度対応を期日遵守で完遂、安定運用に貢献
                     </div>
                   </div>
                 </div>
@@ -529,8 +532,8 @@
 // SEO設定
 useSeo({
   title: 'Profile - Yuma Mitsuyoshi',
-  description: 'Engineering Manager & Full-Stack Developer のプロフィール詳細。9年以上のエンジニア経験を通じてRuby on Railsを中心としたバックエンド開発に強みを持ち、チームマネジメント・技術選定・パフォーマンスチューニングを得意とします。',
-  keywords: 'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby on Rails,バックエンド開発,チームマネジメント,TRUSTDOCK,ココナラ,MERY',
+  description: '開発グループマネージャー兼バックエンドエンジニアのプロフィール。10年以上の実務経験でRuby・Goを中心に開発し、eKYC基盤のマネジメント、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
+  keywords: 'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby,Go,バックエンド開発,チームマネジメント,生成AI,TRUSTDOCK,ココナラ,MERY',
   type: 'website',
   canonical: '/profile'
 })

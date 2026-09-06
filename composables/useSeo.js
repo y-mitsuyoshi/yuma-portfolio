@@ -8,9 +8,9 @@ export const useSeo = (options = {}) => {
     siteUrl: 'https://yuma-portfolio.web.app',
     authorName: 'Yuma Mitsuyoshi',
     defaultTitle: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
-    defaultDescription: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。PHP、Go、Java、Vue.js、Nuxt.jsなどの技術スタックでWebアプリケーション開発。',
+    defaultDescription: 'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
     defaultImage: '/og-image.png',
-    defaultKeywords: 'Yuma Mitsuyoshi,Engineering Manager,Full-Stack Developer,Backend Developer,PHP,Go,Java,Vue.js,Nuxt.js,Web Development,Team Management,技術マネジメント,フルスタック開発,バックエンド開発',
+    defaultKeywords: 'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
     twitterHandle: '@MitsuyoshiYuma',
     language: 'ja',
     locale: 'ja_JP'

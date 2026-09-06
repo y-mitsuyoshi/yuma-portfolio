@@ -49,8 +49,8 @@
           <p
             class="text-lg md:text-xl text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto"
           >
-            バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。<br />
-            10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。
+            eKYC基盤の開発グループマネージャー。<br />
+            Ruby・Goによるバックエンド開発と生成AI活用を軸に、組織づくりと技術革新を推進しています。
           </p>
 
           <!-- CTA Buttons -->
@@ -122,7 +122,7 @@
                 Engineering Management
               </h4>
               <p class="text-slate-600">
-                チーム育成、技術戦略立案、プロジェクトマネジメントを通じて組織の成長を支援
+                複数チームの管掌、評価制度設計、開発生産性の可視化を通じた組織の成長支援
               </p>
             </div>
 
@@ -140,7 +140,7 @@
                 Backend Development
               </h4>
               <p class="text-slate-600">
-                PHP、Go、Java等を用いたスケーラブルなWebアプリケーション・API開発
+                Ruby、Go、TypeScript等を用いたスケーラブルなWebアプリケーション・API開発
               </p>
             </div>
 
@@ -155,10 +155,10 @@
                 />
               </div>
               <h4 class="text-xl font-semibold text-slate-800 mb-4">
-                Full-Stack Development
+                AI & Data Utilization
               </h4>
               <p class="text-slate-600">
-                フロントエンドからバックエンドまで一貫したWebアプリケーション開発
+                生成AI活用とデータ基盤による業務改善・効率化
               </p>
             </div>
           </div>
@@ -311,8 +311,8 @@
 // SEO設定
 useSeo({
   title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
-  description: 'バックエンド開発を軸とした技術マネジメントとフルスタック開発に従事。10年以上の開発経験を活かし、チーム育成と技術革新を推進しています。PHP、Go、Java、Vue.js、Nuxt.jsなどの技術スタックでWebアプリケーション開発。',
-  keywords: 'Yuma Mitsuyoshi,Engineering Manager,Full-Stack Developer,Backend Developer,PHP,Go,Java,Vue.js,Nuxt.js,Web Development,Team Management,技術マネジメント,フルスタック開発,バックエンド開発',
+  description: 'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
+  keywords: 'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
   type: 'website'
 })
 

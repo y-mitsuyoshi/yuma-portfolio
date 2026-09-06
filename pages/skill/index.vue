@@ -72,7 +72,7 @@
           <div class="strength-overview-card primary">
             <div class="strength-icon">🎯</div>
             <h3 class="strength-category">Core Strength</h3>
-            <p class="strength-description">Ruby on Rails バックエンド開発</p>
+            <p class="strength-description">Ruby / Go バックエンド開発・生成AI活用</p>
             <div class="strength-bar primary-bar"></div>
           </div>
 
@@ -80,7 +80,7 @@
             <div class="strength-icon">⚡</div>
             <h3 class="strength-category">Proficient</h3>
             <p class="strength-description">
-              フルスタック開発・チームマネジメント
+              組織マネジメント・データ基盤・クラウドAI基盤
             </p>
             <div class="strength-bar secondary-bar"></div>
           </div>
@@ -134,6 +134,12 @@ const skillCategories = [
             textClass: 'text-red-800',
           },
           {
+            label: 'Go',
+            emoji: '🐹',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
+          },
+          {
             label: 'JavaScript',
             emoji: '📜',
             bgClass: 'bg-yellow-100',
@@ -152,12 +158,6 @@ const skillCategories = [
         strength: 'secondary',
         items: [
           {
-            label: 'Go',
-            emoji: '🐹',
-            bgClass: 'bg-cyan-100',
-            textClass: 'text-cyan-800',
-          },
-          {
             label: 'Python',
             emoji: '🐍',
             bgClass: 'bg-green-100',
@@ -165,7 +165,7 @@ const skillCategories = [
           },
           {
             label: 'PHP',
-            emoji: '�',
+            emoji: '🐘',
             bgClass: 'bg-indigo-100',
             textClass: 'text-indigo-800',
           },
@@ -177,7 +177,7 @@ const skillCategories = [
           },
           {
             label: 'VB.NET',
-            emoji: '�',
+            emoji: '🧰',
             bgClass: 'bg-blue-100',
             textClass: 'text-blue-800',
           },
@@ -255,6 +255,12 @@ const skillCategories = [
             textClass: 'text-green-800',
           },
           {
+            label: 'React',
+            emoji: '⚛️',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
+          },
+          {
             label: 'jQuery',
             emoji: '📝',
             bgClass: 'bg-blue-100',
@@ -330,7 +336,7 @@ const skillCategories = [
         ],
       },
       {
-        title: 'NoSQL・KVS',
+        title: 'NoSQL・KVS・DWH',
         strength: 'secondary',
         items: [
           {
@@ -345,6 +351,12 @@ const skillCategories = [
             bgClass: 'bg-yellow-100',
             textClass: 'text-yellow-800',
           },
+          {
+            label: 'BigQuery',
+            emoji: '📊',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
         ],
       },
     ],
@@ -355,7 +367,7 @@ const skillCategories = [
     icon: '☁️',
     groups: [
       {
-        title: 'クラウドサービス',
+        title: 'クラウド・AI基盤',
         strength: 'secondary',
         items: [
           {
@@ -363,6 +375,30 @@ const skillCategories = [
             emoji: '🌩️',
             bgClass: 'bg-orange-100',
             textClass: 'text-orange-800',
+          },
+          {
+            label: 'Bedrock',
+            emoji: '🤖',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'SageMaker',
+            emoji: '🧠',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
+          },
+          {
+            label: 'Azure AI',
+            emoji: '☁️',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
+            label: 'Google Cloud',
+            emoji: '🌐',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'Fargate',
@@ -458,12 +494,18 @@ const skillCategories = [
         ],
       },
       {
-        title: '監視・運用ツール',
+        title: '監視・運用・可視化',
         strength: 'secondary',
         items: [
           {
+            label: 'Datadog',
+            emoji: '🐶',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
+          },
+          {
             label: 'Sentry',
-            emoji: '�',
+            emoji: '🚨',
             bgClass: 'bg-red-100',
             textClass: 'text-red-800',
           },
@@ -480,6 +522,12 @@ const skillCategories = [
             textClass: 'text-orange-800',
           },
           {
+            label: 'Looker Studio',
+            emoji: '📊',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
+          {
             label: 'Rundeck',
             emoji: '⚙️',
             bgClass: 'bg-blue-100',
@@ -488,12 +536,12 @@ const skillCategories = [
         ],
       },
       {
-        title: 'CI/CD・その他',
+        title: 'CI/CD・テスト',
         strength: 'basic',
         items: [
           {
             label: 'CircleCI',
-            emoji: '�',
+            emoji: '🔁',
             bgClass: 'bg-green-100',
             textClass: 'text-green-800',
           },
@@ -530,7 +578,7 @@ const skillCategories = [
           },
           {
             label: 'メンバー育成',
-            emoji: '�',
+            emoji: '🌱',
             bgClass: 'bg-green-100',
             textClass: 'text-green-800',
           },
@@ -546,6 +594,12 @@ const skillCategories = [
             bgClass: 'bg-pink-100',
             textClass: 'text-pink-800',
           },
+          {
+            label: '評価制度設計',
+            emoji: '📝',
+            bgClass: 'bg-indigo-100',
+            textClass: 'text-indigo-800',
+          },
         ],
       },
       {
@@ -560,7 +614,7 @@ const skillCategories = [
           },
           {
             label: '要件定義',
-            emoji: '�',
+            emoji: '📐',
             bgClass: 'bg-blue-100',
             textClass: 'text-blue-800',
           },
@@ -576,6 +630,18 @@ const skillCategories = [
             bgClass: 'bg-yellow-100',
             textClass: 'text-yellow-800',
           },
+          {
+            label: '生産性可視化',
+            emoji: '📊',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
+          },
+          {
+            label: 'AI活用推進',
+            emoji: '🤖',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
+          },
         ],
       },
       {
@@ -590,7 +656,7 @@ const skillCategories = [
           },
           {
             label: 'レビュー改善',
-            emoji: '�️',
+            emoji: '🔍',
             bgClass: 'bg-purple-100',
             textClass: 'text-purple-800',
           },
@@ -615,8 +681,8 @@ const skillCategories = [
 // SEO設定
 useSeo({
   title: 'Technical Skills - Yuma Mitsuyoshi',
-  description: 'プログラミング言語、フレームワーク、ツール、技術的専門知識の詳細。Ruby on Rails、JavaScript、Go、Python、PHP、Java、Vue.js、Nuxt.js、AWS、チームマネジメントなどの実務経験とスキルレベル。',
-  keywords: 'Technical Skills,Programming Languages,Ruby on Rails,JavaScript,TypeScript,Go,Python,PHP,Java,Vue.js,Nuxt.js,AWS,Database,チームマネジメント,DDD,マイクロサービス',
+  description: 'プログラミング言語、フレームワーク、クラウド・AI基盤、マネジメントの詳細。Ruby・Go・TypeScript、Vue.js・React、AWS Bedrock・SageMaker・Azure AI・Google Cloud、BigQuery・Datadog、キャリアラダー設計・開発生産性可視化などの実務経験。',
+  keywords: 'Technical Skills,Ruby,Go,TypeScript,Vue.js,React,AWS Bedrock,SageMaker,BigQuery,Datadog,生成AI,チームマネジメント,DDD,マイクロサービス',
   type: 'website',
   canonical: '/skill'
 })
