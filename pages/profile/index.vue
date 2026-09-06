@@ -102,7 +102,7 @@
               </p>
               <p>
                 現在は<strong class="text-purple-600">株式会社TRUSTDOCK</strong
-                >で開発グループマネージャーとして、eKYC・本人確認サービスの複数チーム運営と技術戦略に携わっています。
+                >で開発組織のマネージャーとして、複数チームの技術戦略と組織運営に携わっています。
               </p>
             </div>
           </div>
@@ -149,7 +149,7 @@
                     <div class="timeline-title">株式会社TRUSTDOCK</div>
                     <div class="timeline-role">開発グループマネージャー</div>
                     <div class="timeline-desc">
-                      eKYC・本人確認プラットフォームの複数チームを管掌。法令対応の確実なデリバリー、生成AI活用による業務改善、キャリアラダー・評価制度の設計、開発生産性の可視化・AI活用推進を担当。
+                      複数チームを管掌し、確実なデリバリー、生成AI活用による業務改善、キャリアラダー・評価制度の設計、開発生産性の可視化・AI活用推進を担当。
                     </div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@
                     <div class="timeline-title">株式会社ココナラ</div>
                     <div class="timeline-role">チームマネージャー</div>
                     <div class="timeline-desc">
-                      バックエンド開発部にて新規機能開発・開発基盤改善を担当。2チームのマネージャーとしてスクラム導入・レビュー改善・育成、eKYC導入等のプロジェクトを推進。
+                      バックエンド開発部にて新規機能開発・開発基盤改善を担当。2チームのマネージャーとしてスクラム導入・レビュー改善・育成、認証基盤の導入等のプロジェクトを推進。
                     </div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@
                   </li>
                   <li>
                     <strong>安定運用・監視</strong> -
-                    Datadog、Sentry、パフォーマンス改善、法令対応の確実なデリバリー
+                    Datadog、Sentry、パフォーマンス改善、着実なデリバリーと安定運用
                   </li>
                 </ul>
               </div>
@@ -316,9 +316,9 @@
                 <div class="project-highlight">
                   <div class="project-icon">🛡️</div>
                   <div>
-                    <div class="project-title">法令対応・確実なデリバリー</div>
+                    <div class="project-title">確実なデリバリー・安定運用</div>
                     <div class="project-desc">
-                      eKYC周辺の制度対応を期日遵守で完遂、安定運用に貢献
+                      大規模サービスの安定運用と着実な改善に貢献
                     </div>
                   </div>
                 </div>
@@ -336,7 +336,7 @@
 useSeo({
   title: 'Profile - Yuma Mitsuyoshi',
   description:
-    '開発グループマネージャー兼バックエンドエンジニアのプロフィール。10年以上の実務経験でRuby・Goを中心に開発し、eKYC基盤のマネジメント、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
+    '開発組織のマネージャー兼バックエンドエンジニアのプロフィール。10年以上の実務経験でRuby・Goを中心に開発し、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
   keywords:
     'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby,Go,バックエンド開発,チームマネジメント,生成AI,TRUSTDOCK,ココナラ,MERY',
   type: 'website',

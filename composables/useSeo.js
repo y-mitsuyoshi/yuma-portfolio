@@ -10,7 +10,7 @@ export const useSeo = (options = {}) => {
     defaultTitle:
       'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
     defaultDescription:
-      'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
+      'バックエンド開発を軸とした技術マネジメント・組織づくりに従事。Ruby・Go・TypeScriptによる開発と生成AI活用、開発生産性の可視化を通じた技術革新を推進しています。',
     defaultImage: '/og-image.png',
     defaultKeywords:
       'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',

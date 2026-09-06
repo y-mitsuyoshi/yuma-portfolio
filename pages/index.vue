@@ -49,8 +49,8 @@
           <p
             class="text-lg md:text-xl text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto"
           >
-            eKYC基盤の開発グループマネージャー。<br />
-            Ruby・Goによるバックエンド開発と生成AI活用を軸に、組織づくりと技術革新を推進しています。
+            バックエンド開発を軸に、技術マネジメントと組織づくりに従事。<br />
+            生成AI活用とデータに基づく改善で、チームの成長と技術革新を推進しています。
           </p>
 
           <!-- CTA Buttons -->
@@ -206,7 +206,7 @@
 useSeo({
   title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
   description:
-    'eKYC基盤の開発グループマネージャー。Ruby・Go・TypeScriptによるバックエンド開発と生成AI活用を軸に、組織づくり・開発生産性の可視化・技術革新を推進しています。',
+    'バックエンド開発を軸とした技術マネジメント・組織づくりに従事。Ruby・Go・TypeScriptによる開発と生成AI活用、開発生産性の可視化を通じた技術革新を推進しています。',
   keywords:
     'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
   type: 'website',
