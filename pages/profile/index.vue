@@ -162,7 +162,7 @@
                 <div class="timeline-item">
                   <div class="timeline-date">2021年5月 - 2021年12月</div>
                   <div class="timeline-content">
-                    <div class="timeline-title">フリーランスエンジニア</div>
+                    <div class="timeline-title">副業エンジニア</div>
                     <div class="timeline-role">業務委託</div>
                   </div>
                 </div>
