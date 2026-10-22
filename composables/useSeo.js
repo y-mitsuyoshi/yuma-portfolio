@@ -85,9 +85,6 @@ export const useSeo = (options = {}) => {
     // Additional meta tags
     viewport: 'width=device-width, initial-scale=1',
     charset: 'utf-8',
-    httpEquiv: {
-      'X-UA-Compatible': 'IE=edge',
-    },
   })
 
   // カノニカルURL

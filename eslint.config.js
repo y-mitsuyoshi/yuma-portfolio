@@ -1,10 +1,10 @@
 // eslint.config.js - Flat config (ESLint v10)
-const globals = require('globals')
-const vue = require('eslint-plugin-vue')
-const prettierPlugin = require('eslint-plugin-prettier')
-const eslintConfigPrettier = require('eslint-config-prettier')
+import globals from 'globals'
+import vue from 'eslint-plugin-vue'
+import prettierPlugin from 'eslint-plugin-prettier'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
-module.exports = [
+export default [
   {
     ignores: [
       '.nuxt/**',

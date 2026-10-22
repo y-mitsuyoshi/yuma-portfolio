@@ -4,6 +4,7 @@
   "description": "Yuma Mitsuyoshi's Portfolio - Engineering Manager & Full-Stack Developer",
   "author": "Yuma Mitsuyoshi <yuma@example.com>",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,28 +15,32 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^7.0.0",
-    "@fortawesome/free-brands-svg-icons": "^7.0.0",
-    "@fortawesome/free-solid-svg-icons": "^7.0.0",
-    "@fortawesome/vue-fontawesome": "^3.1.1",
-    "firebase": "^12.1.0",
-    "nuxt": "^4.0.0"
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/vue-fontawesome": "^3.3.3",
+    "firebase": "^13.1.0",
+    "nuxt": "^4.6.2"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "eslint": "^10.10.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-vue": "^10.10.0",
-    "globals": "^17.12.0",
-    "prettier": "^3.6.2"
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-vue": "^10.11.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.14.6"
   },
   "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.0.0"
+    "node": ">=26.12.1",
+    "npm": ">=11.0.0"
   },
   "volta": {
-    "node": "22.18.0"
+    "node": "26.12.1"
   },
   "allowScripts": {
     "@firebase/util@1.15.3": true,

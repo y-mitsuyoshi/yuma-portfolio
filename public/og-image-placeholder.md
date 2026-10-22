@@ -1,7 +1,7 @@
 # OG Image Placeholder
 
 このファイルは OG（Open Graph）画像のプレースホルダーです。
-実際の画像ファイル（1200x630px推奨）を `static/og-image.png` として配置してください。
+実際の画像ファイル（1200x630px推奨）を `public/og-image.png` として配置してください。
 
 推奨仕様:
 - サイズ: 1200x630px

@@ -1,8 +1,5 @@
 // nuxt.config.js
-import { readFileSync } from 'fs'
-
-// package.jsonを読み込み
-const pkg = JSON.parse(readFileSync('./package.json', 'utf8'))
+import tailwindcss from '@tailwindcss/vite'
 
 const gtmID = 'GTM-NF5443D8'
 const gtmHeadTag = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmID}');`
@@ -10,10 +7,14 @@ const gtmBodyTag = `<iframe src="https://www.googletagmanager.com/ns.html?id=${g
 
 export default defineNuxtConfig({
   // 互換性の日付設定
-  compatibilityDate: '2025-08-25',
+  compatibilityDate: '2026-10-22',
 
   // SEO向上のためSSGを有効化
   ssr: true,
+
+  // 本番ビルド時はデバッグ用ページを除外
+  ignore:
+    process.env.NODE_ENV === 'production' ? ['pages/debug-analytics.vue'] : [],
 
   app: {
     head: {
@@ -22,7 +23,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
-          hid: 'description',
+          key: 'description',
           name: 'description',
           content:
             'バックエンド開発を軸とした技術マネジメント・組織づくりに従事。Ruby・Go・TypeScriptによる開発と生成AI活用、開発生産性の可視化を通じた技術革新を推進しています。',
@@ -78,35 +79,31 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          hid: 'gtmHead',
+          key: 'gtmHead',
           innerHTML: gtmHeadTag,
         },
       ],
       noscript: [
         {
-          hid: 'gtmBody',
+          key: 'gtmBody',
           innerHTML: gtmBodyTag,
-          pbody: true,
+          tagPosition: 'bodyOpen',
         },
       ],
-      __dangerouslyDisableSanitizersByTagID: {
-        gtmHead: ['innerHTML'],
-        gtmBody: ['innerHTML'],
-      },
     },
   },
 
   // CSS設定
-  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/css/main.css',
+  ],
 
   // プラグイン設定
   plugins: [
     '~/plugins/fontawesome.js',
     { src: '~/plugins/firebase.js', mode: 'client' },
   ],
-
-  // モジュール設定
-  modules: ['@nuxtjs/tailwindcss'],
 
   // ランタイム設定
   runtimeConfig: {
@@ -126,7 +123,7 @@ export default defineNuxtConfig({
 
   // Vite設定（Nuxt 4ではデフォルトでVite）
   vite: {
-    // Viteの設定をカスタマイズ可能
+    plugins: [tailwindcss()],
     define: {
       __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
     },

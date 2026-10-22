@@ -6,8 +6,6 @@ Sitemap: https://yuma-portfolio.web.app/sitemap.xml
 
 # 不要なクロールを防ぐ
 Disallow: /debug-analytics
-Disallow: /_nuxt/
-Disallow: /.output/
 
 # Well-known paths
 Allow: /.well-known/

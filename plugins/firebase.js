@@ -1,6 +1,6 @@
 // plugins/firebase.js - Nuxt 4 & Vue 3対応
 import { initializeApp } from 'firebase/app'
-import { getAnalytics, logEvent, setCurrentScreen } from 'firebase/analytics'
+import { getAnalytics, logEvent } from 'firebase/analytics'
 
 export default defineNuxtPlugin(() => {
   // クライアントサイドでのみ実行
@@ -38,7 +38,6 @@ export default defineNuxtPlugin(() => {
 
     const trackPageView = (pageName) => {
       if (analytics) {
-        setCurrentScreen(analytics, pageName)
         logEvent(analytics, 'page_view', {
           page_title: pageName,
           page_location: window.location.href,

@@ -4,17 +4,17 @@
 
 ## 技術スタック
 
-- **Nuxt.js**: 4.0.x (Vue 3 + Vite)
+- **Nuxt.js**: 4.x (Vue 3 + Vite)
 - **Vue.js**: 3.x (Composition API)
-- **CSS Framework**: Tailwind CSS
-- **Icons**: FontAwesome
-- **Backend**: Firebase
+- **CSS Framework**: Tailwind CSS v4 (`@tailwindcss/vite`)
+- **Icons**: FontAwesome v7
+- **Backend**: Firebase v13
 - **Build Tool**: Vite
 
 ## 前提条件
 
-- **Node.js**: 22.18.0以上 (推奨)
-- **npm**: 10.0.0以上
+- **Node.js**: 26.12.1以上（2026年10月21日セキュリティリリース対応版）
+- **npm**: 11.0.0以上
 
 ## セットアップ
 
@@ -106,8 +106,8 @@ npx firebase deploy --only hosting
 
 ## 環境要件
 
-- **Node.js**: 22.18.0 (推奨)
-- **npm**: 10.x以上
+- **Node.js**: 26.12.1 (推奨)
+- **npm**: 11.x以上
 - **.nvmrc**: Node.jsバージョン管理用ファイル含む
 
 ## 開発環境のセットアップ
@@ -119,6 +119,6 @@ npx firebase deploy --only hosting
 nvm use
 
 # または直接指定
-nvm install 22.18.0
-nvm use 22.18.0
+nvm install 26.12.1
+nvm use 26.12.1
 ```

@@ -70,7 +70,7 @@
           </a>
 
           <a
-            href="http://tabilike.hatenablog.com"
+            href="https://tabilike.hatenablog.com"
             target="_blank"
             rel="noopener noreferrer"
             class="social-link blog"
