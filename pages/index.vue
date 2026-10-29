@@ -172,6 +172,27 @@
         <div class="max-w-4xl mx-auto text-center">
           <h3 class="text-3xl font-bold text-slate-800 mb-12">My Creations</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- AXIOM -->
+            <a
+              href="https://axiom-qa.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="overview-card"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              >
+                <font-awesome-icon
+                  icon="circle-check"
+                  class="text-blue-600 text-2xl"
+                />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">AXIOM</h4>
+              <p class="text-slate-600">
+                日本語の仕様やURLからPlaywright・MaestroのE2Eテストを自動生成・自律実行・自己修復できるセルフホスト型AIテスト基盤。
+              </p>
+            </a>
+
             <!-- Zatsudan Gacha -->
             <a
               href="https://zatsudan-gacha.app"
