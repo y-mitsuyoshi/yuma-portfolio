@@ -35,7 +35,10 @@ export const useSeo = (options = {}) => {
   } = options
 
   // 完全なURL生成
-  const fullUrl = canonical || `${siteConfig.siteUrl}${useRoute().path}`
+  const routePath = canonical || useRoute().path
+  const fullUrl = routePath.startsWith('http')
+    ? routePath
+    : `${siteConfig.siteUrl}${routePath.startsWith('/') ? '' : '/'}${routePath}`
   const fullImageUrl = image.startsWith('http')
     ? image
     : `${siteConfig.siteUrl}${image}`
@@ -59,6 +62,10 @@ export const useSeo = (options = {}) => {
     ogTitle: pageTitle,
     ogDescription: description,
     ogImage: fullImageUrl,
+    ogImageSecureUrl: fullImageUrl,
+    ogImageType: 'image/png',
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
     ogImageAlt: `${title} - ${siteConfig.siteName}`,
     ogUrl: fullUrl,
     ogType: type,
