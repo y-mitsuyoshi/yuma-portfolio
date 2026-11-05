@@ -82,7 +82,7 @@
             <div class="strength-icon">⚡</div>
             <h3 class="strength-category">Proficient</h3>
             <p class="strength-description">
-              組織マネジメント・データ基盤・クラウドAI基盤
+              組織マネジメント・SRE / クラウド・データ基盤
             </p>
             <div class="strength-bar secondary-bar"></div>
           </div>
@@ -365,13 +365,19 @@ const skillCategories = [
   },
 
   {
-    title: 'クラウド・インフラ・OS',
+    title: 'クラウド・SRE・インフラ',
     icon: '☁️',
     groups: [
       {
         title: 'クラウド・AI基盤',
-        strength: 'secondary',
+        strength: 'primary',
         items: [
+          {
+            label: 'Google Cloud (PCA)',
+            emoji: '🏅',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
           {
             label: 'AWS',
             emoji: '🌩️',
@@ -393,12 +399,6 @@ const skillCategories = [
           {
             label: 'Azure AI',
             emoji: '☁️',
-            bgClass: 'bg-blue-100',
-            textClass: 'text-blue-800',
-          },
-          {
-            label: 'Google Cloud',
-            emoji: '🌐',
             bgClass: 'bg-blue-100',
             textClass: 'text-blue-800',
           },
@@ -496,8 +496,8 @@ const skillCategories = [
         ],
       },
       {
-        title: '監視・運用・可視化',
-        strength: 'secondary',
+        title: 'SRE・可観測性（Observability）',
+        strength: 'primary',
         items: [
           {
             label: 'Datadog',
@@ -524,6 +524,12 @@ const skillCategories = [
             textClass: 'text-orange-800',
           },
           {
+            label: 'SLO / SLI運用',
+            emoji: '🎯',
+            bgClass: 'bg-emerald-100',
+            textClass: 'text-emerald-800',
+          },
+          {
             label: 'Looker Studio',
             emoji: '📊',
             bgClass: 'bg-blue-100',
@@ -539,8 +545,14 @@ const skillCategories = [
       },
       {
         title: 'CI/CD・テスト',
-        strength: 'basic',
+        strength: 'secondary',
         items: [
+          {
+            label: 'GitHub Actions',
+            emoji: '🚀',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
+          },
           {
             label: 'CircleCI',
             emoji: '🔁',
@@ -684,9 +696,9 @@ const skillCategories = [
 useSeo({
   title: 'Technical Skills - Yuma Mitsuyoshi',
   description:
-    'プログラミング言語、フレームワーク、クラウド・AI基盤、マネジメントの詳細。Ruby・Go・TypeScript、Vue.js・React、AWS Bedrock・SageMaker・Azure AI・Google Cloud、BigQuery・Datadog、キャリアラダー設計・開発生産性可視化などの実務経験。',
+    'プログラミング言語、フレームワーク、SRE・クラウド・AI基盤、マネジメントの詳細。Ruby・Go・TypeScript、Google Cloud (PCA)・AWS Bedrock・SageMaker、Datadog・Sentryによる可観測性向上、BigQuery、キャリアラダー設計・開発生産性可視化などの実務経験。',
   keywords:
-    'Technical Skills,Ruby,Go,TypeScript,Vue.js,React,AWS Bedrock,SageMaker,BigQuery,Datadog,生成AI,チームマネジメント,DDD,マイクロサービス',
+    'Technical Skills,SRE,Observability,Ruby,Go,TypeScript,Vue.js,React,Google Cloud,AWS Bedrock,SageMaker,BigQuery,Datadog,Sentry,生成AI,チームマネジメント,DDD,マイクロサービス',
   type: 'website',
   canonical: '/skill',
 })

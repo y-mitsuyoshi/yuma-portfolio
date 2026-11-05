@@ -1,0 +1,45 @@
+name: CI (Lint, Security Audit & Build Verification)
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  verify:
+    name: Lint, Audit & SSG Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Check critical vulnerabilities
+        run: npm audit --audit-level=critical
+
+      - name: Generate static site (SSG)
+        run: npm run generate
+
+      - name: Verify build artifacts & SRE invariants
+        run: |
+          test -f .output/public/index.html
+          test -f .output/public/profile/index.html
+          test -f .output/public/skill/index.html
+          test -f .output/public/hobby/index.html
+          test -f .output/public/og-image.png
+          test -f .output/public/robots.txt
+          test -f .output/public/sitemap.xml
+          test ! -d .output/public/debug-analytics
+          grep -q "https://yuma-portfolio.web.app/og-image.png" .output/public/index.html

@@ -17,6 +17,8 @@
                 <img
                   src="~/assets/icon.png"
                   alt="Yuma Mitsuyoshi"
+                  width="24"
+                  height="24"
                   class="w-6 h-6 object-contain"
                 />
               </div>

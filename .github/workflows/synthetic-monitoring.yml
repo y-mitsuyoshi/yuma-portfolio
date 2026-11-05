@@ -1,0 +1,42 @@
+name: Synthetic Monitoring (Uptime, Latency SLO & Headers)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  healthcheck:
+    name: Production Endpoint & SLO Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify availability and latency SLO (< 2.0s)
+        run: |
+          BASE_URL="https://yuma-portfolio.web.app"
+          ENDPOINTS=("/" "/profile/" "/skill/" "/hobby/" "/og-image.png" "/robots.txt" "/sitemap.xml")
+
+          for path in "${ENDPOINTS[@]}"; do
+            url="${BASE_URL}${path}"
+            result=$(curl -sL -o /dev/null -w "%{http_code} %{time_total}" "$url")
+            status=$(echo "$result" | awk '{print $1}')
+            latency=$(echo "$result" | awk '{print $2}')
+            echo "Checked $url -> status=$status latency=${latency}s"
+
+            if [ "$status" != "200" ]; then
+              echo "ERROR: $url returned HTTP $status"
+              exit 1
+            fi
+
+            awk -v lat="$latency" 'BEGIN { if (lat > 2.0) { print "ERROR: Latency SLO breached (" lat "s > 2.0s)"; exit 1 } }'
+          done
+
+      - name: Verify security headers and OGP tags
+        run: |
+          headers=$(curl -sI https://yuma-portfolio.web.app/)
+          echo "$headers" | grep -qi "x-content-type-options: nosniff"
+          echo "$headers" | grep -qi "x-frame-options: SAMEORIGIN"
+          echo "$headers" | grep -qi "referrer-policy: strict-origin-when-cross-origin"
+
+          html=$(curl -s https://yuma-portfolio.web.app/)
+          echo "$html" | grep -q 'property="og:image" content="https://yuma-portfolio.web.app/og-image.png"'
+          echo "$html" | grep -q 'name="twitter:card" content="summary_large_image"'

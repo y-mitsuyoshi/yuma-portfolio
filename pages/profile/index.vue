@@ -71,7 +71,9 @@
               </div>
               <div class="strength-item">
                 <span class="strength-dot bg-green-500"></span>
-                <span class="strength-text">パフォーマンス改善</span>
+                <span class="strength-text"
+                  >SRE・可観測性・パフォーマンス改善</span
+                >
               </div>
               <div class="strength-item">
                 <span class="strength-dot bg-yellow-500"></span>
@@ -98,7 +100,9 @@
                   >Ruby / Go を中心としたバックエンド開発</strong
                 >に強みを持ちます。
                 生成AI活用による業務改善、データに基づく開発生産性の可視化、
-                チームマネジメント・技術選定・パフォーマンスチューニングを得意としています。
+                <strong class="text-emerald-600"
+                  >SRE（可観測性向上・クラウド設計・パフォーマンスチューニング）</strong
+                >、チームマネジメント・技術選定を得意としています。
               </p>
               <p>
                 現在は<strong class="text-purple-600">株式会社TRUSTDOCK</strong
@@ -226,8 +230,13 @@
                     gRPC、GraphQL、DDD、クリーンアーキテクチャ
                   </li>
                   <li>
-                    <strong>安定運用・監視</strong> -
-                    Datadog、Sentry、パフォーマンス改善、着実なデリバリーと安定運用
+                    <strong>SRE・可観測性 (Observability)</strong> -
+                    Datadog、Sentry、CloudWatchによる監視・アラート設計、パフォーマンス改善、高信頼なサービス運用
+                  </li>
+                  <li>
+                    <strong>クラウドアーキテクチャ</strong> - Google Cloud
+                    (Professional Cloud
+                    Architect)、AWSによるセキュアで拡張性の高い基盤設計
                   </li>
                 </ul>
               </div>
@@ -295,9 +304,11 @@
                 <div class="project-highlight">
                   <div class="project-icon">🛡️</div>
                   <div>
-                    <div class="project-title">確実なデリバリー・安定運用</div>
+                    <div class="project-title">
+                      SRE推進・可観測性と信頼性向上
+                    </div>
                     <div class="project-desc">
-                      大規模サービスの安定運用と着実な改善に貢献
+                      Datadog・Sentry等によるオブザーバビリティ強化、パフォーマンス改善と大規模サービスの安定運用に貢献
                     </div>
                   </div>
                 </div>
@@ -315,9 +326,9 @@
 useSeo({
   title: 'Profile - Yuma Mitsuyoshi',
   description:
-    '開発組織のマネージャー兼バックエンドエンジニアのプロフィール。10年以上の実務経験でRuby・Goを中心に開発し、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
+    '開発組織のマネージャー兼バックエンド・SREエンジニアのプロフィール。10年以上の実務経験でRuby・Go開発、SRE・クラウド設計（Google Cloud PCA）、生成AI活用、開発生産性の可視化、キャリアラダー設計を得意とします。',
   keywords:
-    'Profile,Yuma Mitsuyoshi,Engineering Manager,Career,プロフィール,経歴,Ruby,Go,バックエンド開発,チームマネジメント,生成AI,TRUSTDOCK,ココナラ,MERY',
+    'Profile,Yuma Mitsuyoshi,Engineering Manager,SRE,Career,プロフィール,経歴,Ruby,Go,バックエンド開発,Google Cloud,Datadog,チームマネジメント,生成AI,TRUSTDOCK,ココナラ,MERY',
   type: 'website',
   canonical: '/profile',
 })

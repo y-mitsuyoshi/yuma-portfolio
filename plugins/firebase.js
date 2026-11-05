@@ -1,6 +1,7 @@
 // plugins/firebase.js - Nuxt 4 & Vue 3対応
 import { initializeApp } from 'firebase/app'
 import { getAnalytics, logEvent } from 'firebase/analytics'
+import { getPerformance } from 'firebase/performance'
 
 export default defineNuxtPlugin(() => {
   // クライアントサイドでのみ実行
@@ -19,14 +20,18 @@ export default defineNuxtPlugin(() => {
 
     const app = initializeApp(firebaseConfig)
     let analytics = null
+    let performance = null
 
     try {
       // measurementId が空だと Analytics 初期化は失敗するため、存在チェック
       if (firebaseConfig.measurementId) {
         analytics = getAnalytics(app)
       }
+      if (firebaseConfig.appId) {
+        performance = getPerformance(app)
+      }
     } catch (e) {
-      // Analytics初期化エラーを無視
+      // Analytics / Performance 初期化エラーを無視
     }
 
     // Analytics ヘルパー関数
@@ -58,6 +63,7 @@ export default defineNuxtPlugin(() => {
       provide: {
         firebaseApp: app,
         analytics,
+        performance,
         trackEvent,
         trackPageView,
       },
