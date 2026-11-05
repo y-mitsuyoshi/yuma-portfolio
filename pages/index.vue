@@ -52,8 +52,8 @@
           <p
             class="text-lg md:text-xl text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto"
           >
-            バックエンド開発を軸に、技術マネジメント・SRE・組織づくりに従事。<br />
-            生成AI活用と可観測性・データに基づく改善で、チームの成長と高信頼なサービス運用を推進しています。
+            バックエンド開発を軸に、技術マネジメントと組織づくりに従事。<br />
+            生成AI活用とデータに基づく改善で、チームの成長と技術革新を推進しています。
           </p>
 
           <!-- CTA Buttons -->
@@ -107,10 +107,10 @@
     <!-- Quick Overview Section -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6">
-        <div class="max-w-6xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center">
           <h3 class="text-3xl font-bold text-slate-800 mb-12">What I Do</h3>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Engineering Management -->
             <div class="overview-card">
               <div
@@ -147,26 +147,7 @@
               </p>
             </div>
 
-            <!-- SRE & Cloud Architecture -->
-            <div class="overview-card">
-              <div
-                class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
-              >
-                <font-awesome-icon
-                  icon="chart-line"
-                  class="text-emerald-600 text-2xl"
-                />
-              </div>
-              <h4 class="text-xl font-semibold text-slate-800 mb-4">
-                SRE & Cloud
-              </h4>
-              <p class="text-slate-600">
-                Google Cloud /
-                AWS設計、Datadog・Sentryによる可観測性向上と高信頼なサービス安定運用
-              </p>
-            </div>
-
-            <!-- AI & Data Utilization -->
+            <!-- Full-Stack Development -->
             <div class="overview-card">
               <div
                 class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
@@ -249,9 +230,9 @@
 useSeo({
   title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
   description:
-    'バックエンド開発を軸とした技術マネジメント・SRE・組織づくりに従事。Ruby・Go・TypeScriptによる開発、クラウド設計・可観測性向上、生成AI活用、開発生産性の可視化を推進しています。',
+    'バックエンド開発を軸とした技術マネジメント・組織づくりに従事。Ruby・Go・TypeScriptによる開発と生成AI活用、開発生産性の可視化を通じた技術革新を推進しています。',
   keywords:
-    'Yuma Mitsuyoshi,Engineering Manager,SRE,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,Google Cloud,Datadog,チームマネジメント,技術マネジメント',
+    'Yuma Mitsuyoshi,Engineering Manager,Backend Developer,Ruby,Go,TypeScript,Vue.js,React,生成AI,AWS,チームマネジメント,技術マネジメント',
   type: 'website',
 })
 
