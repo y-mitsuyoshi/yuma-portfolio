@@ -1,172 +1,129 @@
 <template>
-  <div class="container-page py-14 md:py-20">
-    <header class="border-b border-line pb-10">
-      <p class="label-mono">03 / Skills</p>
-      <div
-        class="mt-5 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
-      >
-        <div>
-          <h1 class="title-display text-6xl sm:text-7xl md:text-8xl">
-            Technical Skills
-          </h1>
-          <p class="mt-4 text-sm text-ink-soft">
-            バックエンド開発を軸とした技術スタック
-          </p>
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <!-- Header Section -->
+      <div class="text-center mb-16">
+        <div
+          class="w-24 h-24 mx-auto bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-6 shadow-xl"
+        >
+          <font-awesome-icon icon="laptop-code" class="text-white text-2xl" />
         </div>
-        <p class="max-w-sm text-sm leading-7 text-ink-soft">
-          業務で継続的に用いてきた技術を中心に、習熟度の目安とあわせて整理しています。
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          Technical Skills
+        </h1>
+        <p class="text-xl text-slate-600">
+          バックエンド開発を軸とした技術スタック
         </p>
       </div>
-    </header>
 
-    <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
-      <span class="flex items-center gap-2 text-xs text-ink-muted">
-        <span class="h-1.5 w-1.5 bg-accent" aria-hidden="true"></span>
-        主要技術（強み）
-      </span>
-      <span class="flex items-center gap-2 text-xs text-ink-muted">
-        <span class="h-1.5 w-1.5 bg-ink" aria-hidden="true"></span>
-        実務レベル
-      </span>
-      <span class="flex items-center gap-2 text-xs text-ink-muted">
-        <span class="h-1.5 w-1.5 bg-line-strong" aria-hidden="true"></span>
-        扱える・学習経験
-      </span>
-    </div>
-
-    <div class="mt-10 border-t border-line">
-      <section
-        v-for="(category, index) in skillCategories"
-        :key="category.title"
-        class="grid gap-8 border-b border-line py-10 md:grid-cols-[280px_minmax(0,1fr)] md:gap-12"
-      >
-        <div>
-          <p class="label-mono">0{{ index + 1 }}</p>
-          <div class="mt-4 flex items-center gap-3">
-            <font-awesome-icon
-              :icon="categoryIcons[index]"
-              class="h-5 w-5 shrink-0 text-accent"
-            />
-            <h2 class="text-lg font-semibold leading-snug tracking-tight">
-              {{ category.title }}
-            </h2>
+      <!-- Skills Matrix -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div
+          v-for="category in skillCategories"
+          :key="category.title"
+          class="skill-card"
+        >
+          <!-- Category Header -->
+          <div class="category-header">
+            <div class="category-icon">
+              <span class="text-2xl">{{ category.icon }}</span>
+            </div>
+            <h2 class="category-title">{{ category.title }}</h2>
           </div>
-        </div>
 
-        <div class="space-y-7">
-          <div v-for="group in category.groups" :key="group.title">
-            <div class="flex items-center gap-3">
-              <span
-                :class="[
-                  'h-1.5 w-1.5',
-                  group.strength === 'primary'
-                    ? 'bg-accent'
-                    : group.strength === 'secondary'
-                      ? 'bg-ink'
-                      : 'bg-line-strong',
-                ]"
-                aria-hidden="true"
-              ></span>
-              <h3
-                class="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft"
-              >
+          <!-- Skill Groups -->
+          <div class="space-y-6">
+            <div
+              v-for="group in category.groups"
+              :key="group.title"
+              class="skill-group"
+            >
+              <h3 class="group-title">
+                <span :class="`strength-indicator ${group.strength}`"></span>
                 {{ group.title }}
               </h3>
-            </div>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <TechBadge
-                v-for="item in group.items"
-                :key="item.label"
-                :label="item.label"
-                :strength="group.strength"
-              />
+              <div class="tech-grid">
+                <TechBadge
+                  v-for="item in group.items"
+                  :key="item.label"
+                  :label="item.label"
+                  :emoji="item.emoji"
+                  :bg-class="item.bgClass"
+                  :text-class="item.textClass"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
 
-    <section class="mt-16">
+      <!-- Strength Overview -->
       <div
-        class="flex items-baseline justify-between gap-4 border-b border-line pb-4"
+        class="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-slate-200"
       >
-        <h2 class="text-2xl font-semibold tracking-tight">
-          Strength Distribution
-        </h2>
-        <span class="label-mono">07</span>
-      </div>
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-slate-800 mb-4">
+            Strength Distribution
+          </h2>
+          <p class="text-slate-600">技術領域ごとの習熟度</p>
+        </div>
 
-      <div class="mt-8 grid gap-10 md:grid-cols-3">
-        <div
-          v-for="level in strengthLevels"
-          :key="level.title"
-          class="border-t border-ink pt-4"
-        >
-          <div class="flex items-center justify-between gap-4">
-            <span class="label-mono">{{ level.label }}</span>
-            <span class="font-mono text-[10px] text-ink-muted">
-              {{ level.ratio }}%
-            </span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="strength-overview-card primary">
+            <div class="strength-icon">🎯</div>
+            <h3 class="strength-category">Core Strength</h3>
+            <p class="strength-description">
+              Ruby / Go バックエンド開発・生成AI活用
+            </p>
+            <div class="strength-bar primary-bar"></div>
           </div>
-          <h3 class="mt-4 text-lg font-semibold">{{ level.title }}</h3>
-          <p class="mt-2 text-sm leading-7 text-ink-soft">
-            {{ level.description }}
-          </p>
-          <div class="mt-5 h-1 w-full bg-line">
-            <div
-              :class="['h-full', level.barClass]"
-              :style="{ width: `${level.ratio}%` }"
-            ></div>
+
+          <div class="strength-overview-card secondary">
+            <div class="strength-icon">⚡</div>
+            <h3 class="strength-category">Proficient</h3>
+            <p class="strength-description">
+              組織マネジメント・データ基盤・クラウドAI基盤
+            </p>
+            <div class="strength-bar secondary-bar"></div>
+          </div>
+
+          <div class="strength-overview-card basic">
+            <div class="strength-icon">🔧</div>
+            <h3 class="strength-category">Working Knowledge</h3>
+            <p class="strength-description">フロントエンド・インフラ・その他</p>
+            <div class="strength-bar basic-bar"></div>
           </div>
         </div>
       </div>
 
-      <p class="mt-6 font-mono text-[10px] text-ink-muted">
-        * 習熟度は主観的な目安です。
-      </p>
-    </section>
+      <!-- Additional Info -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex items-center space-x-6 text-sm text-slate-500">
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
+            <span>主要技術（強み）</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+            <span>実務レベル</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-3 h-3 bg-slate-400 rounded-full mr-2"></div>
+            <span>扱える・学習経験</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import TechBadge from '~/components/TechBadge.vue'
 
-const categoryIcons = [
-  'code',
-  'project-diagram',
-  'database',
-  'server',
-  'chart-line',
-  'users',
-]
-
-const strengthLevels = [
-  {
-    label: 'Core',
-    title: 'Core Strength',
-    ratio: 85,
-    description: 'Ruby / Go バックエンド開発・生成AI活用',
-    barClass: 'bg-accent',
-  },
-  {
-    label: 'Proficient',
-    title: 'Proficient',
-    ratio: 62,
-    description: '組織マネジメント・データ基盤・クラウドAI基盤',
-    barClass: 'bg-ink',
-  },
-  {
-    label: 'Working',
-    title: 'Working Knowledge',
-    ratio: 38,
-    description: 'フロントエンド・インフラ・その他',
-    barClass: 'bg-line-strong',
-  },
-]
-
 const skillCategories = [
   {
     title: 'プログラミング言語',
+    icon: '💻',
     groups: [
       {
         title: '主要言語（強み）',
@@ -174,15 +131,27 @@ const skillCategories = [
         items: [
           {
             label: 'Ruby',
+            emoji: '💎',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'Go',
+            emoji: '🐹',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
           },
           {
             label: 'JavaScript',
+            emoji: '📜',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
           },
           {
             label: 'TypeScript',
+            emoji: '🔷',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -192,15 +161,27 @@ const skillCategories = [
         items: [
           {
             label: 'Python',
+            emoji: '🐍',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'PHP',
+            emoji: '🐘',
+            bgClass: 'bg-indigo-100',
+            textClass: 'text-indigo-800',
           },
           {
             label: 'Java',
+            emoji: '☕',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'VB.NET',
+            emoji: '🧰',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -210,12 +191,21 @@ const skillCategories = [
         items: [
           {
             label: 'R',
+            emoji: '📊',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
           },
           {
             label: 'Elixir',
+            emoji: '⚗️',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
           },
           {
             label: 'SQL',
+            emoji: '🗃️',
+            bgClass: 'bg-slate-100',
+            textClass: 'text-slate-800',
           },
         ],
       },
@@ -224,6 +214,7 @@ const skillCategories = [
 
   {
     title: 'フレームワーク・ライブラリ',
+    icon: '🏗️',
     groups: [
       {
         title: 'バックエンド（強み）',
@@ -231,12 +222,21 @@ const skillCategories = [
         items: [
           {
             label: 'Rails',
+            emoji: '🚂',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'Sinatra',
+            emoji: '🎵',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'gRPC',
+            emoji: '⚡',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -246,15 +246,27 @@ const skillCategories = [
         items: [
           {
             label: 'Vue.js',
+            emoji: '🖖',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'Nuxt.js',
+            emoji: '🏔️',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'React',
+            emoji: '⚛️',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
           },
           {
             label: 'jQuery',
+            emoji: '📝',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -264,15 +276,27 @@ const skillCategories = [
         items: [
           {
             label: 'Django',
+            emoji: '🐍',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'bottle',
+            emoji: '🍶',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'WordPress',
+            emoji: '📝',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'GraphQL',
+            emoji: '🔗',
+            bgClass: 'bg-pink-100',
+            textClass: 'text-pink-800',
           },
         ],
       },
@@ -281,6 +305,7 @@ const skillCategories = [
 
   {
     title: 'データベース・ストレージ',
+    icon: '🗄️',
     groups: [
       {
         title: 'RDBMS（実務経験）',
@@ -288,15 +313,27 @@ const skillCategories = [
         items: [
           {
             label: 'MySQL',
+            emoji: '🐬',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'PostgreSQL',
+            emoji: '🐘',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'Oracle',
+            emoji: '🔺',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'SQLite',
+            emoji: '💿',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
           },
         ],
       },
@@ -306,12 +343,21 @@ const skillCategories = [
         items: [
           {
             label: 'Redis',
+            emoji: '📮',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'DynamoDB',
+            emoji: '⚡',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
           },
           {
             label: 'BigQuery',
+            emoji: '📊',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -320,6 +366,7 @@ const skillCategories = [
 
   {
     title: 'クラウド・インフラ・OS',
+    icon: '☁️',
     groups: [
       {
         title: 'クラウド・AI基盤',
@@ -327,24 +374,45 @@ const skillCategories = [
         items: [
           {
             label: 'AWS',
+            emoji: '🌩️',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'Bedrock',
+            emoji: '🤖',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'SageMaker',
+            emoji: '🧠',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'Azure AI',
+            emoji: '☁️',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'Google Cloud',
+            emoji: '🌐',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'Fargate',
+            emoji: '🚢',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'CloudWatch',
+            emoji: '📊',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
         ],
       },
@@ -354,9 +422,15 @@ const skillCategories = [
         items: [
           {
             label: 'Linux',
+            emoji: '🐧',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
           },
           {
             label: 'Windows Server',
+            emoji: '🪟',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -366,12 +440,21 @@ const skillCategories = [
         items: [
           {
             label: 'Docker',
+            emoji: '🐳',
+            bgClass: 'bg-cyan-100',
+            textClass: 'text-cyan-800',
           },
           {
             label: 'Git',
+            emoji: '📂',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'GitHub',
+            emoji: '🐙',
+            bgClass: 'bg-gray-100',
+            textClass: 'text-gray-800',
           },
         ],
       },
@@ -380,6 +463,7 @@ const skillCategories = [
 
   {
     title: '開発手法・ツール・監視',
+    icon: '🛠️',
     groups: [
       {
         title: '開発手法・アーキテクチャ',
@@ -387,15 +471,27 @@ const skillCategories = [
         items: [
           {
             label: 'アジャイル開発',
+            emoji: '🔄',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'スクラム開発',
+            emoji: '🏃',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'DDD',
+            emoji: '🏗️',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
           },
           {
             label: 'マイクロサービス',
+            emoji: '🔧',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -405,21 +501,39 @@ const skillCategories = [
         items: [
           {
             label: 'Datadog',
+            emoji: '🐶',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
           },
           {
             label: 'Sentry',
+            emoji: '🚨',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'X-Ray',
+            emoji: '🔬',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'Grafana',
+            emoji: '📈',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'Looker Studio',
+            emoji: '📊',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'Rundeck',
+            emoji: '⚙️',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
         ],
       },
@@ -429,12 +543,21 @@ const skillCategories = [
         items: [
           {
             label: 'CircleCI',
+            emoji: '🔁',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'Jest',
+            emoji: '🧪',
+            bgClass: 'bg-red-100',
+            textClass: 'text-red-800',
           },
           {
             label: 'ESLint',
+            emoji: '📝',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
           },
         ],
       },
@@ -443,6 +566,7 @@ const skillCategories = [
 
   {
     title: 'マネジメント・リーダーシップ',
+    icon: '👥',
     groups: [
       {
         title: 'チームマネジメント（強み）',
@@ -450,18 +574,33 @@ const skillCategories = [
         items: [
           {
             label: 'チーム運営',
+            emoji: '👥',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
           },
           {
             label: 'メンバー育成',
+            emoji: '🌱',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: '1on1運営',
+            emoji: '🗣️',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: '採用面接',
+            emoji: '🤝',
+            bgClass: 'bg-pink-100',
+            textClass: 'text-pink-800',
           },
           {
             label: '評価制度設計',
+            emoji: '📝',
+            bgClass: 'bg-indigo-100',
+            textClass: 'text-indigo-800',
           },
         ],
       },
@@ -471,21 +610,39 @@ const skillCategories = [
         items: [
           {
             label: 'プロジェクト管理',
+            emoji: '📋',
+            bgClass: 'bg-indigo-100',
+            textClass: 'text-indigo-800',
           },
           {
             label: '要件定義',
+            emoji: '📐',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: '技術選定',
+            emoji: '🎯',
+            bgClass: 'bg-orange-100',
+            textClass: 'text-orange-800',
           },
           {
             label: 'パフォーマンス改善',
+            emoji: '⚡',
+            bgClass: 'bg-yellow-100',
+            textClass: 'text-yellow-800',
           },
           {
             label: '生産性可視化',
+            emoji: '📊',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'AI活用推進',
+            emoji: '🤖',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
           },
         ],
       },
@@ -495,15 +652,27 @@ const skillCategories = [
         items: [
           {
             label: '勉強会企画',
+            emoji: '📚',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
           {
             label: 'レビュー改善',
+            emoji: '🔍',
+            bgClass: 'bg-purple-100',
+            textClass: 'text-purple-800',
           },
           {
             label: 'VBAコーチング',
+            emoji: '🏫',
+            bgClass: 'bg-blue-100',
+            textClass: 'text-blue-800',
           },
           {
             label: 'コスト削減',
+            emoji: '💰',
+            bgClass: 'bg-green-100',
+            textClass: 'text-green-800',
           },
         ],
       },
@@ -532,3 +701,172 @@ onMounted(() => {
   })
 })
 </script>
+
+<style scoped>
+.skill-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(241 245 249);
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgb(241 245 249);
+}
+
+.category-icon {
+  width: 3rem;
+  height: 3rem;
+  background: rgb(248 250 252);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  border: 1px solid rgb(226 232 240);
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(30 41 59);
+}
+
+.skill-group {
+  margin-bottom: 1.5rem;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(51 65 85);
+  margin-bottom: 1rem;
+}
+
+.strength-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.strength-indicator.primary {
+  background-color: rgb(34 197 94);
+}
+
+.strength-indicator.secondary {
+  background-color: rgb(59 130 246);
+}
+
+.strength-indicator.basic {
+  background-color: rgb(148 163 184);
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.strength-overview-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(241 245 249);
+  transition: transform 0.3s;
+}
+
+.strength-overview-card:hover {
+  transform: translateY(-3px);
+}
+
+.strength-overview-card.primary {
+  background: linear-gradient(
+    135deg,
+    rgb(220 252 231) 0%,
+    rgb(187 247 208) 100%
+  );
+}
+
+.strength-overview-card.secondary {
+  background: linear-gradient(
+    135deg,
+    rgb(219 234 254) 0%,
+    rgb(191 219 254) 100%
+  );
+}
+
+.strength-overview-card.basic {
+  background: linear-gradient(
+    135deg,
+    rgb(248 250 252) 0%,
+    rgb(226 232 240) 100%
+  );
+}
+
+.strength-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.strength-category {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(30 41 59);
+  margin-bottom: 0.5rem;
+}
+
+.strength-description {
+  color: rgb(71 85 105);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.strength-bar {
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-bar {
+  background: linear-gradient(to right, rgb(34 197 94), rgb(22 163 74));
+}
+
+.secondary-bar {
+  background: linear-gradient(to right, rgb(59 130 246), rgb(37 99 235));
+}
+
+.basic-bar {
+  background: linear-gradient(to right, rgb(148 163 184), rgb(100 116 139));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .category-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+</style>

@@ -1,110 +1,131 @@
 <template>
-  <div class="flex min-h-screen flex-col bg-paper text-ink">
-    <header class="sticky top-0 z-50 border-b border-line bg-paper">
-      <nav class="container-page" aria-label="Main navigation">
-        <div class="flex h-20 items-center justify-between gap-6">
-          <nuxt-link
-            to="/"
-            class="group flex items-center gap-3"
-            @click="mobileMenuOpen = false"
-          >
-            <span
-              class="relative grid h-10 w-10 place-items-center border border-ink bg-paper-raised"
-              aria-hidden="true"
-            >
-              <span class="font-serif text-lg leading-none">YM</span>
-              <span
-                class="absolute -right-px -top-px h-1.5 w-1.5 bg-accent"
-                aria-hidden="true"
-              ></span>
-            </span>
-            <span class="leading-tight">
-              <span class="block text-sm font-semibold tracking-tight">
-                Yuma Mitsuyoshi
-              </span>
-              <span class="label-mono block text-[10px]">
-                Engineering Manager
-              </span>
-            </span>
-          </nuxt-link>
-
-          <div class="hidden items-center gap-7 md:flex">
-            <template v-for="item in navItems" :key="item.label">
-              <a
-                v-if="item.href"
-                :href="item.href"
-                class="nav-link"
-                @click="mobileMenuOpen = false"
+  <div
+    class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 text-slate-900"
+  >
+    <!-- Header with improved navigation -->
+    <header
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/60"
+    >
+      <nav class="container mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo/Brand -->
+          <div class="flex items-center">
+            <nuxt-link to="/" class="group flex items-center space-x-2">
+              <div
+                class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden"
               >
-                <span class="nav-index">{{ item.index }}</span>
-                {{ item.label }}
-              </a>
-              <nuxt-link
-                v-else
-                :to="item.to"
-                class="nav-link"
-                @click="mobileMenuOpen = false"
-              >
-                <span class="nav-index">{{ item.index }}</span>
-                {{ item.label }}
-              </nuxt-link>
-            </template>
+                <img
+                  src="~/assets/icon.png"
+                  alt="Yuma Mitsuyoshi"
+                  width="24"
+                  height="24"
+                  class="w-6 h-6 object-contain"
+                />
+              </div>
+              <div class="hidden sm:block">
+                <div class="text-xl font-bold text-slate-800">
+                  Yuma Mitsuyoshi
+                </div>
+                <div class="text-sm text-slate-500">Engineering Manager</div>
+              </div>
+            </nuxt-link>
           </div>
 
-          <button
-            type="button"
-            class="grid h-10 w-10 place-items-center border border-line-strong text-ink transition-colors hover:border-ink md:hidden"
-            :aria-expanded="mobileMenuOpen"
-            aria-controls="mobile-navigation"
-            :aria-label="mobileMenuOpen ? 'Close menu' : 'Open menu'"
-            @click="mobileMenuOpen = !mobileMenuOpen"
-          >
-            <span class="relative block h-3 w-4" aria-hidden="true">
-              <span
-                class="absolute left-0 top-0 h-px w-4 bg-ink transition-transform duration-200"
-                :class="mobileMenuOpen ? 'translate-y-1.5 rotate-45' : ''"
-              ></span>
-              <span
-                class="absolute bottom-0 left-0 h-px w-4 bg-ink transition-transform duration-200"
-                :class="mobileMenuOpen ? '-translate-y-1.5 -rotate-45' : ''"
-              ></span>
-            </span>
-          </button>
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-1">
+            <nuxt-link to="/" class="nav-link">
+              <font-awesome-icon icon="home" class="w-4 h-4 mr-2" />
+              Home
+            </nuxt-link>
+            <nuxt-link to="/profile" class="nav-link">
+              <font-awesome-icon icon="user" class="w-4 h-4 mr-2" />
+              Profile
+            </nuxt-link>
+            <nuxt-link to="/skill" class="nav-link">
+              <font-awesome-icon icon="laptop-code" class="w-4 h-4 mr-2" />
+              Skills
+            </nuxt-link>
+            <nuxt-link to="/#creations" class="nav-link">
+              <font-awesome-icon icon="lightbulb" class="w-4 h-4 mr-2" />
+              Creations
+            </nuxt-link>
+            <nuxt-link to="/hobby" class="nav-link">
+              <font-awesome-icon icon="heart" class="w-4 h-4 mr-2" />
+              Hobby
+            </nuxt-link>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              class="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+              @click="mobileMenuOpen = !mobileMenuOpen"
+            >
+              <font-awesome-icon
+                :icon="mobileMenuOpen ? 'times' : 'bars'"
+                class="w-5 h-5"
+              />
+            </button>
+          </div>
         </div>
 
+        <!-- Mobile Navigation -->
         <div
           v-show="mobileMenuOpen"
-          id="mobile-navigation"
-          class="border-t border-line md:hidden"
+          class="md:hidden py-4 border-t border-slate-200"
         >
-          <template v-for="item in navItems" :key="`mobile-${item.label}`">
-            <a
-              v-if="item.href"
-              :href="item.href"
-              class="mobile-nav-link"
-              @click="mobileMenuOpen = false"
-            >
-              <span>{{ item.label }}</span>
-              <span class="label-mono">{{ item.index }}</span>
-            </a>
+          <div class="flex flex-col space-y-2">
             <nuxt-link
-              v-else
-              :to="item.to"
+              to="/"
               class="mobile-nav-link"
               @click="mobileMenuOpen = false"
             >
-              <span>{{ item.label }}</span>
-              <span class="label-mono">{{ item.index }}</span>
+              <font-awesome-icon icon="home" class="w-4 h-4 mr-3" />
+              Home
             </nuxt-link>
-          </template>
+            <nuxt-link
+              to="/profile"
+              class="mobile-nav-link"
+              @click="mobileMenuOpen = false"
+            >
+              <font-awesome-icon icon="user" class="w-4 h-4 mr-3" />
+              Profile
+            </nuxt-link>
+            <nuxt-link
+              to="/skill"
+              class="mobile-nav-link"
+              @click="mobileMenuOpen = false"
+            >
+              <font-awesome-icon icon="laptop-code" class="w-4 h-4 mr-3" />
+              Skills
+            </nuxt-link>
+            <nuxt-link
+              to="/#creations"
+              class="mobile-nav-link"
+              @click="mobileMenuOpen = false"
+            >
+              <font-awesome-icon icon="lightbulb" class="w-4 h-4 mr-3" />
+              Creations
+            </nuxt-link>
+            <nuxt-link
+              to="/hobby"
+              class="mobile-nav-link"
+              @click="mobileMenuOpen = false"
+            >
+              <font-awesome-icon icon="heart" class="w-4 h-4 mr-3" />
+              Hobby
+            </nuxt-link>
+          </div>
         </div>
       </nav>
     </header>
 
+    <!-- Main content with improved spacing -->
     <main class="flex-1">
       <slot />
     </main>
 
+    <!-- Footer components -->
     <Contact />
     <Footer />
   </div>
@@ -114,96 +135,64 @@
 import { ref } from 'vue'
 
 const mobileMenuOpen = ref(false)
-
-const navItems = [
-  { label: 'Home', to: '/', index: '01' },
-  { label: 'Profile', to: '/profile', index: '02' },
-  { label: 'Skills', to: '/skill', index: '03' },
-  { label: 'Work', href: '/#creations', index: '04' },
-  { label: 'Hobbies', to: '/hobby', index: '05' },
-]
 </script>
 
 <style>
+/* Navigation Links */
 .nav-link {
-  position: relative;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  padding-block: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(51 65 85);
   font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-ink-soft);
-  transition: color 180ms ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0.15rem;
-  left: 0;
-  height: 1px;
-  background-color: var(--color-accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 180ms ease;
+  transition: all 0.2s;
 }
 
 .nav-link:hover {
-  color: var(--color-ink);
-}
-
-.nav-link:hover::after,
-.nav-link.router-link-active::after {
-  transform: scaleX(1);
+  color: rgb(37 99 235);
+  background-color: rgb(239 246 255);
 }
 
 .nav-link.router-link-active {
-  color: var(--color-accent);
-}
-
-.nav-index {
-  font-size: 0.5625rem;
-  color: var(--color-ink-muted);
-}
-
-.nav-link.router-link-active .nav-index {
-  color: var(--color-accent);
+  color: rgb(37 99 235);
+  background-color: rgb(239 246 255);
 }
 
 .mobile-nav-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-block: 0.9rem;
-  border-bottom: 1px solid var(--color-line);
-  font-size: 0.875rem;
-  color: var(--color-ink-soft);
-  transition: color 180ms ease;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(51 65 85);
+  transition: all 0.2s;
 }
 
-.mobile-nav-link:last-child {
-  border-bottom: 0;
+.mobile-nav-link:hover {
+  color: rgb(37 99 235);
+  background-color: rgb(239 246 255);
 }
 
-.mobile-nav-link:hover,
 .mobile-nav-link.router-link-active {
-  color: var(--color-accent);
+  color: rgb(37 99 235);
+  background-color: rgb(239 246 255);
 }
 
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-paper);
+  background-color: rgb(241 245 249);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-line-strong);
+  background-color: rgb(203 213 225);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(148 163 184);
 }
 </style>

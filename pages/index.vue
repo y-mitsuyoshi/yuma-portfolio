@@ -1,185 +1,224 @@
 <template>
-  <div>
-    <!-- Hero -->
-    <section class="border-b border-line">
+  <div class="relative">
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background Elements -->
       <div
-        class="container-page grid gap-14 py-16 md:py-24 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end lg:gap-20"
-      >
-        <div>
-          <p class="label-mono flex items-center gap-3">
-            <span class="h-px w-8 bg-accent" aria-hidden="true"></span>
-            Portfolio / 2026
-          </p>
+        class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"
+      ></div>
+      <div
+        class="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-50 animate-pulse"
+      ></div>
+      <div
+        class="absolute bottom-20 right-10 w-24 h-24 bg-purple-100 rounded-full opacity-50 animate-pulse delay-1000"
+      ></div>
+      <div
+        class="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-100 rounded-full opacity-30 animate-bounce delay-500"
+      ></div>
 
-          <h1
-            class="title-display mt-8 text-[clamp(3.25rem,10vw,7rem)] leading-[0.9]"
-          >
-            Yuma<br />Mitsuyoshi
-          </h1>
-
-          <p
-            class="mt-5 font-mono text-xs uppercase tracking-[0.14em] text-ink-soft"
-          >
-            Engineering Manager &amp; Full-Stack Developer
-          </p>
-
-          <p class="mt-6 max-w-2xl text-[15px] leading-8 text-ink-soft">
-            バックエンド開発を軸に、技術マネジメントと組織づくりに従事。
-            生成AI活用とデータに基づく改善で、チームの成長と技術革新を推進しています。
-          </p>
-
-          <div class="mt-10 flex flex-wrap gap-3">
-            <nuxt-link
-              to="/profile"
-              class="btn btn-solid"
-              @click="trackProfileClick"
-            >
-              Profile を見る
-              <span aria-hidden="true">→</span>
-            </nuxt-link>
-            <nuxt-link
-              to="/skill"
-              class="btn btn-outline"
-              @click="trackSkillClick"
-            >
-              Skills を見る
-            </nuxt-link>
-          </div>
-        </div>
-
-        <aside class="mx-auto w-full max-w-[280px] lg:mx-0 lg:ml-auto">
-          <div class="relative">
+      <!-- Main Content -->
+      <div class="relative z-10 container mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+          <!-- Profile Image -->
+          <div class="mb-8">
             <div
-              class="absolute -bottom-3 -right-3 h-full w-full border border-accent"
-              aria-hidden="true"
-            ></div>
-            <figure class="relative border border-ink bg-paper-raised p-3">
+              class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl ring-4 ring-white overflow-hidden"
+            >
               <img
                 src="~/assets/icon.png"
                 alt="Yuma Mitsuyoshi"
-                width="480"
-                height="527"
+                width="80"
+                height="80"
                 fetchpriority="high"
-                class="aspect-[4/5] w-full object-contain object-top"
+                class="w-20 h-20 object-contain"
               />
-              <figcaption
-                class="mt-3 flex items-center justify-between border-t border-line pt-3"
-              >
-                <span class="label-mono">Based in Japan</span>
-                <span class="font-mono text-[10px] text-accent">EM / DEV</span>
-              </figcaption>
-            </figure>
+            </div>
           </div>
-        </aside>
-      </div>
 
-      <div class="container-page">
-        <dl class="grid border-t border-line sm:grid-cols-3">
+          <!-- Name and Title -->
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          >
+            Yuma Mitsuyoshi
+          </h1>
+
+          <h2 class="text-2xl md:text-3xl text-slate-600 mb-8 font-light">
+            Engineering Manager & Full-Stack Developer
+          </h2>
+
+          <!-- Description -->
+          <p
+            class="text-lg md:text-xl text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto"
+          >
+            バックエンド開発を軸に、技術マネジメントと組織づくりに従事。<br />
+            生成AI活用とデータに基づく改善で、チームの成長と技術革新を推進しています。
+          </p>
+
+          <!-- CTA Buttons -->
           <div
-            v-for="stat in stats"
-            :key="stat.label"
-            class="border-b border-line py-6 last:border-b-0 sm:border-b-0 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0"
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <dt class="label-mono">{{ stat.label }}</dt>
-            <dd class="title-display mt-2 text-5xl">{{ stat.value }}</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- What I Do -->
-    <section class="border-b border-line">
-      <div class="container-page py-20">
-        <div
-          class="flex flex-col justify-between gap-6 md:flex-row md:items-end"
-        >
-          <div>
-            <p class="label-mono">01 / What I do</p>
-            <h2 class="title-display mt-4 text-5xl sm:text-6xl">
-              Three ways I contribute.
-            </h2>
-          </div>
-          <p class="max-w-sm text-sm leading-7 text-ink-soft">
-            開発・マネジメント・AI活用を横断し、チームとプロダクトの前進を支えています。
-          </p>
-        </div>
-
-        <div class="mt-14 grid border-t border-line md:grid-cols-3">
-          <article
-            v-for="(service, index) in services"
-            :key="service.title"
-            class="group border-b border-line py-8 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:pt-8 md:pb-0 md:first:pl-0 md:last:border-r-0"
-          >
-            <div class="flex items-center justify-between">
-              <span class="label-mono">0{{ index + 1 }}</span>
-              <font-awesome-icon
-                :icon="service.icon"
-                class="h-5 w-5 text-ink-muted transition-colors group-hover:text-accent"
-              />
-            </div>
-            <h3 class="mt-8 text-xl font-semibold tracking-tight">
-              {{ service.title }}
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-ink-soft">
-              {{ service.description }}
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Work -->
-    <section
-      id="creations"
-      class="scroll-mt-20 border-b border-line bg-paper-raised"
-    >
-      <div class="container-page py-20">
-        <div
-          class="flex flex-col justify-between gap-6 md:flex-row md:items-end"
-        >
-          <div>
-            <p class="label-mono">02 / Selected work</p>
-            <h2 class="title-display mt-4 text-5xl sm:text-6xl">
-              Things I've built.
-            </h2>
-          </div>
-          <p class="max-w-sm text-sm leading-7 text-ink-soft">
-            現場の課題から生まれた、プロダクトと実験的な取り組み。
-          </p>
-        </div>
-
-        <div class="mt-12 border-t border-line">
-          <a
-            v-for="(project, index) in projects"
-            :key="project.title"
-            :href="project.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group grid gap-4 border-b border-line py-8 transition-colors hover:bg-paper md:grid-cols-[64px_minmax(0,1fr)_auto] md:gap-8"
-          >
-            <span class="label-mono pt-1">0{{ index + 1 }}</span>
-            <div>
-              <h3
-                class="text-2xl font-semibold tracking-tight transition-colors group-hover:text-accent"
-              >
-                {{ project.title }}
-              </h3>
-              <p class="mt-2 max-w-2xl text-sm leading-7 text-ink-soft">
-                {{ project.description }}
-              </p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span v-for="tag in project.tags" :key="tag" class="tag">
-                  {{ tag }}
-                </span>
-              </div>
-            </div>
-            <span
-              class="grid h-10 w-10 place-items-center border border-line-strong text-sm transition-colors group-hover:border-accent group-hover:text-accent"
-              aria-hidden="true"
+            <nuxt-link
+              to="/profile"
+              class="hero-btn hero-btn-primary"
+              @click="trackProfileClick"
             >
-              ↗
-            </span>
-          </a>
+              <font-awesome-icon icon="user" class="mr-2" />
+              Profile を見る
+            </nuxt-link>
+            <nuxt-link
+              to="/skill"
+              class="hero-btn hero-btn-secondary"
+              @click="trackSkillClick"
+            >
+              <font-awesome-icon icon="laptop-code" class="mr-2" />
+              Skills を見る
+            </nuxt-link>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div class="stat-card">
+              <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
+              <div class="text-slate-600">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-3xl font-bold text-purple-600 mb-2">5+</div>
+              <div class="text-slate-600">Companies</div>
+            </div>
+            <div class="stat-card">
+              <div class="text-3xl font-bold text-pink-600 mb-2">100+</div>
+              <div class="text-slate-600">Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <font-awesome-icon icon="chevron-down" class="text-slate-400 text-xl" />
+      </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h3 class="text-3xl font-bold text-slate-800 mb-12">What I Do</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Engineering Management -->
+            <div class="overview-card">
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              >
+                <font-awesome-icon
+                  icon="users"
+                  class="text-blue-600 text-2xl"
+                />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">
+                Engineering Management
+              </h4>
+              <p class="text-slate-600">
+                複数チームの管掌、評価制度設計、開発生産性の可視化を通じた組織の成長支援
+              </p>
+            </div>
+
+            <!-- Backend Development -->
+            <div class="overview-card">
+              <div
+                class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              >
+                <font-awesome-icon
+                  icon="server"
+                  class="text-purple-600 text-2xl"
+                />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">
+                Backend Development
+              </h4>
+              <p class="text-slate-600">
+                Ruby、Go、TypeScript等を用いたスケーラブルなWebアプリケーション・API開発
+              </p>
+            </div>
+
+            <!-- Full-Stack Development -->
+            <div class="overview-card">
+              <div
+                class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              >
+                <font-awesome-icon
+                  icon="laptop-code"
+                  class="text-pink-600 text-2xl"
+                />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">
+                AI & Data Utilization
+              </h4>
+              <p class="text-slate-600">
+                生成AI活用とデータ基盤による業務改善・効率化
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Creations Section -->
+    <section id="creations" class="py-20 bg-slate-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h3 class="text-3xl font-bold text-slate-800 mb-12">My Creations</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- AXIOM -->
+            <a
+              href="https://axiom-qa.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="overview-card"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              >
+                <font-awesome-icon
+                  icon="circle-check"
+                  class="text-blue-600 text-2xl"
+                />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">AXIOM</h4>
+              <p class="text-slate-600">
+                日本語の仕様やURLからPlaywright・MaestroのE2Eテストを自動生成・自律実行・自己修復できるセルフホスト型AIテスト基盤。
+              </p>
+            </a>
+
+            <!-- Zatsudan Gacha -->
+            <a
+              href="https://zatsudan-gacha.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="overview-card"
+            >
+              <div
+                class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              >
+                <font-awesome-icon
+                  icon="comments"
+                  class="text-green-600 text-2xl"
+                />
+              </div>
+              <h4 class="text-xl font-semibold text-slate-800 mb-4">
+                雑談テーマガチャ
+              </h4>
+              <p class="text-slate-600">
+                ランダムな雑談テーマを生成するWebアプリ。会話のきっかけに困ったときに便利です。
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -187,6 +226,7 @@
 </template>
 
 <script setup>
+// SEO設定
 useSeo({
   title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
   description:
@@ -196,51 +236,10 @@ useSeo({
   type: 'website',
 })
 
-const stats = [
-  { label: 'Years Experience', value: '10+' },
-  { label: 'Companies', value: '5+' },
-  { label: 'Projects', value: '100+' },
-]
-
-const services = [
-  {
-    title: 'Engineering Management',
-    description:
-      '複数チームの管掌、評価制度設計、開発生産性の可視化を通じた組織の成長支援',
-    icon: 'users',
-  },
-  {
-    title: 'Backend Development',
-    description:
-      'Ruby、Go、TypeScript等を用いたスケーラブルなWebアプリケーション・API開発',
-    icon: 'server',
-  },
-  {
-    title: 'AI & Data Utilization',
-    description: '生成AI活用とデータ基盤による業務改善・効率化',
-    icon: 'chart-line',
-  },
-]
-
-const projects = [
-  {
-    title: 'AXIOM',
-    href: 'https://axiom-qa.dev',
-    description:
-      '日本語の仕様やURLからPlaywright・MaestroのE2Eテストを自動生成・自律実行・自己修復できるセルフホスト型AIテスト基盤。',
-    tags: ['E2E Testing', 'AI', 'Self-hosted'],
-  },
-  {
-    title: '雑談テーマガチャ',
-    href: 'https://zatsudan-gacha.app',
-    description:
-      'ランダムな雑談テーマを生成するWebアプリ。会話のきっかけに困ったときに便利です。',
-    tags: ['Web App'],
-  },
-]
-
+// Analytics tracking functions
 const { $trackEvent } = useNuxtApp()
 
+// Hero section interactions
 const trackProfileClick = () => {
   $trackEvent('hero_profile_click', {
     button_text: 'Profile を見る',
@@ -255,6 +254,7 @@ const trackSkillClick = () => {
   })
 }
 
+// Page view tracking (automatic via plugin)
 onMounted(() => {
   $trackEvent('page_engagement', {
     page: 'home',
@@ -262,3 +262,109 @@ onMounted(() => {
   })
 })
 </script>
+
+<style scoped>
+/* Hero Buttons */
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(to right, rgb(37 99 235), rgb(147 51 234));
+  color: white;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 35px -5px rgba(37, 99, 235, 0.4);
+}
+
+.hero-btn-secondary {
+  background: white;
+  color: rgb(37 99 235);
+  border: 2px solid rgb(37 99 235);
+  box-shadow: 0 4px 15px -3px rgba(37, 99, 235, 0.1);
+}
+
+.hero-btn-secondary:hover {
+  background: rgb(37 99 235);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 35px -5px rgba(37, 99, 235, 0.3);
+}
+
+/* Stats Cards */
+.stat-card {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(241 245 249);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Overview Cards */
+.overview-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(241 245 249);
+  transition: all 0.3s;
+}
+
+.overview-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 3s infinite;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+</style>
