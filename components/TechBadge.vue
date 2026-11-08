@@ -1,27 +1,12 @@
 <template>
-  <span
-    :class="[
-      'inline-flex items-center px-3 py-1 rounded-full text-sm font-medium',
-      bgClass,
-      textClass,
-    ]"
-    :aria-label="label"
-    role="img"
-  >
-    <span v-if="emoji" class="mr-2">{{ emoji }}</span>
-    <span>{{ label }}</span>
+  <span :class="['tag', strength === 'primary' ? 'tag-core' : '']">
+    {{ label }}
   </span>
 </template>
 
 <script setup>
 defineProps({
   label: { type: String, required: true },
-  emoji: { type: String, default: '' },
-  bgClass: { type: String, default: 'bg-gray-100' },
-  textClass: { type: String, default: 'text-gray-800' },
+  strength: { type: String, default: 'basic' },
 })
 </script>
-
-<style scoped>
-/* small visual tweaks are handled by Tailwind utility classes */
-</style>

@@ -1,94 +1,79 @@
 <template>
-  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <!-- Left side - Brand -->
-        <div class="flex items-center mb-4 md:mb-0">
-          <div
-            class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3"
-          >
-            <span class="text-white font-bold text-sm">Y</span>
+  <footer class="border-t border-dark-line bg-dark text-dark-text">
+    <div class="container-page py-10">
+      <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div>
+          <div class="flex items-center gap-3">
+            <span
+              class="grid h-9 w-9 place-items-center border border-dark-line font-serif text-base text-white"
+              aria-hidden="true"
+            >
+              YM
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-white">Yuma Mitsuyoshi</p>
+              <p class="label-mono mt-0.5 text-[10px] text-dark-text/60">
+                Engineering Manager
+              </p>
+            </div>
           </div>
-          <div>
-            <div class="text-white font-semibold">Yuma Mitsuyoshi</div>
-            <div class="text-xs text-slate-500">Engineering Manager</div>
-          </div>
+          <p class="mt-5 max-w-xs text-xs leading-6 text-dark-text/60">
+            バックエンド開発を軸に、技術マネジメントと組織づくりに携わっています。
+          </p>
         </div>
 
-        <!-- Center - Navigation -->
-        <div class="hidden md:flex items-center space-x-6 mb-4 md:mb-0">
-          <nuxt-link to="/" class="footer-link">Home</nuxt-link>
-          <nuxt-link to="/profile" class="footer-link">Profile</nuxt-link>
-          <nuxt-link to="/skill" class="footer-link">Skills</nuxt-link>
-          <nuxt-link to="/#creations" class="footer-link">Creations</nuxt-link>
-          <nuxt-link to="/hobby" class="footer-link">Hobby</nuxt-link>
-        </div>
+        <nav aria-label="Footer navigation">
+          <p class="label-mono text-dark-text/60">Index</p>
+          <ul class="mt-4 space-y-2.5">
+            <li v-for="item in footerLinks" :key="item.label">
+              <a
+                v-if="item.href"
+                :href="item.href"
+                class="text-sm text-dark-text/80 transition-colors hover:text-accent-bright focus-visible:outline-accent-bright"
+              >
+                {{ item.label }}
+              </a>
+              <nuxt-link
+                v-else
+                :to="item.to"
+                class="text-sm text-dark-text/80 transition-colors hover:text-accent-bright focus-visible:outline-accent-bright"
+              >
+                {{ item.label }}
+              </nuxt-link>
+            </li>
+          </ul>
+        </nav>
 
-        <!-- Right side - Tech Stack -->
-        <div class="text-center md:text-right">
-          <div class="text-sm text-slate-500 mb-1">Built with</div>
-          <div
-            class="flex items-center justify-center md:justify-end space-x-2 text-xs"
-          >
-            <span class="tech-badge">Nuxt 4</span>
-            <span class="tech-badge">Vue 3</span>
-            <span class="tech-badge">Tailwind</span>
-            <span class="tech-badge">Firebase</span>
-          </div>
+        <div>
+          <p class="label-mono text-dark-text/60">Built with</p>
+          <p class="mt-4 font-mono text-xs leading-6 text-dark-text/70">
+            Nuxt 4 / Vue 3<br />
+            Tailwind CSS / Firebase
+          </p>
+          <p class="mt-4 font-mono text-[10px] text-dark-text/60">
+            SSG · Firebase Hosting
+          </p>
         </div>
       </div>
 
-      <!-- Bottom row -->
       <div
-        class="mt-6 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm"
+        class="mt-10 flex flex-col gap-2 border-t border-dark-line pt-6 text-[11px] text-dark-text/60 sm:flex-row sm:items-center sm:justify-between"
       >
-        <div class="text-slate-500 mb-2 md:mb-0">
-          © 2025 Yuma Mitsuyoshi. All rights reserved.
-        </div>
-        <div class="flex items-center space-x-4 text-slate-500">
-          <span class="flex items-center">
-            <font-awesome-icon icon="heart" class="w-4 h-4 mr-1 text-red-500" />
-            Made with passion
-          </span>
-          <span class="flex items-center">
-            <font-awesome-icon
-              icon="laptop-code"
-              class="w-4 h-4 mr-1 text-blue-500"
-            />
-            Open Source
-          </span>
-        </div>
+        <p>© {{ currentYear }} Yuma Mitsuyoshi. All rights reserved.</p>
+        <p class="font-mono">Designed &amp; built with care.</p>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-// Vue 3 Composition API
+const footerLinks = [
+  { label: 'Home', to: '/' },
+  { label: 'Profile', to: '/profile' },
+  { label: 'Skills', to: '/skill' },
+  { label: 'Work', href: '/#creations' },
+  { label: 'Hobbies', to: '/hobby' },
+]
+
+const currentYear = new Date().getFullYear()
 </script>
-
-<style scoped>
-.footer-link {
-  color: rgb(148 163 184);
-  transition: color 0.3s ease;
-  text-decoration: none;
-  font-size: 0.875rem;
-}
-
-.footer-link:hover {
-  color: rgb(59 130 246);
-}
-
-.footer-link.router-link-active {
-  color: rgb(59 130 246);
-}
-
-.tech-badge {
-  background: rgba(59, 130, 246, 0.1);
-  color: rgb(147 197 253);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.375rem;
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  font-weight: 500;
-}
-</style>

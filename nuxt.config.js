@@ -18,6 +18,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'ja',
+      },
       title: 'Yuma Mitsuyoshi - Engineering Manager & Full-Stack Developer',
       meta: [
         { charset: 'utf-8' },
@@ -53,8 +56,8 @@ export default defineNuxtConfig({
           name: 'twitter:image',
           content: 'https://yuma-portfolio.web.app/og-image.png',
         },
-        { name: 'theme-color', content: '#2563eb' },
-        { name: 'msapplication-TileColor', content: '#2563eb' },
+        { name: 'theme-color', content: '#f5f2ea' },
+        { name: 'msapplication-TileColor', content: '#191815' },
         { name: 'application-name', content: 'Yuma Mitsuyoshi Portfolio' },
       ],
       link: [
@@ -77,7 +80,7 @@ export default defineNuxtConfig({
           href: '/favicon-16x16.png',
         },
         { rel: 'manifest', href: '/site.webmanifest' },
-        { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#2563eb' },
+        { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#191815' },
         { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: '//www.googletagmanager.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -85,6 +88,10 @@ export default defineNuxtConfig({
           rel: 'preconnect',
           href: 'https://fonts.gstatic.com',
           crossorigin: '',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap',
         },
       ],
       script: [

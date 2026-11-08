@@ -4,8 +4,8 @@
   "description": "Engineering Manager & Full-Stack Developer のポートフォリオサイト",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#f5f2ea",
+  "theme_color": "#f5f2ea",
   "icons": [
     {
       "src": "/favicon-16x16.png",
