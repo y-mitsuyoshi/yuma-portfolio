@@ -253,7 +253,7 @@
                   </li>
                   <li>
                     <strong>資格</strong> - Google Cloud Professional Cloud
-                    Architect（2026年取得）
+                    Architect / Generative AI Leader（2026年取得）
                   </li>
                 </ul>
               </div>
